@@ -1,0 +1,154 @@
+<HTML>
+<HEAD>
+ <META HTTP-EQUIV="Content-Language" content="fr">
+ <META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+ <TITLE>QCM avec cases à cocher</TITLE>
+ <SCRIPT LANGUAGE="JavaScript">
+ <!-- cacher code
+ var cpt=0;
+ function test(nom,n) {
+  var rep=true;
+  if ( nom[0].checked==true) rep=true;
+  for (i=1; i<n; i++) { 
+    if (nom[i].checked==true) rep=false;
+	
+  }
+  
+    
+  if (nom[0].checked==false && nom[1].checked==false && nom[1].checked==false && nom[3].checked==false ) rep=false;
+  
+  return rep;
+ }
+ function test2(nom,n) {
+  var rep2=false;
+  if ( nom[0].checked==true &&  nom[1].checked==true &&  nom[2].checked==true && nom[3].checked==false  ) rep2=true;
+       if (nom[3].checked==true) rep2=false;
+	 
+    
+  if (nom[0].checked==false && nom[1].checked==false && nom[1].checked==false && nom[3].checked==false ) rep2=false;
+  
+  return rep2;
+ }
+ //fin du script. -->
+ </SCRIPT>
+</HEAD>
+
+<BODY background = "backg2.jpg">
+<H1>QCM : Le mod&egrave;le relationnel&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type=BUTTON name="bouton11" value="SCORT"
+  ONCLICK="if (true) {alert('votre scort est:'+ cpt*2 + '/10')} 
+          else {alert('Réponse fausse.')}">
+         
+<a href="ACCUEILP.htm"></a></H1>
+<HR>
+<FORM NAME="qcm1">
+<B>Question :</B><BR>
+ Les contraintes d'integrit&eacute; r&eacute;f&eacute;rentielle :<BR>
+<B>Réponses :</B>
+<BR>
+
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1> 
+V&eacute;rifient la correspendance entre les valeurs d'une cl&eacute; &eacute;trang&egrave;re avec celle de la cl&eacute; primaire correspondante<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+V&eacute;rifient l'unicit&eacute; de la cl&eacute; &eacute;trag&egrave;re<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+V&eacute;rifient l'unicit&eacute; de la cl&eacute; primaire <BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1> 
+V&eacute;rifient 
+</INPUT>
+que la valeur d'une cl&eacute; &eacute;trang&egrave;re est non nulle<BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm2">
+<B>Question :</B><BR>
+Les contraintes d&rsquo;int&eacute;grit&eacute;s&nbsp; obligatoires correspondent aux <br>
+<B>Réponses :</B>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Contraintes d'int&eacute;grit&eacute;s sur les cl&eacute;s <BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Contraintes d'int&eacute;grit&eacute;s sur les  entit&eacute;s <BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Contraintes d'int&eacute;grit&eacute;s  r&eacute;f&eacute;rentielle
+</INPUT>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Contraintes d'int&eacute;grit&eacute;s sur les domaines
+</INPUT>
+<BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test2(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm3">
+<B>Question :</B><BR>
+Contrainte d'int&eacute;grit&eacute; sur les  entit&eacute;s exige que : <BR>
+<B>Réponses :</B>
+<BR><INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+La  cl&eacute; primaire  ne doit pas avoir la valeur nulle<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+La cl&eacute; &eacute;trang&egrave;re doit &ecirc;tre non nulle<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+La cl&eacute; primaire doit &ecirc;tre unique
+</INPUT>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+La cl&eacute; &eacute;trang&egrave;re doit &ecirc;tre unique<BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm4">
+<B>Question :</B><BR>
+Une cl&eacute; &eacute;trng&egrave;re <BR>
+<B>Réponses :</B>
+<BR><INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Fait r&eacute;f&eacute;rence &agrave; une cl&eacute; primaire 
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+ Doit &ecirc;tre de valeur non nulle<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+ Doit &ecirc;tre form&eacute; uniquement d'un seul champs<BR>
+ <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1> 
+ Doit &ecirc;tre unique <BR>
+ <BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm1">
+<B>Question :</B><BR>
+La cl&eacute; d'une relation:<BR>
+<B>Réponses :</B>
+<BR><INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Toute  table doit obligatoirement avoir une cl&eacute; primaire&nbsp;
+</INPUT>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+C'est  un attribut/groupe d&rsquo;attributs qui d&eacute;termine un tuple d&rsquo;une mani&egrave;re unique dans la table<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Est souvent soulign&eacute;e&nbsp;<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1> 
+Doit &ecirc;tre toujours r&eacute;f&eacute;renc&eacute;e au moins par une cl&eacute; &eacute;trang&egrave;re<BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test2(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+</BODY>
+</HTML>

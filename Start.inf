@@ -1,0 +1,80 @@
+[Start]
+DXMediaVersion=600
+open=""%sRUNTIME\md8rntm.exe" /nobb "%sDATA\cdsouhail.md8""
+splash=0
+
+[message]
+Success=DX Media 6.0 is installed on your computer.
+SuccessAndRestart=DX Media 6.0 has been installed. Please restart your computer.
+Error=An error occurred while installing DX Media 6.0.
+InstallDXMedia=DX Media 6.0 will be installed on your computer.
+NT4sp3=You are running Windows NT4. You must install Service-Pack 3 for Windows NT4, before you start Mediator.
+NotAdmin=You must log in with administrator privileges to install DX Media 6.0 under Windows NT.
+UnknownError=An unknown error occurred during installation of Microsoft® DX Media 6.0. Mediator will be able to run, but there may be problems with playback of video and sound. Check www.microsoft.com for a newer driver, or contact your hardware supplier.
+splashtext=Please Wait
+splashtitle=Mediator 9.0
+
+[message.de]
+Success=DirectX Media 6.0 ist auf Ihrem Computer installiert.
+SuccessAndRestart=DirectX Media 6.0 wurde auf Ihrem Computer installiert. Bitte starten Sie ihn jetzt neu.
+Error=Während der Installation von DirectX Media 6.0 ist ein Fehler aufgetreten.
+InstallDXMedia=DirectX Media 6.0 wird jetzt auf Ihrem Computer installiert.
+NT4sp3=Sie arbeiten unter Windows NT 4. Sie müssen das Service-Pack 3 für Windows NT 4 installieren, bevor Sie Mediator starten.
+NotAdmin=Sie müssen sich mit den Privilegien eines Administrators einloggen, um DirectX Media 6.0 unter Windows NT zu installieren.
+UnknownError=Unbekannter Fehler bei der Installation von Microsofts (r) DX Media 6.0. Mediator ist damit lauffähig, Probleme bei Video und Sound sind aber möglich. Suchen Sie unter www.microsoft.com einen neueren Treiber oder fragen Sie Ihren Hardware-Händler.
+splashtext=Bitte warten
+
+[message.fr]
+Success=DirectX Media 6.0 est installé sur votre ordinateur.
+SuccessAndRestart=DirectX Media 6.0 est maintenant installé. Veuillez relancer votre ordinateur.
+Error=Une erreur s'est produite durant l'installation de DirectX Media 6.0.
+InstallDXMedia=DirectX Media 6.0 va être installé sur votre ordinateur.
+NT4sp3=Vous exécutez Windows NT4. Vous devez installer Service-Pack 3 pour Windows NT4 avant de lancer Mediator.
+NotAdmin=Vous devez vous connecter avec les droits administrateur pour installer DirectX Media 6.0 sous Windows NT.
+UnknownError=Une erreur s'est produite durant l'installation de Microsoft(r) DX Media 6.0. Mediator peut s'exécuter, mais vidéos et sons risquent de poser problème. Munissez-vous d'un nouveau pilote à partir de www.microsoft.com ou auprès de votre revendeur.
+
+[message.da]
+Success=DX Media 6.0 er blevet installeret på din computer.
+SuccessAndRestart=DX Media 6.0 er blevet installeret på din computer. Du skal genstarte din computer.
+Error=Der er opstået en fejl under installationen af DX Media 6.0.
+InstallDXMedia=DX Media 6.0 vil nu blive installeret på din computer.
+NT4sp3=Du kører Windows NT4. Du må installere Service-Pack 3 for Windows NT4, før du kan anvende Mediator.
+NotAdmin=Du skal have administrator rettigheder for at kunne installere DX Media 6.0 på Windows NT.
+UnknownError=En ukendt fejl er opstået under installation af Microsoft® DX Media 6.0. Mediator kan stadig køre, men der kan være problemer med afspilning af lyd og video. Check www.microsoft.com for en nyere driver, eller kontakt din hardware leverandør.
+splashtext=Vent lidt
+
+[message.no]
+Success=DX Media 6.0 er nå installert på datamaskinen.
+SuccessAndRestart=DX Media 6.0 er nå installert på datamaskinen. Maskinen må omstartes.
+Error=Det er oppståtte en feil under installasjonen av DX Media 6.0.
+InstallDXMedia=DX Media 6.0 vil nå bli installert på datamaskinen.
+NT4sp3=Du kjører Windows NT4. Du må installere Service-Pack 3 for Windows NT4 før du kan bruke Mediator.
+NotAdmin=Du må ha administrator-rettigheter for å kunne installere DX Media 6.0 på Windows NT.
+UnknownError=En ukjent feil er oppstått under installasjonen av Microsoft® DX Media 6.0. Mediator kan likevel brukes, men det kan oppstå problemer med avspilling av lyd og video. Se www.microsoft.com for en nyere driver, eller kontakt din maskinleverandør.
+
+[message.nl]
+Success=DX Media 6.0 is geïnstalleerd op uw computer.
+SuccessAndRestart=DX Media 6.0 is geïnstalleerd. Start uw computer opnieuw op.
+Error=Tijdens de installatie van DX Media 6.0 heeft zich een probleem voorgedaan.
+InstallDXMedia=DX Media 6.0 zal geïnstalleerd worden op uw computer.
+NT4sp3=U werkt onder Windows NT4. U moet Service-Pack 3 for Windows NT4 installeren, voordat u Mediator gaat starten.
+NotAdmin=U moet inloggen met 'administrator privileges' om DX Media 6.0 onder Windows NT te kunnen installeren.
+UnknownError=Een onbekende fout heeft zich voorgedaan tijdens de installatie van Microsoft® DX Media 6.0. Mediator zal opgestart kunnen worden, maar er kunnen zich problemen voordoen bij het afspelen van video of geluid. Bezoek www.microsoft.com voor een nieuwere versie van de driver of neem contact op met uw hardwareleverancier.
+
+[message.es]
+Success=DX Media 6.0 ha sido instalado en su ordenador.
+SuccessAndRestart=DX Media 6.0 ha sido instalado. Por favor, encienda su ordenador de nuevo.
+Error=Ha aparecido un error en la instalacion de DX Media 6.0.
+InstallDXMedia=DX Media 6.0 se instalara en su ordenador.
+NT4sp3=Usted esta utilizando Windows NT4. Debe instalar Service-Pack 3 para Windows NT4 antes de comenzar Mediator.
+NotAdmin=Debe acceder al ordenador con estatus de administrador para instalar DX Media 6.0 con Windows NT.
+UnknownError=Un error desconocido ha ocurrido durante la instalacion de Microsoft. DX Media 6.0 Mediator puede fundionar pero pueden haber problemas con videos y sonido. Compruebe www.microsoft.com para un nuevo driver o contacte su proveedor de hardware.
+
+[message.it]
+Success=DX Media 6.0 è installato sul computer.
+SuccessAndRestart=DX Media 6.0 è stato installato. Riavviare il computer.
+Error=Si è verificato un errore durante l'installazione di DX Media 6.0.
+InstallDXMedia=DX Media 6.0 verrà installato sul computer.
+NT4sp3=Si sta utilizzando Windows NT4. Prima di avviare Mediator, occorre installare Service-Pack 3 per Windows NT4.
+NotAdmin=Per installare DX Media 6.0 sotto Windows NT, occorre accedere al sistema con privilegi da amministratore.
+UnknownError=Si è verificato un errore sconosciuto durante l'installazione di Microsoft® DX Media 6.0. Sarà possibile utilizzare Mediator, ma potrebbero verificarsi problemi per la riproduzione di video e audio. Visitare il sito www.microsoft.com per verificare se è disponibile un driver più recente, oppure contattare il fornitore dell'hardware.

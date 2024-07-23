@@ -1,0 +1,1638 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="introduction_sql_fichiers/filelist.xml">
+<link rel=Preview href="introduction_sql_fichiers/preview.wmf">
+<link rel=Edit-Time-Data href="introduction_sql_fichiers/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>ASUS</o:Author>
+  <o:LastAuthor>ASUS</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>2</o:TotalTime>
+  <o:Created>2019-03-08T20:04:00Z</o:Created>
+  <o:LastSaved>2019-03-08T20:04:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>808</o:Words>
+  <o:Characters>4449</o:Characters>
+  <o:Lines>37</o:Lines>
+  <o:Paragraphs>10</o:Paragraphs>
+  <o:CharactersWithSpaces>5247</o:CharactersWithSpaces>
+  <o:Version>14.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel=themeData href="introduction_sql_fichiers/themedata.thmx">
+<link rel=colorSchemeMapping
+href="introduction_sql_fichiers/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>80</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:HyphenationZone>21</w:HyphenationZone>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>FR</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>AR-SA</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Titre 1 Car";
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	mso-style-unhide:no;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Texte de bulles Car";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:"Times New Roman";}
+span.Titre1Car
+	{mso-style-name:"Titre 1 Car";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Titre 1";
+	mso-ansi-font-size:24.0pt;
+	mso-bidi-font-size:24.0pt;
+	font-family:"Times New Roman","serif";
+	mso-ascii-font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:18.0pt;
+	mso-fareast-language:FR;
+	font-weight:bold;}
+span.TextedebullesCar
+	{mso-style-name:"Texte de bulles Car";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Texte de bulles";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;
+	mso-fareast-language:FR;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:Arial;
+	mso-bidi-theme-font:minor-bidi;
+	mso-fareast-language:EN-US;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:1881281155;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-710642176 67895303 67895299 67895301 67895297 67895299 67895301 67895297 67895299 67895301;}
+@list l0:level1
+	{mso-level-number-format:image;
+	list-style-image:url("introduction_sql_fichiers/image001.png");
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Tableau Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin-top:0cm;
+	mso-para-margin-right:0cm;
+	mso-para-margin-bottom:10.0pt;
+	mso-para-margin-left:0cm;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-fareast-language:EN-US;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=FR link=blue vlink=purple style='tab-interval:35.4pt' background = "backg2.jpg">
+
+<div class=WordSection1>
+
+<h1 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm'><span style='font-size:12.0pt'>INTRODUCTION<o:p></o:p></span></h1>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'>Le langage <b>SQL </b>(<span
+class=SpellE>Structured</span> <span class=SpellE>Query</span> <span
+class=SpellE>Language</span>) est un langage d’accès normalisé aux bases de
+données, supporté par la majorité des produits<span style='mso-spacerun:yes'> 
+</span>commerciaux.<o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'>La première version de SQL a
+été développée à IBM en 1970 par Donald D. <span class=SpellE>Chamberlin</span>
+et Raymond F. Boyce. Cette version, d'origine était appelé SEQUEL, a été conçue
+pour manipuler et éditer des données emmagasinées dans la base de données
+relationnelles IBM. <o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'>En <a
+href="http://fr.wikipedia.org/wiki/1979" title=1979><span style='color:windowtext;
+text-decoration:none;text-underline:none'>1979</span></a>, <span class=SpellE>Relational</span>
+Software, (actuellement <a
+href="http://fr.wikipedia.org/wiki/Oracle_Corporation"
+title="Oracle Corporation"><span style='color:windowtext;text-decoration:none;
+text-underline:none'>Oracle Corporation</span></a>) présenta la première
+version commercialement disponible de SQL.<o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'>SQL a été adopté comme
+recommandation par l'Institut de normalisation américaine (<a
+href="http://fr.wikipedia.org/wiki/ANSI" title=ANSI><span style='color:windowtext;
+text-decoration:none;text-underline:none'>ANSI</span></a>) en <a
+href="http://fr.wikipedia.org/wiki/1986" title=1986><span style='color:windowtext;
+text-decoration:none;text-underline:none'>1986</span></a>, puis comme norme internationale
+par l'<a
+href="http://fr.wikipedia.org/wiki/Organisation_internationale_de_normalisation"
+title="Organisation internationale de normalisation"><span style='color:windowtext;
+text-decoration:none;text-underline:none'>ISO</span></a> en <a
+href="http://fr.wikipedia.org/wiki/1987" title=1987><span style='color:windowtext;
+text-decoration:none;text-underline:none'>1987</span></a> sous le nom de
+ISO/CEI 9075 - Technologies de l'information - Langages de base de données -
+SQL.<o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'>La norme internationale SQL
+est passée par un certain nombre de révisions&nbsp;:<o:p></o:p></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='background:#F9F9F9;border-collapse:collapse;border:none;mso-border-alt:
+ solid #AAAAAA .75pt;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:29.0pt'>
+  <td style='border:solid #AAAAAA 1.0pt;mso-border-alt:solid #AAAAAA .75pt;
+  background:#F2F2F2;padding:2.4pt 2.4pt 2.4pt 2.4pt;height:29.0pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0cm;
+  margin-bottom:12.0pt;margin-left:0cm;text-align:center;line-height:14.4pt'><b><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'>Année<o:p></o:p></span></b></p>
+  </td>
+  <td style='border:solid #AAAAAA 1.0pt;border-left:none;mso-border-left-alt:
+  solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;background:#F2F2F2;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt;height:29.0pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0cm;
+  margin-bottom:12.0pt;margin-left:0cm;text-align:center;line-height:14.4pt'><b><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'>Nom<o:p></o:p></span></b></p>
+  </td>
+  <td width=165 style='width:123.55pt;border:solid #AAAAAA 1.0pt;border-left:
+  none;mso-border-left-alt:solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;
+  background:#F2F2F2;padding:2.4pt 2.4pt 2.4pt 2.4pt;height:29.0pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0cm;
+  margin-bottom:12.0pt;margin-left:0cm;text-align:center;line-height:14.4pt'><b><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'>Appellation<o:p></o:p></span></b></p>
+  </td>
+  <td width=299 style='width:224.6pt;border:solid #AAAAAA 1.0pt;border-left:
+  none;mso-border-left-alt:solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;
+  background:#F2F2F2;padding:2.4pt 2.4pt 2.4pt 2.4pt;height:29.0pt'>
+  <p class=MsoNormal align=center style='margin-top:12.0pt;margin-right:0cm;
+  margin-bottom:12.0pt;margin-left:0cm;text-align:center;line-height:14.4pt'><b><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'>Commentaires<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;mso-border-top-alt:
+  solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><a
+  href="http://fr.wikipedia.org/wiki/1986" title=1986><span style='font-size:
+  10.0pt;mso-bidi-font-size:12.0pt;font-family:"Arial","sans-serif";color:#0B0080'>1986</span></a><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'><o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;mso-border-top-alt:solid #AAAAAA .75pt;
+  mso-border-left-alt:solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>ISO/CEI&nbsp;9075:1986<o:p></o:p></span></p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>SQL-86 ou SQL-87<o:p></o:p></span></p>
+  </td>
+  <td width=299 style='width:224.6pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>Édité par l'ANSI puis adopté
+  par l'ISO en</span><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt;
+  font-family:"Arial","sans-serif";color:black'>&nbsp;</span><a
+  href="http://fr.wikipedia.org/wiki/1987" title=1987><span style='font-size:
+  10.0pt;mso-bidi-font-size:12.0pt;font-family:"Arial","sans-serif";color:#0B0080'>1987</span></a><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'>.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;mso-border-top-alt:
+  solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><a
+  href="http://fr.wikipedia.org/wiki/1989" title=1989><span style='font-size:
+  10.0pt;mso-bidi-font-size:12.0pt;font-family:"Arial","sans-serif";color:#0B0080'>1989</span></a><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'><o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;mso-border-top-alt:solid #AAAAAA .75pt;
+  mso-border-left-alt:solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>ISO/CEI&nbsp;9075:1989<o:p></o:p></span></p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>SQL-89 ou SQL-1<o:p></o:p></span></p>
+  </td>
+  <td width=299 style='width:224.6pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>Révision mineure.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;mso-border-top-alt:
+  solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><a
+  href="http://fr.wikipedia.org/wiki/1992" title=1992><span style='font-size:
+  10.0pt;mso-bidi-font-size:12.0pt;font-family:"Arial","sans-serif";color:#0B0080'>1992</span></a><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'><o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;mso-border-top-alt:solid #AAAAAA .75pt;
+  mso-border-left-alt:solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>ISO/CEI&nbsp;9075:1992<o:p></o:p></span></p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><a
+  href="http://fr.wikipedia.org/w/index.php?title=SQL-92&amp;action=edit&amp;redlink=1"
+  title="SQL-92 (page inexistante)"><span style='font-size:10.0pt;mso-bidi-font-size:
+  12.0pt;font-family:"Arial","sans-serif";color:#A55858'>SQL-92</span></a><span
+  style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Arial","sans-serif";
+  color:black'>&nbsp;</span><a href="http://en.wikipedia.org/wiki/SQL-92"
+  title="en:SQL-92"></a><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+  color:black'>alias SQL2<o:p></o:p></span></p>
+  </td>
+  <td width=299 style='width:224.6pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>Révision majeure.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:79.05pt'>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;mso-border-top-alt:
+  solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt;
+  height:79.05pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><a
+  href="http://fr.wikipedia.org/wiki/1999" title=1999><span style='font-size:
+  10.0pt;mso-bidi-font-size:12.0pt;font-family:"Arial","sans-serif";color:#0B0080'>1999</span></a><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'><o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;mso-border-top-alt:solid #AAAAAA .75pt;
+  mso-border-left-alt:solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt;height:79.05pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>ISO/CEI&nbsp;9075:1999<o:p></o:p></span></p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt;
+  height:79.05pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><a
+  href="http://fr.wikipedia.org/w/index.php?title=SQL-99&amp;action=edit&amp;redlink=1"
+  title="SQL-99 (page inexistante)"><span style='font-size:10.0pt;mso-bidi-font-size:
+  12.0pt;font-family:"Arial","sans-serif";color:#A55858'>SQL-99</span></a><span
+  style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Arial","sans-serif";
+  color:black'>&nbsp;</span><a href="http://en.wikipedia.org/wiki/SQL:1999"
+  title="en:SQL:1999"></a><span style='font-size:10.0pt;font-family:"Arial","sans-serif";
+  color:black'>alias SQL3<o:p></o:p></span></p>
+  </td>
+  <td width=299 style='width:224.6pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt;
+  height:79.05pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>Expressions rationnelles,
+  requêtes récursives, déclencheurs, types non-scalaires et quelques fonctions
+  orientées objet (les deux derniers points sont quelque peu controversés et
+  pas encore largement implémentés).<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;mso-border-top-alt:
+  solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><a
+  href="http://fr.wikipedia.org/wiki/2003" title=2003><span style='font-size:
+  10.0pt;mso-bidi-font-size:12.0pt;font-family:"Arial","sans-serif";color:#0B0080'>2003</span></a><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'><o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;mso-border-top-alt:solid #AAAAAA .75pt;
+  mso-border-left-alt:solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>ISO/CEI&nbsp;9075:2003<o:p></o:p></span></p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><a
+  href="http://fr.wikipedia.org/w/index.php?title=SQL:2003&amp;action=edit&amp;redlink=1"
+  title="SQL:2003 (page inexistante)"><span style='font-size:10.0pt;mso-bidi-font-size:
+  12.0pt;font-family:"Arial","sans-serif";color:#A55858'>SQL:2003</span></a><a
+  href="http://en.wikipedia.org/wiki/SQL:2003" title="en:SQL:2003"></a><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'><o:p></o:p></span></p>
+  </td>
+  <td width=299 style='width:224.6pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>Introduction de fonctions pour
+  la manipulation XML, «&nbsp;<span class=SpellE>window</span> <span
+  class=SpellE>functions</span>&nbsp;», ordres standardisés et colonnes avec
+  valeurs <span class=SpellE>auto-produites</span> (y compris colonnes
+  d'identité).<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;mso-border-top-alt:
+  solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><a
+  href="http://fr.wikipedia.org/wiki/2008" title=2008><span style='font-size:
+  10.0pt;mso-bidi-font-size:12.0pt;font-family:"Arial","sans-serif";color:#0B0080'>2008</span></a><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'><o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;mso-border-top-alt:solid #AAAAAA .75pt;
+  mso-border-left-alt:solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>ISO/CEI&nbsp;9075:2008<o:p></o:p></span></p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><a
+  href="http://fr.wikipedia.org/wiki/SQL:2008" title="SQL:2008"><span
+  style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Arial","sans-serif";
+  color:#0B0080'>SQL:2008</span></a><a
+  href="http://en.wikipedia.org/wiki/SQL:2008" title="en:SQL:2008"></a><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'><o:p></o:p></span></p>
+  </td>
+  <td width=299 style='width:224.6pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>Ajout de quelques fonctions de
+  fenêtrage (<span class=SpellE>ntile</span>, lead, <span class=SpellE>lag</span>,
+  first value, last value, <span class=SpellE>nth</span> value), limitation du
+  nombre de ligne (OFFSET / FETCH), amélioration mineure sur les types
+  distincts, curseurs et mécanismes d'auto incréments.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;mso-yfti-lastrow:yes'>
+  <td style='border:solid #AAAAAA 1.0pt;border-top:none;mso-border-top-alt:
+  solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><a
+  href="http://fr.wikipedia.org/wiki/2011" title=2011><span style='font-size:
+  10.0pt;mso-bidi-font-size:12.0pt;font-family:"Arial","sans-serif";color:#0B0080'>2011</span></a><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'><o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #AAAAAA 1.0pt;
+  border-right:solid #AAAAAA 1.0pt;mso-border-top-alt:solid #AAAAAA .75pt;
+  mso-border-left-alt:solid #AAAAAA .75pt;mso-border-alt:solid #AAAAAA .75pt;
+  padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><span style='font-size:10.0pt;
+  font-family:"Arial","sans-serif";color:black'>ISO/IEC&nbsp;9075:2011<o:p></o:p></span></p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'>
+  <p class=MsoNormal style='margin-top:12.0pt;margin-right:0cm;margin-bottom:
+  12.0pt;margin-left:0cm;line-height:14.4pt'><u><span style='font-size:10.0pt;
+  mso-bidi-font-size:12.0pt;font-family:"Arial","sans-serif";color:#0B0080'>SQL:2011</span></u><span
+  style='font-size:10.0pt;font-family:"Arial","sans-serif";color:black'><o:p></o:p></span></p>
+  </td>
+  <td width=299 style='width:224.6pt;border-top:none;border-left:none;
+  border-bottom:solid #AAAAAA 1.0pt;border-right:solid #AAAAAA 1.0pt;
+  mso-border-top-alt:solid #AAAAAA .75pt;mso-border-left-alt:solid #AAAAAA .75pt;
+  mso-border-alt:solid #AAAAAA .75pt;padding:2.4pt 2.4pt 2.4pt 2.4pt'></td>
+ </tr>
+</table>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'><o:p>&nbsp;</o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'><o:p>&nbsp;</o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'>SQL est un langage
+interactif non procédural, peut être décomposé en trois sous langages&nbsp;:<o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'><span style='mso-no-proof:
+yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+ stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Image_x0020_1" o:spid="_x0000_i1027" type="#_x0000_t75"
+ alt="Description&nbsp;: bille" style='width:9pt;height:10.5pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="introduction_sql_fichiers/image002.jpg" o:title="bille"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=12 height=14
+src="introduction_sql_fichiers/image002.jpg" alt="Description&nbsp;: bille"
+v:shapes="Image_x0020_1"><![endif]></span>&nbsp;&nbsp;Le <b>langage
+de définition de données (LDD)</b> qui permet de définir les structures et les
+contraintes des bases de données,
+<o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'><span style='mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Image_x0020_2" o:spid="_x0000_i1026"
+ type="#_x0000_t75" alt="Description&nbsp;: bille" style='width:9pt;height:10.5pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="introduction_sql_fichiers/image002.jpg" o:title="bille"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=12 height=14
+src="introduction_sql_fichiers/image002.jpg" alt="Description&nbsp;: bille"
+v:shapes="Image_x0020_2"><![endif]></span>&nbsp;&nbsp;Le <b>langage
+de manipulation de données (LMD)</b> qui permet d’interroger une base de
+données indépendamment de l’organisation physique des données,
+<o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'><span style='mso-no-proof:
+yes'><!--[if gte vml 1]><v:shape id="Image_x0020_3" o:spid="_x0000_i1025"
+ type="#_x0000_t75" alt="Description&nbsp;: bille" style='width:9pt;height:10.5pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="introduction_sql_fichiers/image002.jpg" o:title="bille"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=12 height=14
+src="introduction_sql_fichiers/image002.jpg" alt="Description&nbsp;: bille"
+v:shapes="Image_x0020_3"><![endif]></span>&nbsp;&nbsp; Le <b>langage
+de contrôle de données (LCD)</b> qui permet de contrôler la sécurité et les
+accès aux données. 
+<o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'><b><u>NB&nbsp;:<o:p></o:p></u></b></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+36.0pt;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:36.0pt;text-align:justify;text-indent:-36.0pt;
+mso-list:l0 level1 lfo1;tab-stops:18.0pt list 36.0pt'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=13 height=13
+src="introduction_sql_fichiers/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span>Tout au long de ce cours on
+utilisera la base de données suivante&nbsp;:<o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'><span class=GramE>fournisseur(</span><span
+class=SpellE><u>cod_frs</u></span>, <span class=SpellE>nom_frs</span>, <span
+class=SpellE>adresse_frs</span>, <span class=SpellE>tele_frs</span>)<o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'><span class=GramE>produit</span>
+(<span class=SpellE><u>cod_prd</u></span>, <span class=SpellE>lib_prd</span>, <span
+class=SpellE>quantite_stock</span>, <span class=SpellE>prix_unitaire</span>, <span
+class=SpellE>cod_tva</span>#) <span style='mso-no-proof:yes'><span
+style='mso-spacerun:yes'> </span></span><o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'><span class=GramE>tva</span>
+(<span class=SpellE><u>cod_tva</u></span>, <span class=SpellE>taux_tva</span>)<o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'><span class=GramE>fournir</span>
+(<span class=SpellE><u>cod_frs</u></span><u>#, <span class=SpellE>cod_prd</span>#</u>)<o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'><span class=GramE>commande</span>
+(<span class=SpellE><u>num_cde</u></span>, <span class=SpellE>date_cde</span>,
+#<span class=SpellE>cod_frs</span>)<o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'><span class=SpellE><span
+class=GramE>ligne_commande</span></span> (<span class=SpellE><u>num_cde</u></span><u>,
+<span class=SpellE>cod_prd</span></u>, quantité)<o:p></o:p></p>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:0cm;text-align:justify'>Dictionnaire de données&nbsp;:<o:p></o:p></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>CODE<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>DESCRIPTION<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>TYPE<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:silver;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>TAILLE<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  class=SpellE><span style='font-size:10.0pt'>cod_frs</span></span><span
+  style='font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Code fournisseur<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Chaîne de caractères<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>10<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  class=SpellE><span style='font-size:10.0pt'>nom_frs</span></span><span
+  style='font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Nom fournisseur<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Chaîne de caractères<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>35<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  class=SpellE><span style='font-size:10.0pt'>Adresse_frs</span></span><span
+  style='font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Adresse fournisseur<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Chaîne de caractères<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>100<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  class=SpellE><span style='font-size:10.0pt'>tele_frs</span></span><span
+  style='font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Téléphone fournisseur<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Chaîne de caractères<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>13<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  class=SpellE><span style='font-size:10.0pt'>cod_prd</span></span><span
+  style='font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Code fournisseur<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Chaîne de caractères<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>10<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  class=SpellE><span style='font-size:10.0pt'>lib_prd</span></span><span
+  style='font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  class=SpellE><span style='font-size:10.0pt'>Libéllé</span></span><span
+  style='font-size:10.0pt'> produit<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Chaîne de caractères<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>25<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  class=SpellE><span style='font-size:10.0pt'>quantite_stock</span></span><span
+  style='font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Quantité stock<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Décimal<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>(10,3)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  class=SpellE><span style='font-size:10.0pt'>cod_tva</span></span><span
+  style='font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Code TVA<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Entier<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>1<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  class=SpellE><span style='font-size:10.0pt'>taux_tva</span></span><span
+  style='font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Taux TVA<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Entier<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>2<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  class=SpellE><span style='font-size:10.0pt'>prix_unitaire</span></span><span
+  style='font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Prix unitaire<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Décimal<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>(10,3)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  class=SpellE><span style='font-size:10.0pt'>Num_cde</span></span><span
+  style='font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Numéro commande<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Entier<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>4<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  class=SpellE><span style='font-size:10.0pt'>date_cde</span></span><span
+  style='font-size:10.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Date commande<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>date<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>-<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;mso-yfti-lastrow:yes'>
+  <td width="25%" valign=top style='width:25.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>quantité<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Quantité commandée<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>Décimal<o:p></o:p></span></p>
+  </td>
+  <td width="25%" valign=top style='width:25.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p align=center style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;
+  margin-left:0cm;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;
+  mso-para-margin-bottom:1.0gd;mso-para-margin-left:0cm;text-align:center'><span
+  style='font-size:10.0pt'>(10,3)<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p style='margin-top:12.0pt;margin-right:0cm;margin-bottom:12.0pt;margin-left:
+36.0pt;mso-para-margin-top:1.0gd;mso-para-margin-right:0cm;mso-para-margin-bottom:
+1.0gd;mso-para-margin-left:36.0pt;text-align:justify;text-indent:-36.0pt;
+mso-list:l0 level1 lfo1;tab-stops:list 18.0pt'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'><img width=13 height=13
+src="introduction_sql_fichiers/image001.png" alt="*"><span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span dir=LTR></span>Tout ce qui est écrit entre
+[ ] est facultatif.<o:p></o:p></p>
+
+<p class=MsoNormal><o:p>&nbsp;</o:p></p>
+
+</div>
+
+</body>
+
+</html>

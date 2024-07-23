@@ -1,0 +1,505 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style type="text/css">
+<!--
+.Style1 {
+	font-size: 24px;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif;
+}
+.Style2 {font-family: "Times New Roman", Times, serif}
+-->
+</style>
+</head>
+
+<body background = "backg2.jpg">
+<div class="Style2" id="Layer1" style="position:absolute; left:92px; top:149px; width:855px; height:6437px; z-index:1"> 
+  <p align="center"><strong><font color="#A3A352" size="5">Chapitre 
+    5 : L'algebre Relationnelle</font></strong></p>
+  <blockquote>
+    <p align="justify"><font color="#000080" size="4"><strong>Objectif</strong></font></p>
+    <p align="justify"><font size="4">Apprendre les principes 
+      de base et les diff&eacute;rents op&eacute;rateurs de l'Algebre Relationnelle</font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>El&eacute;ments 
+      de contenu </strong></font></p>
+    <p align="justify"><font size="4">1-<a href="chapitre5.htm#introduction"> 
+      Introduction</a></font></p>
+    <p align="justify"><font size="4">2-<a href="chapitre5.htm#unaire"> Op&eacute;rateurs Unaires</a></font></p>
+    <p align="justify"><font size="4">3- <a href="chapitre5.htm#similaire">Op&eacute;rateurs 
+      binaires de m&ecirc;me sch&eacute;ma</a></font></p>
+    <p align="justify"><font size="4">4- <a href="chapitre5.htm#different">Op&eacute;rateurs 
+      binaires de sch&eacute;mas diff&eacute;rents</a></font></p>
+    <p align="justify"><font size="4">5- <a href="chapitre5.htm#schema">Sch&eacute;ma 
+      r&eacute;capitulatif des op&eacute;rateurs </a></font></p>
+    <blockquote>
+      <p align="justify">&nbsp;</p>
+    </blockquote>
+    <p><font color="#0000CC" size="4"><strong><font color="#000080"><a name="introduction"></a>1- 
+      Introduction</font></strong></font></p>
+    <p align="justify"><font color="#333333" size="4">L'alg&egrave;bre 
+      relationnelle est unecollection d'op&eacute;rations permettant d'op&eacute;rer 
+      sur les concept du mod&egrave;le relationnel. Elle permet par exemple de 
+      s&eacute;lectionner certains enregistrements d'une relation satisfaisant 
+      une condition ou encore de regrouper des enregistrements de relations diff&eacute;rentes. 
+      Le r&eacute;sultat de toute op&eacute;ration de l'alg&egrave;bre est une 
+      nouvelle relation. Cette propri&eacute;t&eacute; implique notamment qu'il 
+      ny a pas de doublons dans le r&eacute;sultat et permet l'ecriture d'expressions 
+      de calcul. Etant donn&eacute;e, que le mod&egrave;le relationnel est bas&eacute; 
+      sur la th&eacute;orie des ensembles, l'alg&egrave;bre relationnelle utilise 
+      des op&eacute;rateurs qu'on pourra classifier en 3 cat&eacute;gories.</font></p>
+    <blockquote>
+      <p><font size="4">- Les op&eacute;rateurs unaires: 
+        affectation,s&eacute;lection et projection</font></p>
+      <p> <font size="4">- 
+        Les op&eacute;rteurs binaires travaillant sur des relations de m&ecirc;me 
+        sch&eacute;ma: union,intersection et diff&eacute;rence. </font></p>
+      <p> <font size="4">- 
+        Les op&eacute;rateurs binaires travaillant sur des relations de sch&eacute;mas 
+        diff&eacute;rents: jointure, produit cart&eacute;sien et division</font></p>
+    </blockquote>
+    <p align="justify">&nbsp;</p>
+    <p><strong><font color="#0000CC" size="4"><font color="#000080"><a name="unaire"></a>2- 
+      Op&eacute;rateurs Unaires</font></font></strong></p>
+    <p align="justify"><font color="#000080"><strong><font size="4">2.1- 
+      Affectation</font></strong></font></p>
+  </blockquote>
+  <div align="justify"> </div>
+  <blockquote> 
+    <blockquote> 
+      <blockquote>
+        <p align="justify"><strong><font size="4">R(A1,...An) 
+          &lt;&#8212; Expresseion de s&eacute;lection</font></strong></p>
+      </blockquote>
+    </blockquote>
+    <p align="justify"><font size="4">L'affectation permet 
+      d'identifier le r&eacute;sultat d'une expression alg&eacute;brique afin 
+      de pouvoir r&eacute;utiliser cette expression dans une autre expression 
+      ou bien de renommer une relation ou de construire une image d'une relation.</font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>2.2- 
+      S&eacute;lection</strong></font></p>
+  </blockquote>
+  <div align="justify"> </div>
+  <blockquote> 
+    <blockquote> 
+      <blockquote>
+        <p align="justify"><strong><font color="#000000" size="4">SELECTION 
+          condition-de-selection (R)</font></strong></p>
+      </blockquote>
+      <div align="justify"> </div>
+      <blockquote> 
+        <blockquote> 
+          <blockquote> 
+            <blockquote> 
+              <blockquote>
+                <p align="justify"><strong><font color="#000000" size="4">ou</font></strong></p>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+        <p align="justify"><strong><font color="#000000" size="4">SELECT 
+          (R, condition-de-selection)</font></strong></p>
+      </blockquote>
+    </blockquote>
+    <p align="justify"><font color="#000000" size="4">La 
+      s&eacute;lection prend en entr&eacute;e une relation R d&eacute;finie sur 
+      un sch&eacute;ma SR et produit en sortie une nouvelle relation de m&ecirc;me 
+      Sch&eacute;ma SR ayant comme n-uplets ceux de R satisfaisant &agrave; l'expression 
+      de s&eacute;lection.</font></p>
+    <p align="justify"><font color="#000000" size="4">&#8212;&gt;<strong> 
+      Remarque</strong></font></p>
+  </blockquote>
+  <div align="justify"> </div>
+  <blockquote> 
+    <blockquote>
+      <p align="justify"><font color="#000000" size="4">Dans 
+        la condition, on peut utiliser les op&eacute;rateurs logiques : ET , OU 
+        , Non ainsi que les op&eacute;rateurs de comparaison classiques.</font></p>
+    </blockquote>
+    <p align="justify"><font color="#000000" size="4"><strong>Exemple 
+      : </strong></font></p>
+    <p align="justify"><font color="#000000" size="4">Soit 
+      R1 l'ensemble des n-uplets &eacute;tudiants de la classe IG2, R2 &lt;&#8212; 
+      SELECT (R1, &acirc;ge &gt; 20) donne tous les &eacute;tudiants de cette 
+      base qui ont d&eacute;pass&eacute; 20 ans.</font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>2.3- 
+      Projection</strong></font></p>
+  </blockquote>
+  <div align="justify"> </div>
+  <blockquote> 
+    <blockquote> 
+      <blockquote> 
+        <p align="justify"><strong><font color="#000033" size="4">PROJECTION 
+          A1,...,An (R)</font></strong></p>
+        <blockquote> 
+          <blockquote> 
+            <blockquote> 
+              <blockquote> 
+                <div align="justify"> </div>
+                <p align="justify"><strong><font color="#000033" size="4">ou</font></strong></p>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+        <p align="justify"><strong><font color="#000033" size="4">R[A1,...,An]</font></strong></p>
+      </blockquote>
+    </blockquote>
+    <p align="justify"><font color="#000033" size="4">La 
+      projection prend en entr&eacute;e une relation R d&eacute;finie sur un Sch&eacute;ma 
+      SR et produit en sortie une nouvelle relation de Sch&eacute;ma A1,....An 
+      (Sch&eacute;ma inclus dans SR) ayant comme n-uplets ceux de R restraints 
+      au Sous-Sch&eacute;ma A1,...,An. Il faut noter que la cardinalit&eacute; 
+      de la nouvelle relation est inferieure ou &eacute;gale &agrave; celle de 
+      R, puisque des doublons ont pu &ecirc;tre produits par la projection et 
+      sont donc supprim&eacute;s ( une relation est toujours un ensemble).</font></p>
+    <p align="justify"><font color="#000033" size="4"><strong>Exemple:</strong></font></p>
+    <p align="justify"><font color="#000033" size="4">Soit 
+      R1 l'ensemble des tuples &eacute;tudiants de la classe IG2, R2 &lt;&#8212; 
+      R1[nom] donne les diff&eacute;rents noms des &eacute;tudiants de cette classe.</font></p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify"><strong><font color="#000099" size="4"><font color="#000080"><a name="similaire"></a>3- 
+      Op&eacute;rateurs Binaires de m&ecirc;me Sch&eacute;ma</font></font></strong></p>
+    <p align="justify"><font color="#000000" size="4">Les 
+      3 Op&eacute;rateurs ensemblistes op&eacute;rent sur des relations R et S 
+      de m&ecirc;me Sch&eacute;ma SRS</font></p>
+  </blockquote>
+  <div align="justify"></div>
+  <blockquote> 
+    <p align="justify"><font color="#000080" size="4"><strong>3.1- 
+      Union</strong></font></p>
+    <div align="justify"> </div>
+    <blockquote> 
+      <p align="justify"><strong><font color="#333333" size="4">R 
+        UNION S </font></strong></p>
+    </blockquote>
+  </blockquote>
+  <p align="justify">&nbsp;</p>
+  <blockquote>
+    <div align="justify"><font color="#333333" size="4">Elle 
+      produit une nouvelle relation de Sch&eacute;ma SRS ayant les n-uplets de 
+      R suivis de ceux de S ( les doublons sont supprim&eacute;s).</font></div>
+    <p align="justify"><font color="#333333" size="4"><strong>Exemple:</strong></font></p>
+    <p align="justify"><font color="#333333" size="4">Soit 
+      R1 l'ensemble des n-uplets &eacute;tudiants du groupe 1 de IG2 et R2 l'ensemble 
+      des n-uplets &eacute;tudiants du groupe 2 IG2. R1 UNION R2 donne l'ensemble 
+      de tous les &eacute;tudiants de IG2( en supposant que IG2 ne poss&egrave;de 
+      que 2 groupes).</font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>3.2- 
+      Intersection</strong></font></p>
+    <blockquote>
+      <blockquote> 
+        <div align="justify"> </div>
+        <p align="justify"><strong><font color="#000000" size="4">R 
+          INTERSECTION S</font></strong></p>
+        <blockquote>
+          <blockquote> 
+            <div align="justify"></div>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+    <p align="justify"><font color="#000000" size="4">L'intersection 
+      produit une nouvelle relation de sch&eacute;ma SRS ayant les n-uplets communs 
+      &agrave; R et S.</font></p>
+    <p align="justify"><font color="#000000" size="4"><strong>Exemple:</strong></font></p>
+    <p align="justify"><font color="#000000" size="4">Soit 
+      R1 l'ensemble des n-uplets &eacute;tudiants en IG2. Soit R2 l'ensemble des 
+      n-uplets &eacute;tudiants qui ont TP Mardi. R1 INTERSECTION R2 donne les 
+      n-uplets des &eacute;tudiants en IG2 et qui ont TP le Mardi.</font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>3.3- 
+      Diff&eacute;rence</strong></font></p>
+    <blockquote>
+      <blockquote> 
+        <p align="justify"><font color="#000000" size="4">R 
+          - S</font></p>
+      </blockquote>
+    </blockquote>
+    <p align="justify"><font color="#000000" size="4">Elle 
+      produit une nouvelle relation de Sch&eacute;ma SRS ayant les n-uplets de 
+      R qui ne sont pas dans S.</font></p>
+    <p align="justify"><font color="#000000" size="4">&#8212;&gt; 
+      Attention : La diff&eacute;rence n'est pas commutative.</font></p>
+    <p align="justify"><font color="#000000" size="4"><strong>Exemple:</strong></font></p>
+    <p align="justify"><font color="#000000" size="4">Soit 
+      R1 l'ensemble des n-uplets &eacute;tudiants de la classe IG2. Soit R2 l'ensemble 
+      des n-uplets &eacute;tudiants du groupe 1 de la classe IG2. R1 - R2 donne 
+      l'ensemble des n-uplets &eacute;tudiants du groupe 2 de la classe IG2 ( 
+      en supposant que IG2 ne poss&egrave;de que 2 groupes).</font></p>
+    <div align="justify"><font color="#0000CC" size="4"><strong><font color="#000080"><a name="different"></a>3- 
+      OP&eacute;rateurs Binaires de Sch&eacute;mas diff&eacute;rents</font></strong></font></div>
+    <div align="justify"><font color="#000080" size="4"><strong>3.1 
+      Produit Cartesien</strong></font></div>
+    <blockquote>
+      <blockquote> 
+        <div align="justify"><strong><font color="#000000" size="4">R 
+          * S </font></strong></div>
+      </blockquote>
+    </blockquote>
+    <p><font size="4">Il faut que les deux relations SR et 
+      SS soient disjoints. La relation a un sch&eacute;ma qui est l'union des 
+      Sch&eacute;mas SR et SS et dont les n-uplets sont la concat&eacute;nation 
+      des n-uplets de R avec ceux de S.</font></p>
+    <p><font size="4">Si x est le degr&eacute; de R et y 
+      est le degr&eacute; de S alors x + y est le degr&eacute; de R*S.</font></p>
+    <p><font size="4">Si a est la cardinalit&eacute; de R 
+      et b est la cardinalit&eacute; de S alors a*b est la cardinalit&eacute; 
+      de R*S.</font></p>
+    <p><font size="4"><strong>Exemple:</strong></font></p>
+    <p><font size="4">R1(nom,&acirc;ge) </font></p>
+    <blockquote>
+      <table width="41%" border="1">
+        <tr> 
+          <td><font size="4">Nom</font></td>
+          <td><font size="4">Age</font></td>
+        </tr>
+        <tr> 
+          <td><font size="4">A</font></td>
+          <td><font size="4">20</font></td>
+        </tr>
+        <tr> 
+          <td><font size="4">B</font></td>
+          <td><font size="4">24</font></td>
+        </tr>
+        <tr> 
+          <td><font size="4">C</font></td>
+          <td><font size="4">18</font></td>
+        </tr>
+      </table>
+    </blockquote>
+    <p><font size="4">R2(prenom,taille,poids)</font></p>
+    <table width="75%" border="1">
+      <tr> 
+        <td><font size="4">Prenom</font></td>
+        <td><font size="4">taille</font></td>
+        <td><font size="4">poids</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">X</font></td>
+        <td><font size="4">1.7</font></td>
+        <td><font size="4">60</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">Y</font></td>
+        <td><font size="4">1.6</font></td>
+        <td><font size="4">65</font></td>
+      </tr>
+    </table>
+    <p><font size="4">R3 &lt;&#8212; R1*R2</font></p>
+    <p><font size="4">R3(nom,&acirc;ge,prenom,taille,poids)</font></p>
+    <table width="75%" border="1">
+      <tr> 
+        <td><font size="4">Nom</font></td>
+        <td><font size="4">Age</font></td>
+        <td><font size="4">Prenom</font></td>
+        <td><font size="4">Taille</font></td>
+        <td><font size="4">Poids</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">A</font></td>
+        <td><font size="4">20</font></td>
+        <td><font size="4">X</font></td>
+        <td><font size="4">1.7</font></td>
+        <td><font size="4">60</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">A</font></td>
+        <td><font size="4">20</font></td>
+        <td><font size="4">Y</font></td>
+        <td><font size="4">1.6</font></td>
+        <td><font size="4">65</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">B</font></td>
+        <td><font size="4">24</font></td>
+        <td><font size="4">X</font></td>
+        <td><font size="4">1.7</font></td>
+        <td><font size="4">60</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">B</font></td>
+        <td><font size="4">24</font></td>
+        <td><font size="4">Y</font></td>
+        <td><font size="4">1.6</font></td>
+        <td><font size="4">65</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">C</font></td>
+        <td><font size="4">18</font></td>
+        <td><font size="4">X</font></td>
+        <td><font size="4">1.7</font></td>
+        <td><font size="4">60</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">C</font></td>
+        <td><font size="4">18</font></td>
+        <td><font size="4">Y</font></td>
+        <td><font size="4">1.6</font></td>
+        <td><font size="4">65</font></td>
+      </tr>
+    </table>
+    <p><font color="#000080" size="4"><strong>3.2- Jointure</strong></font></p>
+    <blockquote>
+      <blockquote> 
+        <p><font size="4">JOIN(R,S,Condition)</font></p>
+        <blockquote>
+          <p><font size="4">ou</font></p>
+        </blockquote>
+        <p><font size="4">R * (condition) S</font></p>
+      </blockquote>
+    </blockquote>
+    <p><font size="4">La jointure de deux relations n'est 
+      possible que lorsqu'elles ont chacune une ou plusieurs colonnes d&eacute;finies 
+      sur le m&ecirc;me domaine. La jointure se fait alors selon une ou plusieurs 
+      de ces colonnes, appel&eacute;es de jointure.</font></p>
+    <p><font size="4">La condition de jointure peut &ecirc;tre 
+      une &eacute;galit&eacute; entre les colonnes de jointure ou une in&eacute;galit&eacute; 
+      (&lt;,&gt;,&lt;= , &gt;= ou &lt;&gt;). Dans le premier cas, l'op&eacute;ration 
+      est app&eacute;l&eacute;e &eacute;qui-jointure et dans le s&eacute;cond 
+      cas, l'op&eacute;ration est appel&eacute;e th&eacute;ta-jointure. Si les 
+      deux op&eacute;randes d'une jointure sont identiques, l'op&eacute;ration 
+      est appel&eacute;e auto-jointure( jointure d'une relation avec elle m&ecirc;me).</font></p>
+    <p><font size="4">La jointure de deux relations R et 
+      S est une relation dont le d&eacute;gr&eacute; de R + le d&eacute;gr&eacute; 
+      de S. La cardinalit&eacute; est &eacute;gle au maximum le d&eacute;gr&eacute; 
+      de S et au minimum 0.</font></p>
+    <p><font size="4"><strong>&#8212;&gt; Remarque:</strong></font></p>
+    <p><font size="4">R * (Condition) S = SELECTION CONDITION 
+      (R*S)</font></p>
+    <p><font size="4"><strong>Exemple:</strong></font></p>
+    <p><font size="4">R1(A,B,C)</font></p>
+    <table width="46%" border="1">
+      <tr> 
+        <td><font size="4">A</font></td>
+        <td><font size="4">B</font></td>
+        <td><font size="4">C</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">9</font></td>
+        <td><font size="4">8</font></td>
+        <td><font size="4">7</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">6</font></td>
+        <td><font size="4">5</font></td>
+        <td><font size="4">4</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">3</font></td>
+        <td><font size="4">2</font></td>
+        <td><font size="4">1</font></td>
+      </tr>
+    </table>
+    <p><font size="4">R2(D,E)</font></p>
+    <table width="46%" border="1">
+      <tr> 
+        <td><font size="4">D</font></td>
+        <td><font size="4">E</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">3</font></td>
+        <td><font size="4">4</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">5</font></td>
+        <td><font size="4">6</font></td>
+      </tr>
+    </table>
+    <p><font size="4">Condition: Les tuples qui v&eacute;rifient 
+      la condition B&lt;=D.</font></p>
+    <p><font size="4">B et D doivent &ecirc;tre de m&ecirc;me 
+      domaine.</font></p>
+    <p><font size="4">R3 &lt;&#8212; JOIN(R1,R2,B &lt;= D)</font></p>
+    <p><font size="4">R3(A,B,C,D,E)</font></p>
+    <table width="75%" border="1">
+      <tr> 
+        <td><font size="4">A</font></td>
+        <td><font size="4">B</font></td>
+        <td><font size="4">C</font></td>
+        <td><font size="4">D</font></td>
+        <td><font size="4">E</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">6</font></td>
+        <td><font size="4">5</font></td>
+        <td><font size="4">4</font></td>
+        <td><font size="4">5</font></td>
+        <td><font size="4">6</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">3</font></td>
+        <td><font size="4">2</font></td>
+        <td><font size="4">1</font></td>
+        <td><font size="4">3</font></td>
+        <td><font size="4">4</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">3</font></td>
+        <td><font size="4">2</font></td>
+        <td><font size="4">1</font></td>
+        <td><font size="4">5</font></td>
+        <td><font size="4">6</font></td>
+      </tr>
+    </table>
+    <p><font color="#000080" size="4"><strong>3.3- Division 
+      </strong></font></p>
+    <blockquote>
+      <blockquote> 
+        <p><font size="4">R / S</font></p>
+        <blockquote>
+          <p><font size="4">ou</font></p>
+        </blockquote>
+        <p><font size="4">R&divide; S</font></p>
+        <blockquote>
+          <p><font size="4">ou</font></p>
+        </blockquote>
+        <p><font size="4">Div(R,S)</font></p>
+      </blockquote>
+    </blockquote>
+    <p><font size="4">Rest d&eacute;finie sur un sch&eacute;ma 
+      SR compos&eacute; des ensembles d'attributs X,Y ( SR= X UNION Y) et S est 
+      d&eacute;finie sur un Sch&eacute;ma SS compos&eacute; de l'ensemble d'attributs 
+      Y (SS= Y). La relation produite est d&eacute;finie sur le Sch&eacute;ma 
+      Sres (Sres= SR- SS=X) et comprend tous les n-uplets dont la concat&eacute;nation 
+      avec tous les n-uplets de S appatient &agrave; R (r&eacute;sultat X S ....R).</font></p>
+    <p><font color="#000080" size="4"><strong><a name="schema"></a>5- 
+      Sch&eacute;ma r&eacute;capitulatif des diff&eacute;rents op&eacute;rateurs</strong></font></p>
+    <p><font size="4">Voici un sch&eacute;ma qui englobe 
+      les diff&eacute;rentes r&eacute;presentations graphiques des op&eacute;rateurs 
+      de l'alg&egrave;bre relationnelle</font></p>
+    <blockquote>
+      <div align="justify"></div>
+      <div align="justify"><img name="ch6" src="ch6.jpg" width="485" height="396" border="0" alt=""></div>
+    </blockquote>
+    <p align="justify">&nbsp;</p>
+  </blockquote>
+  <p>&nbsp;</p>
+</div>
+<div align="center">
+  <p>&nbsp;</p>
+  <p class="Style1"><font color="#000080">Cours 
+    en ligne : Base de Donn&eacute;es</font></p>
+</div>
+<blockquote> 
+  <blockquote> 
+    <div id="Layer2" style="position:absolute; left:887px; top:115px; width:502px; height:25px; z-index:2"><a href="ACCUEILP.htm"><img src="acceuil.gif" width="60" height="21" border="0"></a> 
+      <a href="chapitre4.htm"><img src="previous_off.gif" width="21" height="21" border="0"></a> 
+      <a href="chapitre6.htm"><img src="next_off.gif" width="21" height="21" border="0"></a></div>
+    <hr align="left">
+    <p>&nbsp;</p>
+  </blockquote>
+  <p>&nbsp;</p>
+</blockquote>
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>chapitre5</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style type="text/css">
+<!--
+.Style1 {
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-size: 24px;
+}
+.Style2 {font-family: "Times New Roman", Times, serif}
+-->
+</style>
+</head>
+
+<body background = "backg2.jpg">
+<div class="Style2" id="Layer1" style="position:absolute; left:93px; top:150px; width:964px; height:512px; z-index:1"> 
+  <blockquote>
+    <p align="center"><font color="#99994D" size="5"><strong>Chapitre 
+      4 : La Normalisation</strong></font></p>
+    <p><font color="#000080" size="4"><strong>Objectif</strong></font></p>
+    <p><font size="4">Comprendre la Normalisation</font></p>
+    <p><font color="#000080" size="4"><strong>El&eacute;ments 
+      de Contenu </strong></font></p>
+    <p><font color="#000000" size="4">1- <a href="chapitre4.htm#introduction">Introduction</a></font></p>
+    <p><font size="4">2- <a href="chapitre4.htm#definition">D&eacute;finition 
+      de la Normalisation</a></font></p>
+    <p><font size="4">3- <a href="chapitre4.htm#anomalies">Les 
+      Anomalies de mise &agrave; jour</a></font></p>
+    <p><font size="4">4-<a href="chapitre4.htm#dependance"> Les D&eacute;pendances Fonctionnelles</a></font></p>
+    <p><font size="4">5- <a href="chapitre4.htm#processus">Processus 
+      de Normalisation</a></font></p>
+    <p>&nbsp;</p>
+    <p><font color="#000099" size="4"><strong><font color="#000080"><a name="introduction"></a>1- 
+      Introduction</font></strong></font></p>
+    <p><font size="4">La Normalisation constitue un ensemble 
+      des r&egrave;gles introduites dans le Mod&egrave;le Relationnel afin de 
+      garantir la coh&eacute;rence et l'integrit&eacute; dans la base de donn&eacute;es.</font></p>
+    <p><font size="4">L'application de ces r&egrave;gles 
+      se fait progressivement (Etape par Etape) lors de la conception de la structure 
+      de la base ( Schema de Relation de la BD).</font></p>
+    <p><font color="#000099" size="4"><strong><font color="#000080"><a name="definition"></a>2- 
+      D&eacute;finition de la Normalisation</font></strong></font></p>
+    <p align="justify"><font color="#000000" size="4">La 
+      Normalisation est un processus de conception dont le but est d'aboutir &agrave; 
+      des bases de donn&eacute;es coh&eacute;rentes et integres, en d'autres termes 
+      &agrave; des bases de donn&eacute;es ne contenant pas des anomalies de mise 
+      &agrave; jour. </font></p>
+    <p><font color="#000099" size="4"><strong><font color="#000080"><a name="anomalies" id="anomalies"></a>3- 
+      Les Anomalies de mise &agrave; jour</font></strong></font></p>
+    <p><font size="4">Soit la Relation non normalis&eacute;e 
+      suivante:</font></p>
+    <p><font size="4">Avion(<strong>numav</strong>,nomav,capacit&eacute;,localit&eacute;)</font></p>
+  </blockquote>
+  <table width="75%" height="138" border="1">
+    <tr> 
+      <td>numav</td>
+      <td>nomav</td>
+      <td>capacit&eacute;</td>
+      <td>localit&eacute;</td>
+    </tr>
+    <tr> 
+      <td>100</td>
+      <td>Airbus</td>
+      <td>250</td>
+      <td>Tunis</td>
+    </tr>
+    <tr> 
+      <td>101</td>
+      <td>Airbus</td>
+      <td>250</td>
+      <td>Sfax</td>
+    </tr>
+    <tr> 
+      <td>104</td>
+      <td>BO707</td>
+      <td>150</td>
+      <td>Tunis</td>
+    </tr>
+    <tr> 
+      <td>105</td>
+      <td>BO707</td>
+      <td>150</td>
+      <td>Sfax</td>
+    </tr>
+    <tr> 
+      <td>106</td>
+      <td>BO900</td>
+      <td>200</td>
+      <td>Monastir</td>
+    </tr>
+  </table>
+  <blockquote>
+    <p align="justify"><font size="4">3 Types des Anomalies 
+      peuvent se produire lors de la manipulation de la Relation Avion:</font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>3.1- 
+      Anomalie d'insertion</strong></font></p>
+    <p align="justify"><font size="4">Cette Anomalie se manifeste 
+      lorqu'on ne peut pas ajouter des donn&eacute;es dans la base alors qu'on 
+      devrait &ecirc;tre capable de le faire.</font></p>
+    <p align="justify"><font size="4">EXEMPLE:</font></p>
+    <p align="justify"><font size="4">Supposons qu'un nouveau 
+      type d'avion est con&ccedil;u e qu'on veut ajouter cette nouvelle information 
+      &agrave; la base ( le nomav et la capacit&eacute;). En absence de numero 
+      avion ( numav), on est emp&ecirc;ch&eacute;par la contrainte d'integrit&eacute; 
+      Entit&eacute;. </font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>3.2- 
+      Anomalie de Modification</strong></font></p>
+    <p align="justify"><font color="#000000" size="4">Ceete 
+      anomalie se manifeste dans le cas suivant : si on veut modifier la valeur 
+      d'un attribut dans la base alors on serait amen&eacute; &agrave; op&eacute;rer 
+      N fois cette op&eacute;ration. Cette anomalie entra&icirc;ne une perte du 
+      temps d&ucirc;e &agrave; la redondance de donn&eacute;es et une &eacute;ventuelle 
+      incoh&eacute;rence de la base d&ucirc;e au risque d'oublier la modification 
+      de cetains tuples.</font></p>
+    <p align="justify"><font color="#000000" size="4">EXEMPLE: 
+      </font></p>
+    <p align="justify"><font color="#000000" size="4">Modifier 
+      la capacit&eacute; des Avions BO707 ( se fait en 2 fois ).</font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>3.3- 
+      Anomalie de Suppression</strong></font></p>
+    <p align="justify"><font size="4">Suite &agrave; la Suppression 
+      de certaines donn&eacute;es, il y a perte d'autres donn&eacute;es.</font></p>
+    <p align="justify"><font size="4">EXEMPLE:</font></p>
+    <p align="justify"><font size="4">Supposons qu'on veut 
+      supprimer l'avion BO900. Toute information sur ce type d'avion telle que 
+      la capacit&eacute; sera perdue.</font></p>
+    <p align="justify">&nbsp;</p>
+    <p><font color="#000099" size="4"><strong><font color="#000080"><a name="depondance"></a>4- 
+      Les D&eacute;pendances Fonctionnelles</font></strong></font></p>
+    <p><font color="#000000" size="4">4.1- D&eacute;finition</font></p>
+    <p><font color="#000000" size="4">Etant donn&eacute; 
+      une relation R d&eacute;finie de la mani&egrave;re suivante qui contient 
+      entre autre A et B : R(...,A,...,B,...).</font></p>
+    <p><font color="#000000" size="4">On dit qu'il existe 
+      une DF entre l'attribut A et B si et seulement si &agrave; toute valeur 
+      de A, on ne peut pas attribuer &agrave; un instant donn&eacute; qu'une seule 
+      valeur de B.</font></p>
+    <p><font color="#000000" size="4">On note :</font></p>
+    <p><font color="#000000" size="4">A&#8212;&gt; B et on 
+      dit :</font></p>
+    <blockquote>
+      <p><font color="#000000" size="4">- B d&eacute;pend 
+        fonctionnellement de A.</font></p>
+      <p><font color="#000000" size="4">- A d&eacute;termine 
+        fonctionnellement B.</font></p>
+      <p><font color="#000000" size="4">- A donne B.</font></p>
+      <p><font color="#000000" size="4">- A est appel&eacute; 
+        d&eacute;terminant.</font></p>
+      <p><font color="#000000" size="4">- B est appel&eacute; 
+        d&eacute;termin&eacute;.</font></p>
+    </blockquote>
+    <p><font color="#000000" size="4">REMARQUES:</font></p>
+    <p align="justify"><font color="#000000" size="4">1) 
+      On dit qu'il y a une d&eacute;pendance fonctionnelle partielle entre A et 
+      B si et seulement si il existe A' inclus dans A tel que A' &#8212;&gt; B. 
+      Sinon on dit qu'il y a une d&eacute;pendance fonctionnelle totale ( &eacute;lementaire).</font></p>
+    <p align="justify"><font color="#000000" size="4">EXEMPLE:</font></p>
+    <p align="justify"><font color="#000000" size="4">Employ&eacute;(<strong><u>codemp</u></strong>,<strong><u>cod_dep</u></strong>,nom_emp,desc_dep)</font></p>
+    <p align="justify"><font color="#000000" size="4">codemp,cod_dep 
+      &#8212;&gt; desc_dep n'est pas totale( &eacute;lementaire) car </font></p>
+    <p align="justify"><font color="#000000" size="4">cod_dep 
+      &#8212;&gt; desc_dep.</font></p>
+    <p align="justify"><font color="#000000" size="4">2) 
+      Une DF A&#8212;&gt;B est dite directe ssi il n'existe aucun attribut X de 
+      R tel que A&#8212;&gt; X et X &#8212;&gt; B. Sinon elle es dite Transitive.</font></p>
+    <p align="justify"><font color="#000000" size="4">EXEMPLE:</font></p>
+    <p align="justify"><font color="#000000" size="4">dans 
+      la Relation suivante : Produit(<strong><u>codp</u>,</strong>designation, 
+      cod_tva,taux_tva), la d&eacute;pendance suivante : codp &#8212;&gt; taux_tva 
+      n'est pas directe car codp &#8212;&gt; cod_tva et cod_tva &#8212;&gt; taux_tva.</font></p>
+    <p align="justify"><font color="#000000" size="4">3) 
+      Une cl&eacute; condidate d'une Relation R d&eacute;termine fonctionnellement 
+      tous les autres attributs. Pour que la Relation soit normalis&eacute;e, 
+      ces d&eacute;pendances doivent &ecirc;tre &eacute;lementaires( non partielles) 
+      et directes ( non transitives).</font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>4.2- 
+      Propri&eacute;t&eacute;s des D&eacute;pendances Fonctionnelles ( Axiomes 
+      d'Amstrong)</strong></font></p>
+    <p align="justify"><strong><font color="#000000" size="4">- 
+      La R&eacute;flexivit&eacute; : </font></strong><font color="#000000" size="4">A&#8212;&gt; 
+      A et s'il existe B inclus dans A alors A&#8212;&gt; B</font></p>
+    <p align="justify"><strong><font color="#000000" size="4">- 
+      L'augmentation : </font></strong><font color="#000000" size="4">Si 
+      A &#8212;&gt; B alors A,C &#8212;&gt; B. </font></p>
+    <p align="justify"><font color="#000000" size="4">- <strong> La Transitivit&eacute; : </strong>Si A &#8212;&gt; B et B&#8212;&gt; C alors 
+      A&#8212;&gt; C.</font></p>
+    <p align="justify"><font color="#000000" size="4">- <strong>La 
+      pseudo-transivit&eacute;</strong> : si A&#8212;&gt; B et B,C&#8212;&gt; 
+      D alors A,C&#8212;&gt; D </font></p>
+    <p align="justify"><font color="#000000" size="4">- <strong>L'union</strong> : si on a A &#8212;&gt; B et A &#8212;&gt; C alors A &#8212;&gt; B,C</font></p>
+    <p align="justify"><font color="#000000" size="4">REMARQUES:</font></p>
+    <p align="justify"><font color="#000000" size="4">- La 
+      Fermeture transitive F+ d'un ensemble F de D&eacute;pendances fonctionnelles 
+      est compos&eacute;e de l'ensemble de d&eacute;pendances fonctionnelles de 
+      F augment&eacute; des d&eacute;pendances fonctionnelles transitives d&eacute;duites.</font></p>
+    <p align="justify"><font color="#000000" size="4">- La 
+      Fermeture de F est l'ensemble de DFs par l'application des axiomes d'Amstrong 
+      sur l'ensemble F.</font></p>
+    <p align="justify"><font color="#000000" size="4">- La 
+      Couverture Minimale : c'est l'ensemble des d&eacute;pendances fonctionnelles 
+      duquel on a &eacute;limin&eacute; toutes les DFs redondantes.</font></p>
+    <p><font color="#000099" size="4"><strong><font color="#000080"><a name="processus"></a>5- 
+      Processus de Normalisation</font></strong></font></p>
+    <p align="justify"><font size="4">Le processus de Normalisation 
+      conduit &agrave; la d&eacute;composition de la relation initiale en un certain 
+      nombre d'autres relations en appliquant les r&egrave;gles de Normalisation 
+      et ce dans l'objectif de:</font></p>
+    <p align="justify"><font size="4">- Minimiser les onn&eacute;es 
+      redondantes.</font></p>
+    <p align="justify"><font size="4">- Eviter les anomalies 
+      de mise &agrave; jour.</font></p>
+    <p align="justify"><font size="4">- R&eacute;duire les 
+      donn&eacute;es incoh&eacute;rentes.</font></p>
+    <p align="justify"><font size="4">- Concevoir des structures 
+      de donn&eacute;es qui facilitent la maintenance.</font></p>
+    <p align="justify"><font size="4">Les diff&eacute;rentes 
+      formes normales sont d&eacute;pendantes et structur&eacute;es. En effet 
+      une relation ne peut &ecirc;tre en 2 &egrave;me forme normale que si elle 
+      est d&eacute;j&agrave; en premi&egrave;re forme normale.</font></p>
+    <p align="justify"><img name="NO1" src="NO1.gif" width="600" height="400" border="0" alt=""></p>
+    <p align="justify"><font color="#000099" size="4"><strong><font color="#000080">5.1- 
+      Les Formes Normales d'une Base de Donn&eacute;es.</font></strong></font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>5.1.1 
+      - 1 &egrave;re Forme Normale (1NF)</strong></font></p>
+    <p align="justify"><font size="4">Une relation est dite 
+      en 1NF si et seulement si:</font></p>
+    <blockquote>
+      <p align="justify"><font size="4">- Elle poss&egrave;de 
+        une Cl&eacute;.</font></p>
+      <p align="justify"><font size="4">- Tous les attributs 
+        sont atomiques.</font></p>
+    </blockquote>
+    <p align="justify"><font size="4">Un attribut atomique 
+      est un attribut n'ayant &agrave; un instant qu'une seule valeur et ne regroupant 
+      pas un ensemble de valeurs.</font></p>
+    <p align="justify"><font size="4"><strong><em>EXEMPLE 
+      </em></strong></font></p>
+    <p align="justify"><font size="4">Employe (<strong> <u>codemp</u></strong>,nomemp,caracteristiques)</font></p>
+  </blockquote>
+  <table width="75%" border="1">
+    <tr> 
+      <td><blockquote> 
+          <blockquote> 
+            <p>codemp</p>
+          </blockquote>
+        </blockquote></td>
+      <td><blockquote> 
+          <blockquote> 
+            <p>nomemp</p>
+          </blockquote>
+        </blockquote></td>
+      <td><blockquote> 
+          <blockquote> 
+            <p>caracteristiques</p>
+          </blockquote>
+        </blockquote></td>
+    </tr>
+    <tr> 
+      <td><blockquote> 
+          <blockquote> 
+            <p>E01</p>
+          </blockquote>
+        </blockquote></td>
+      <td><blockquote> 
+          <blockquote> 
+            <p>Ali</p>
+          </blockquote>
+        </blockquote></td>
+      <td><blockquote> 
+          <blockquote> 
+            <p>Analyste,12/01/98</p>
+          </blockquote>
+        </blockquote></td>
+    </tr>
+    <tr> 
+      <td><blockquote> 
+          <blockquote> 
+            <p>E02</p>
+          </blockquote>
+        </blockquote></td>
+      <td><blockquote> 
+          <blockquote> 
+            <p>Mohamed</p>
+          </blockquote>
+        </blockquote></td>
+      <td><blockquote> 
+          <blockquote> 
+            <p>Programmeur,30/11/98</p>
+          </blockquote>
+        </blockquote></td>
+    </tr>
+  </table>
+  <blockquote>
+    <p align="justify"><font size="4">On constate que les 
+      valeurs de l'attribut caracteristiques sont h&eacute;trog&egrave;nes ( appartiennent 
+      &agrave; plusieurs domaines et donc non atomiques.</font></p>
+    <p align="justify"><font size="4">Pour que la Relation 
+      soit en 1NF alors :</font></p>
+    <p align="justify"><font size="4">Employe(<strong><u>codemp</u></strong>,nomemp,fonction,date_embauche)</font></p>
+  </blockquote>
+  <table width="75%" border="1">
+    <tr> 
+      <td>codemp</td>
+      <td>nomemp</td>
+      <td>fonction</td>
+      <td>date_embauche</td>
+    </tr>
+    <tr> 
+      <td>E01</td>
+      <td>Ali</td>
+      <td>Analyste</td>
+      <td>12/01/98</td>
+    </tr>
+    <tr> 
+      <td>E02</td>
+      <td>Mohamed</td>
+      <td>Programmeur</td>
+      <td>30/11/98</td>
+    </tr>
+  </table>
+  <blockquote>
+    <p><font size="4">- Le passage d'une Relation non Normalis&eacute;e 
+      &agrave; une relation normalis&eacute;e en 1NF se fait en rendant chaque 
+      attribut atomique.</font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>5.1.2 
+      - 2 &egrave;me Forme Normale (2NF)</strong></font></p>
+    <p align="justify"><font color="#000000" size="4">Une 
+      Relation est dite en 2NF ssi</font></p>
+    <blockquote>
+      <p align="justify"><font color="#000000" size="4">- 
+        Elle est en 1NF.</font></p>
+      <p align="justify"><font color="#000000" size="4">- 
+        Tous ses D&eacute;pendances Fonctionnelles sont totales ( Elementaires).</font></p>
+    </blockquote>
+    <p align="justify"><font color="#000000" size="4"><strong><em>EXEMPLE</em></strong></font></p>
+    <p align="justify"><font color="#000000" size="4">Employe(<strong><u>codemp</u></strong>,<strong>cod_dep</strong>,nomemp,desc_dep,adresse).</font></p>
+    <p align="justify"><font size="4">Cette Relation est 
+      en 1NF mais elle n'est pas en 2NF car il existe des DFs non totales telles 
+      que :</font></p>
+    <p align="justify"><font size="4">codemp,cod_dep &#8212;&gt; 
+      desc_dep</font></p>
+    <p align="justify"><font size="4">cod_emp,cod_dep &#8212;&gt; 
+      nomemp </font></p>
+    <p align="justify"><font size="4">cod_emp,cod_dep &#8212;&gt; 
+      adresse</font></p>
+    <p align="justify"><font size="4">La solution r&eacute;side 
+      dans la d&eacute;composition de la Relation Employ&eacute; en 2 Relations</font></p>
+    <p align="justify"><font size="4">Employ&eacute;(<strong><u>codemp</u></strong>,nom,adresse,#cod_dep)</font></p>
+    <p align="justify"><font size="4">D&eacute;partement(<strong><u>cod_dep</u></strong>,desc_dep).</font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>5.1.3- 
+      La 3 &egrave;me Forme Normale (3NF)</strong></font></p>
+    <p align="justify"><font size="4">Une Relation est en 
+      3NF ssi</font></p>
+    <blockquote>
+      <p align="justify"><font size="4">- Elle est en 2NF.</font></p>
+      <p align="justify"><font size="4">- Toutes les DFs 
+        sont directes ( tous les attributs non cl&eacute;s d&eacute;pendent directement 
+        de la cl&eacute;).</font></p>
+    </blockquote>
+    <p align="justify"><font size="4"><strong><em>EXEMPLE</em></strong></font></p>
+    <p align="justify"><font size="4">produit(<u><strong>codp</strong></u>,designation,cod_tva,taux_tva).</font></p>
+    <p align="justify"><font size="4">Cette relation est 
+      en 1NF , en 2NF mais elle n'est pas en 3NF car </font></p>
+    <p align="justify"><font size="4">codp&#8212;&gt; taux_tva 
+      est une DF transitive( codp&#8212;&gt; cod_tva et cod_tva &#8212;&gt; taux_tva).</font></p>
+    <p align="justify"><font size="4">Solution:</font></p>
+    <p align="justify"><font size="4">D&eacute;composition 
+      de la Relation en 2 Relations :</font></p>
+    <p align="justify"><font size="4">produit(<strong><u>codp</u></strong>,designation,#cod_tva) 
+      </font></p>
+    <p align="justify"><font size="4">Tva(<strong><u>cod_tva</u></strong>,taux_tva).</font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>5.1.4- 
+      La Forme Normale Boyce Codd (BCNF)</strong></font></p>
+    <p align="justify"><font size="4">Une Relation est dite 
+      en BCNF si et seulement si</font></p>
+    <blockquote> 
+      <blockquote>
+        <p align="justify"><font size="4">- Elle est en 3NF</font></p>
+        <p align="justify"><font size="4">- et Tout attribut 
+          non cl&eacute; n'est pas source de DF vers une partie de la cl&eacute;. 
+          En d'autrestermes aussi tout d&eacute;terminant est une cl&eacute; condidate.</font></p>
+      </blockquote>
+    </blockquote>
+    <p align="justify"><font size="4">EXEMPLE:</font></p>
+    <p align="justify"><font size="4">Enseignement(<u><strong>etudiant,matiere</strong></u>,professeur)</font></p>
+    <p align="justify"><font size="4">On suppose que le professeur 
+      n'enseigne qu'une seule mati&egrave;re.</font></p>
+    <p align="justify"><font size="4">Etant en 3NF, cette 
+      Relation n'est pas en BCNF.</font></p>
+    <p align="justify"><font size="4">SOLUTION:</font></p>
+    <p align="justify"><font size="4">R1(<strong><u>professeur</u></strong>,matiere)</font></p>
+    <p align="justify"><font size="4">R2(<strong><u>etudiant,professeur</u></strong>).</font></p>
+    <p align="justify"><font color="#000080" size="4"><strong>5.2- 
+      D&eacute;composition</strong></font></p>
+    <p align="justify"><font color="#000033" size="4">- La 
+      d&eacute;composition est une op&eacute;ration qui consiste &agrave; remplacer 
+      un Sch&eacute;ma de Relation R par plusieurs Relations R1,R2,...Rp tel que 
+      tous les attributs de la relation R apparaissent dans la r&eacute;union 
+      des relations R1,R2,...Rp.</font></p>
+    <p align="justify"><font color="#000000" size="4">- Le 
+      but de la d&eacute;composition est d'&eacute;tablir des relations normalis&eacute;es 
+      c'est &agrave; dire qui ne provoquent pas des anomalies de mise &agrave; 
+      jour et qui soient fid&egrave;les &agrave; la r&eacute;alit&eacute;. Cependant 
+      pour qu'une d&eacute;composition soit correcte, il faut tout d'abord qu'elle 
+      permette de retrouver les tuples de la relation d'origine et ceux-ci uniquement 
+      et d'autre part que les d&eacute;pendances fonctionnelles ne soient pas 
+      perdues suite &agrave; la dcomposition, on dira qu'elle pr&eacute;serve 
+      les d&eacute;pendances.</font></p>
+    <p align="justify">&nbsp;</p>
+    <blockquote>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+    </blockquote>
+    <p align="justify">&nbsp;</p>
+    <p align="justify"><font color="#000000" size="4"><br>
+      </font></p>
+    <p align="justify">&nbsp;</p>
+    <p>&nbsp;</p>
+  </blockquote>
+</div>
+<div align="center">
+  <p>&nbsp;</p>
+  <p class="Style1"><font color="#000080">Cours 
+    en ligne : Base de Donn&eacute;es</font></p>
+</div>
+<blockquote> 
+  <blockquote> 
+    <div id="Layer2" style="position:absolute; left:904px; top:104px; width:502px; height:25px; z-index:2"><a href="ACCUEILP.htm"><img src="acceuil.gif" width="60" height="21" border="0"></a> 
+      <a href="chapitre3.htm"><img src="previous_off.gif" width="21" height="21" border="0"></a> 
+      <a href="chapitre5.htm"><img src="next_off.gif" width="21" height="21" border="0"></a></div>
+    <hr align="left">
+    <p>&nbsp;</p>
+  </blockquote>
+  </blockquote>
+</body>
+</html>

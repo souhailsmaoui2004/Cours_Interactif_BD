@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style type="text/css">
+<!--
+.Style1 {
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-size: 24px;
+}
+.Style2 {font-family: "Times New Roman", Times, serif}
+-->
+</style>
+</head>
+
+<body background = "backg2.jpg">
+<div class="Style2" id="Layer1" style="position:absolute; left:95px; top:158px; width:874px; height:4316px; z-index:1"> 
+  <p align="center"><font color="#A3A352" size="6"><strong><font size="5">Chapitre3 
+    : Le Mod&egrave;le Relationnel</font></strong></font></p>
+  <blockquote>
+    <p><font size="5"><strong><font color="#000080">Objectif</font></strong></font></p>
+    <p>Introduire les Notions de base du Mod&egrave;le 
+      Relationnel</p>
+    <p><font color="#000080" size="4"><strong>El&eacute;ments 
+      de Contenu</strong></font></p>
+    <p><font size="4">1- <a href="chapitre3.htm#introduction">Introduction</a></font></p>
+    <p><font size="4">2- <a href="chapitre3.htm#concepts">Concepts 
+      du Mod&egrave;le Relationnel</a></font></p>
+    <blockquote>
+      <p><font size="4"> 2.1- <a href="#attribut">Attribut 
+        et Domaine</a></font></p>
+      <p><font size="4">2.2- <a href="chapitre3.htm#relation">Relation 
+        et Sch&eacute;ma de Relation</a></font></p>
+      <p><font size="4">2.3- <a href="chapitre3.htm#cle">Cl&eacute; 
+        d'une Relation</a></font></p>
+      <p><font size="4">2.4- <a href="chapitre3.htm#schema">Sch&eacute;ma 
+        de Base de Donn&eacute;es</a></font></p>
+    </blockquote>
+    <p><font size="4">3- <a href="chapitre3.htm#contraintes">Les 
+      Contraintes d'Integrit&eacute;</a></font></p>
+    <p>&nbsp;</p>
+    <p align="justify"><font color="#0000CC" size="4"><strong><font color="#000080"><a name="introduction"></a>1- 
+      Introduction</font></strong></font></p>
+    <p align="justify"><font size="4">Le Mod&egrave;le Relationnel 
+      a &eacute;t&eacute; propos&eacute; par E.F.CODD EN 1970. Il est souvent 
+      consider&eacute; comme le plus simple et le plus &eacute;legant des mod&egrave;les. 
+      Sa simplicit&eacute; est due &agrave; une vision tabulaire des donn&eacute;es 
+      tr&egrave;s intuitive. Son &eacute;legance r&eacute;sulte de bases formelles 
+      issues de la th&eacute;orie math&eacute;matique des ensembles.</font></p>
+    <p align="justify"><font size="4">Les Objectifs du Mod&egrave;le 
+      Relationnel &eacute;taient diff&eacute;rents de ceux des mod&egrave;les 
+      R&eacute;seau et hi&eacute;rarchique : Parmi les lacunes de ces mod&egrave;les 
+      auxquelles E.F.Codd souhaitait apporter une solution nous en retenons 2 
+      :</font></p>
+  </blockquote>
+  <div align="justify"></div>
+  <blockquote> 
+    <blockquote> 
+      <p align="justify"><font size="4">- Permettre un haut 
+        degr&eacute; d'ind&eacute;pendance entre les applications ( programmes, 
+        interfaces) et la repr&eacute;sentation interne des donn&eacute;es( fichiers, 
+        chemin d'acc&egrave;s).</font></p>
+      <p align="justify"><font size="4">- Etablir une base 
+        solide pour traiter les probl&egrave;mes de cohrence et de redondance 
+        des donn&eacute;es.</font></p>
+    </blockquote>
+    <p align="justify"><font size="4">Le Mod&egrave;le Relationnel 
+      pr&eacute;sente &eacute;galement de nombreux avantages dus au fait qu'il 
+      est bas&eacute; sur la th&eacute;orie des ensembles : langage de manipulation 
+      de donn&eacute;es ensembliste gr&acirc;ce &agrave; l'alg&egrave;bre relationnelle 
+      et gr&acirc;ce &agrave; des langages assertionnels qui permettent de sp&eacute;cifier 
+      ce que l'on souhaite obtenir sans dire comment l'obtenir. Le SGBD est responsable 
+      de la politique d'ex&eacute;cution des req&ucirc;etes.</font></p>
+    <p align="justify"><font size="4"><strong><font color="#0000CC"><font color="#000080"><a name="concepts"></a>2- 
+      Concepts du mod&egrave;le (1)</font></font></strong></font></p>
+    <p align="justify"><font color="#000080" size="4"><strong><a name="attribut"></a>2.1- 
+      Attribut et Domaine</strong></font></p>
+    <p align="justify">- <strong>Attribut</strong> : nom donn&eacute; &agrave; une colonne d'une table (exemple : cote, Titre, 
+      Editeur, etc.). La premi&egrave;re ligne de la table comporte ses attributs.</p>
+    <p align="justify">-  
+    <strong>Domaine</strong> : ensemble de valeurs possibles prises par un Attribut</p>
+    <p align="justify"> <strong>EXEMPLES :</strong><br>
+&#8226; ENTIER, REEL, CHAINES DE CARACTERES<br>
+&#8226; FRANC<br>
+&#8226; SALAIRE = {4 000..100 000}<br>
+&#8226; COULEUR= {BLEU, BLANC, ROUGE}<br>
+      </p>
+    <p align="justify">- REMARQUE: Chaque valeur du 
+      domaine est atomique et donc indivisible. Du point de vue de la r&eacute;alisation 
+      informatique, le domaine se restreint &agrave; la notion de type de donn&eacute;es. 
+      N&eacute;amoins, il est essentiel au cours de l'&eacute;tape de conception 
+      de d&eacute;finir clairement les domaines.</p>
+    <p align="justify"><font color="#0000CC" size="4"><strong><a name="relation"></a><font color="#000080">2.2- 
+      Relation et Sch&eacute;ma de Relation</font></strong></font></p>
+    <p align="justify"> <strong>- Relation (Table) 
+      </strong>: Vision tabulaire du Mod&egrave;le relationnel : Le donn&eacute;es 
+      (le sch&eacute;ma logique) sont repr&eacute;sent&eacute;es dans une table<br>
+      Exemple : la table OUVRAGES d&eacute;crit un ouvrage</p>
+    <p align="justify"><font size="4">OUVRAGES( <u>c&ocirc;te </u>,titre,editeur,ann&eacute;e,nbre_exemplaire,th&egrave;me)</font></p>
+    <p align="justify"> - <strong>Tuple</strong> (ou 
+      n-uplet ou Enregistrement) : nom donn&eacute; &agrave; une ligne comportant 
+      des valeurs saisies.</p>
+    <p align="justify"> Exemple :(tuple : 12TA ; R&eacute;seaux 
+      informatiques ; Eyrolles ; 1998 ; 10 ; Interconnexion r&eacute;seau Internet).<br>
+      - <strong>Cardinalit&eacute;</strong> : nombre de tuples de la relation. 
+      <br>
+&#8212;&gt; L &#8217;ordre des lignes et des colonnes n &#8217;est pas significatif<br>
+&#8212;&gt; Pas de lignes identiques<br>
+      - <strong>D&eacute;gr&eacute; de la Relation</strong> : c'est le nombre 
+      des Attributs</p>
+    <p align="justify"><strong>- Sch&eacute;ma de la 
+      Relation</strong> : Un sch&eacute;ma de Relation R, d&eacute;not&eacute; 
+      R(A1 : D1, A2: D2, ....,An : Dn) est un ensemble d'attributs. Chaque attribut 
+      Ai est le nom d'un R&ocirc;le jou&eacute; par son domaine Di dans le sch&eacute;ma 
+      de relation R. Un Sch&eacute;ma de relation R est utilis&eacute; pour d&eacute;crire 
+      une relation.</p>
+    <p align="justify">D&eacute;finir un sch&eacute;ma 
+      de relation revient &agrave; sp&eacute;cifier un nouveau type de donn&eacute;es 
+      &eacute;quivalent &agrave; un type RECORD en langage PASCAL. Le mod&egrave;le 
+      Relationnel n'autorise q'un seul niveau de structure. Il n'est pas possible 
+      par exemple de d&eacute;finir un attribut Adresse qui se d&eacute;compose 
+      en RUE, VILLE, CODE POSTAL.<br>
+      - EXEMPLE: le sch&eacute;ma de la table OUVRAGES est:</p>
+    <p align="justify">OUVRAGES (<u>cote </u>: texte, 
+      Titre: Texte, Editeur: Texte, NbExemplaire: Num&eacute;rique, Ann&eacute;e:Date, 
+      Th&egrave;me:Texte )</p>
+    <p align="justify"><br>
+      <strong><font color="#0000CC" size="4"><a name="cle"></a><font color="#000080">2.3- 
+      Cl&eacute; d'une Relation</font></font></strong><br>
+      - <strong><font size="4">Cl&eacute; Condidate</font></strong><font size="4">: 
+      Groupe d&#8217;attributs minimum qui d&eacute;termine un tuple d&#8217;une 
+      mani&egrave;re unique dans la table. <br>
+      - <strong>Cl&eacute; Primaire</strong>: c'est une cl&eacute; condidate retenue 
+      comme primaire pour une relation</font></p>
+    <p align="justify"><font size="4">- <strong>Cl&eacute; 
+      S&eacute;condaire</strong> : Une cl&eacute; secondaire est une cl&eacute; 
+      condidate qui n' a pas &eacute;t&eacute; retenue comme cl&eacute; primaire.</font></p>
+    <p align="justify">&#8212;&gt;Exemple de cl&eacute;s 
+      :<br>
+&#8226; la r&eacute;ference de produit<br>
+&#8226; Le num&eacute;ro &eacute;tudiant<br>
+      <br>
+&#8212;&gt; ATTENTION : la cl&eacute; se d&eacute;termine par rapport &agrave; 
+      toutes les valeurs possibles de l&#8217;attribut (ou les attributs) formant 
+      la cl&eacute; primaire, et surtout pas par rapport aux valeurs d&eacute;j&agrave; 
+      saisies.<br>
+&#8212;&gt; Remarque : toute table doit obligatoirement avoir une cl&eacute; 
+      primaire<br>
+&#8212;&gt;La cl&eacute; primaire est souvent soulign&eacute;e (et/ou mise 
+      en gras)<br>
+      <br>
+      <strong><font size="4">- Cl&eacute; &Eacute;trang&egrave;re : </font></strong>Nous 
+      appelons Cl&eacute; &eacute;trang&egrave;re toute cl&eacute; primaire apparaissant 
+      dans une autre table.<br>
+      Soit la relation R1(A,B, ...#S,...). On dit que S est une cl&eacute; &eacute;trang&egrave;re 
+      de R1 si et seulement si il y a une relation R2 ayant comme cl&eacute; primaire 
+      S. <br>
+      - EXEMPLE<br>
+      Produit(<strong><u>nump</u></strong>,designation,couleur, #numag)</p>
+    <p align="justify">magasin(<strong><u>numag</u></strong>,adresse,surface).</p>
+    <p align="justify"> &#8212;&gt;Attention : la notion 
+      de cl&eacute; est toujours li&eacute;e &agrave; une table, un attribut (ou 
+      groupe d&#8217;attributs) est cl&eacute; primaire, ou cl&eacute; &eacute;trang&egrave;re 
+      dans une table donn&eacute;e.</p>
+    <p align="justify"><font size="4"><strong><font color="#0000CC"><a name="schema"></a><font color="#000080">2.4- 
+      Sch&eacute;ma de Base de Donn&eacute;es</font></font></strong></font></p>
+    <p align="justify">Un sch&eacute;ma de base de 
+      donn&eacute;es Relationnelle S est un ensemble de Sch&eacute;ma de relation 
+      et un ensemble de contraintes d'integrit&eacute; CI.</p>
+    <p align="justify">S= {R1,R2,...Rp} + CI , avec 
+      Ri est un Sch&eacute;ma de la Relation Ri.<br>
+      <br>
+      </p>
+    <p><font color="#0000CC" size="4"><strong><font color="#000080"><a name="contraintes"></a>3- 
+      Les Contraintes d'integrit&eacute;</font></strong></font></p>
+    <p><br>
+      <font size="4">- Un des avantages des bases de donn&eacute;es par rapport 
+      &agrave; une gestion de fichiers traditionnelle r&eacute;side dans la possibilit&eacute; 
+      d&#8217;int&eacute;grer des contraintes que doivent v&eacute;rifier les 
+      donn&eacute;es &agrave; tout instant.<br>
+      - Une contrainte d'integrit&eacute; est l'ensemble de contraintes que doivent 
+      &ecirc;tre assur&eacute;es lors de la manipulation des donn&eacute;es afin 
+      de garantir la coh&eacute;rence et l'integrit&eacute; de la base.<br>
+      <br>
+      - Contraintes d &#8217;int&eacute;grit&eacute; &laquo; sont des assertions 
+      qui doivent &ecirc;tre v&eacute;rifi&eacute;es &agrave; tout moment par 
+      les<br>
+      donn&eacute;es contenues dans la base de donn&eacute;es &raquo;.<br>
+      <br>
+      On distingue entre plusieurs types de contraintes d'integrit&eacute;:<br>
+&#8212;&gt;Trois types de C.I. obligatoires<br>
+      <strong>- Contrainte d'integrit&eacute; domaine</strong>: Toute valeur inser&eacute;e 
+      pour un attribut appartient obligatoirement &agrave; son domaine.<br>
+      <br>
+      - <strong>Contrainte d &#8217;entit&eacute;</strong> :La cl&eacute; primaire 
+      d'une relation doit &ecirc;tre unique et obligatoirement d&eacute;termin&eacute;e 
+      (NOT NULL).<br>
+      - <strong>Contrainte d'integrit&eacute; r&eacute;f&eacute;rencielle (pour 
+      les cl&eacute;s &eacute;trang&egrave;res)</strong>: c&#8217;est une contrainte 
+      exprim&eacute;e entre deux tables. Tout tuple d &#8217;une relation faisant 
+      r&eacute;f&eacute;rence &agrave; une autre relation doit se r&eacute;f&eacute;rer 
+      &agrave; un tuple qui existe.<br>
+      <br>
+&#8226; Intuitivement, cela consiste &agrave; v&eacute;rifier que l'information 
+      utilis&eacute;e dans un tuple pour d&eacute;signer un autre tuple est valide, 
+      notamment si le tuple d&eacute;sign&eacute; existe bien<br>
+      <br>
+&#8226; En d&#8217;autre terme, quand on d&eacute;signe un attribut comme 
+      cl&eacute; &eacute;trang&egrave;re, les seules valeurs que peut prendre 
+      cet attribut sont celles qui sont d&eacute;j&agrave; saisies dans la table 
+      qu&#8217;il r&eacute;f&eacute;rence<br>
+      <br>
+      <br>
+&#8212;&gt;D'autres Contraintes optionnelles<br>
+      <strong>- Contraintes d'integrit&eacute; individuelles</strong> : Il s'agit 
+      de contraintes d'integrit&eacute; qu'on applique &agrave; chaque attribut 
+      individuellement telles que la liste des valeurs possibles, la plage de 
+      valeurs...</font></p>
+    <p><font size="4">EXEMPLE: 200000 &lt;= salaire &lt;=2000000</font></p>
+    <p><font size="4">- <strong>Contraintes d'integrit&eacute; 
+      intra-relation</strong> : Il s'agit des contraintes entre les attributs 
+      d'une m&ecirc;me relation</font></p>
+    <p><font size="4">EXEMPLE: produit(nump,designation,qte,seuil)</font></p>
+    <p><font size="4">qte &gt;= seuil ( pour ne pas avoir 
+      une rupture de stock)</font></p>
+    <p><font size="4">- Contraintes dynamiques : Elles concernent 
+      le passage de la base de donn&eacute;es d'un &eacute;tat &agrave; un autre.</font></p>
+    <p><font size="4">EXEMPLE: si on met &agrave; jour la 
+      table employ&eacute;, il faut que nouveau_salaire &gt;= ancien_salaire.</font></p>
+    <p><font size="4">&#8212;&gt; REMARQUE:<br>
+  - Les contraintes d&#8217;int&eacute;grit&eacute; sont v&eacute;rifi&eacute;es 
+      (ex&eacute;cut&eacute;es) &agrave; chaque mise &agrave; jour de la base 
+      de donn&eacute;es (ajout, suppression ou modification d&#8217;un tuple). 
+      Si, lors d&#8217;une mise &agrave; jour une contrainte n&#8217;est pas satisfaite, 
+      cette mise &agrave; jour ne peut pas avoir lieu.<br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      </font></p>
+    <p align="justify">&nbsp;</p>
+  </blockquote>
+</div>
+<div align="center">
+  <p>&nbsp;</p>
+  <p class="Style1"><font color="#000080">Cours 
+    en ligne : Base de Donn&eacute;es</font></p>
+</div>
+<blockquote> 
+  <blockquote> 
+    <div id="Layer2" style="position:absolute; left:917px; top:105px; width:502px; height:25px; z-index:2"><a href="ACCUEILP.htm"><img src="acceuil.gif" width="60" height="21" border="0"></a> 
+      <a href="entite.htm"><img src="previous_off.gif" width="21" height="21" border="0"></a> 
+      <a href="chapitre4.htm"><img src="next_off.gif" width="21" height="21" border="0"></a></div>
+    <hr align="left">
+    <p>&nbsp;</p>
+  </blockquote>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</blockquote>
+</body>
+</html>

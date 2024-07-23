@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style type="text/css">
+<!--
+.Style1 {
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-size: 24px;
+}
+.Style2 {font-family: "Times New Roman", Times, serif}
+-->
+</style>
+</head>
+
+<body background = "backg2.jpg">
+<div id="Layer1" style="position:absolute; left:93px; top:139px; width:816px; height:721px; z-index:1"> 
+  <blockquote class="Style2"> 
+    <p align="center"><font color="#99994D" size="5"><strong>Chapitre2 
+      : Les Mod&egrave;les de Donn&eacute;es</strong></font></p>
+    <p><font size="5"><strong><font color="#000080" size="4">Objectif</font></strong></font></p>
+    <p><font size="4">Donner l'&eacute;volution des mod&egrave;les 
+      de donn&eacute;es.</font></p>
+    <p><font color="#000080" size="4"><strong>El&eacute;ments 
+      de contenu</strong></font></p>
+    <p><font size="4">1-<a href="chapitre2.htm#introduction"> 
+      Introduction</a></font></p>
+    <p><font size="4">2-<a href="chapitre2.htm#modele1"> Le Mod&egrave;le Hi&eacute;rarchique</a></font></p>
+    <p><font size="4">3- <a href="chapitre2.htm#modele2">Le 
+      Mod&egrave;le en R&eacute;seau</a></font></p>
+    <p><font size="4">4- <a href="chapitre2.htm#modele3">Le 
+      Mod&egrave;le Relationnel</a></font></p>
+    <p><font size="4">5- <a href="chapitre2.htm#objet">Le 
+      Mod&egrave;le Objet</a></font></p>
+    <p><font size="5"><strong><font color="#0000CC" size="4"><font color="#000080"><a name="introduction"></a>1- 
+      Introduction</font></font></strong></font></p>
+    <p align="justify"><font size="4">Les applications informatiques 
+      et les utilisateurs ont conjointement subi d'importantes &eacute;volutions 
+      qualitatives et quantitatives.</font></p>
+    <p align="justify"><font size="4">Comme cons&eacute;quence 
+      de la vulgarisation de l'informatique dans divers domaines et la complexit&eacute; 
+      sans cesse croissante des applications &agrave; informatiser, il y a eu 
+      n&eacute;cessit&eacute; d'avoir une r&eacute;presentation interm&eacute;diaire 
+      entre le r&eacute;el per&ccedil;u et ce qui va &ecirc;tre effectivement 
+      implant&eacute;.</font></p>
+    <p align="justify"><font size="4">Cette r&eacute;presentation 
+      interm&eacute;diaire vise la r&eacute;duction de l'&eacute;cart entre le 
+      r&eacute;el &agrave; informatiser et son implantation physique finale, Et 
+      ce, en utilisant un mod&egrave;le de r&eacute;presentation.</font></p>
+    <p align="justify"><font size="4">Un mod&egrave;le est 
+      donc une r&eacute;presentation du monde r&eacute;el via des formalismes 
+      graphiques ou math&eacute;matiques.</font></p>
+    <p align="justify"><font size="4">Une m&eacute;thode 
+      de conception est un ensemble de mod&egrave;les avec un certain nombre de 
+      d&eacute;marches ou &eacute;tapes qui servent &agrave; guider progressivement 
+      la transformation de l'application vers l'implantation : c'est la mod&eacute;lisation.</font></p>
+    <p align="justify"><font size="4">Dans ce qui suit, on 
+      va pr&eacute;senter un aper&ccedil;u sur l'historique des mod&egrave;les 
+      de donn&eacute;es, les avantages et les inconv&eacute;nients de chacun.</font></p>
+    <p><font size="4"><strong><font color="#0000CC"><font color="#000080"><a name="modele1"></a>2- 
+      Le Mod&egrave;le Hi&eacute;rarchique</font></font></strong></font></p>
+    <p><font size="4">Les SGBDs du type hi&eacute;rarchique 
+      sont apparus les premiers sur le march&eacute;. IBM a commercialis&eacute; 
+      IMS-1 &quot;Information Management System&quot; en 1969 sur le syst&egrave;me 
+      360.</font></p>
+    <p><font size="4">La conception du Sch&eacute;ma dans 
+      le mod&egrave;le hi&eacute;rarchique d&eacute;pend uniquemend des liens 
+      1 : N (P&egrave;re-Fils).</font></p>
+    <p><font size="4">Une base de donn&eacute;es se pr&eacute;sente 
+      comme un arbre ordonn&eacute; dont les sommets sont les entoit&eacute;s 
+      et les arcs sont les liens. Une entit&eacute; peut avoir pluieurs fils, 
+      mais un fils ne peut avoir qu'un seul p&egrave;re.</font></p>
+    <p><font size="4">Les inconv&eacute;nients de ce mod&egrave;le 
+      :</font></p>
+    <ul>
+      <li><font color="#000000" size="4">Impossible de r&eacute;pr&eacute;senter 
+        directement les liens maill&eacute;s ( N:M plusieurs &agrave; plusieurs).</font></li>
+      <li><font color="#000000" size="4">Si on supprime l'un 
+        des p&egrave;res, la suppression de tous les fils est obligatoire. Ce 
+        qui engendre des anomalies pour les op&eacute;rations de stockage ( insertion,suppression,modification).</font></li>
+    </ul>
+    <p><strong><font color="#000000" size="4">Exemple</font></strong></p>
+    <p> <img name="m1" src="m1.gif" width="745" height="287" border="0" alt=""></p>
+    <p><font size="4">Cet Exemple met en &eacute;vidence 
+      les inconv&eacute;nients des repr&eacute;sentations hi&eacute;rarchiques. 
+      Prenons le cas o&ugrave; un projet est rattach&eacute; &agrave; plusieurs 
+      d&eacute;partements ( de telle sorte que le projet A devra avoir deux p&egrave;res 
+      : d&eacute;partement X et d&eacute;partement Y ) ce qui n'est pas pemis 
+      dans le mod&egrave;le hi&eacute;rarchique. On devra rajouter des arborescences 
+      avec des donn&eacute;es redondantes avec le risque de les avoir non coh&eacute;rentes. 
+      Le m&ecirc;me probl&egrave;me se pose lorsqu'un employ&eacute; travaille 
+      sur plusieurs projets.</font></p>
+    <p><font size="5"><strong><font color="#0000CC" size="4"><font color="#000080"><a name="modele2"></a>3- 
+      Le Mod&egrave;le en R&eacute;seau</font></font></strong></font></p>
+    <p><font size="4">Le mod&egrave;le en r&eacute;seau a 
+      ses origines dans le d&eacute;veloppement d'IDS (Integrated DataStore),d&eacute;velopp&eacute; 
+      parbachman et ses coll&egrave;gues de la &quot;General Electric Company&quot; 
+      et d'APL (Associated PL/1)), d&eacute;fini par Dodd et ses coll&egrave;gues 
+      de la &quot;General Motors&quot;.</font></p>
+    <p><font size="4">Une base de donn&eacute;es en r&eacute;seau 
+      se pr&eacute;sente comme un graphe ou r&eacute;seau. Dans ce graphe les 
+      entit&eacute;s sont r&eacute;li&eacute;es entre elles &agrave; l'aide de 
+      pointeurs logiques.</font></p>
+    <p><font size="4">Tous les types de lens sont possibles.</font></p>
+    <p><font size="4">Son inconv&eacute;nient r&eacute;side 
+      dans la fa&ccedil;on utilis&eacute;e pour acc&egrave;der aux donn&eacute;es. 
+      En effet, on peut naviguer tout au long de la base pour arriver &agrave; 
+      une information qui est &agrave; deux pas de la requ&ecirc;te.</font></p>
+    <p><font size="4"><strong>Exemple :</strong></font></p>
+    <p><img name="m1" src="m1.gif" width="745" height="287" border="0" alt=""></p>
+    <p><font size="5"><strong><font color="#0000CC" size="4"><font color="#000080"><a name="modele3"></a>4- 
+      Le Mod&egrave;le Relationnel</font></font></strong></font></p>
+    <p><font size="4">Le mod&egrave;le Relationnel a &eacute;t&eacute; 
+      d&eacute;fini par Edgar Codd en 1970 &agrave; IBM San Jos&eacute; en Californie.</font></p>
+    <p><font size="4">Le mod&egrave;le relationnel permet:</font></p>
+    <ul>
+      <li><font size="4"> Une description simple sous forme 
+        tabulaire des entit&eacute;s.</font></li>
+      <li><font size="4">Une mise &agrave; jour de donn&eacute;es 
+        sans anomalies de stockage.</font></li>
+      <li><font size="4">Une manipulation non proc&eacute;durale 
+        de donn&eacute;es.</font></li>
+      <li><font color="#000000" size="4">Une ind&eacute;pndance 
+        donn&eacute;es/traitements</font></li>
+    </ul>
+    <p><font size="5"><strong><font color="#0000CC" size="4"><font color="#000080"><a name="objet"></a>5- 
+      Le Mod&egrave;le Objet</font></font></strong></font></p>
+    <p><font size="4">Un SGBD associe une base d'objets &agrave; 
+      un langage de programmation orient&eacute; objets. Ce dernier est utilis&eacute; 
+      pour la d&eacute;finition du sch&egrave;ma de la base, la manipulation des 
+      objets et pour la codification des applications.</font></p>
+    <p><font size="4">Cette association langage-base d'objets 
+      permet de tirer profil aussi des avantages de la programmation orient&eacute;e 
+      objets que de ceux des bases de donn&eacute;es.</font></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p align="justify">&nbsp;</p>
+  </blockquote>
+</div>
+<div id="Layer2" style="position:absolute; left:880px; top:106px; width:502px; height:25px; z-index:2"><a href="ACCUEILP.htm"><img src="acceuil.gif" width="60" height="21" border="0"></a> 
+  <a href="introduction.htm"><img src="previous_off.gif" width="21" height="21" border="0"></a> 
+  <a href="chapitre3.htm"><img src="next_off.gif" width="21" height="21" border="0"></a></div>
+<div align="center">
+  <p>&nbsp;</p>
+  <p class="Style1"><font color="#000080">Cours 
+    en ligne : Base de Donn&eacute;es</font></p>
+</div>
+<blockquote> 
+  <blockquote> 
+    <hr align="left">
+    <p>&nbsp;</p>
+  </blockquote>
+</blockquote>
+</body>
+</html>

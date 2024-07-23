@@ -1,0 +1,154 @@
+<HTML>
+<HEAD>
+ <META HTTP-EQUIV="Content-Language" content="fr">
+ <META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+ <TITLE>QCM avec cases à cocher</TITLE>
+ <SCRIPT LANGUAGE="JavaScript">
+ <!-- cacher code
+ var cpt=0;
+ function test(nom,n) {
+  var rep=true;
+  if ( nom[0].checked==true) rep=true;
+  for (i=1; i<n; i++) { 
+    if (nom[i].checked==true) rep=false;
+	
+  }
+  
+    
+  if (nom[0].checked==false && nom[1].checked==false && nom[1].checked==false && nom[3].checked==false ) rep=false;
+  
+  return rep;
+ }
+ function test2(nom,n) {
+  var rep2=false;
+  if ( nom[0].checked==true &&  nom[1].checked==true &&  nom[2].checked==true && nom[3].checked==false  ) rep2=true;
+       if (nom[3].checked==true) rep2=false;
+	 
+    
+  if (nom[0].checked==false && nom[1].checked==false && nom[1].checked==false && nom[3].checked==false ) rep2=false;
+  
+  return rep2;
+ }
+ //fin du script. -->
+ </SCRIPT>
+</HEAD>
+
+<BODY background = "backg2.jpg">
+<H1>QCM : Le mod&egrave;le entit&eacute; association&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type=BUTTON name="bouton11" value="SCORT"
+  ONCLICK="if (true) {alert('votre scort est:'+ cpt*2 + '/10')} 
+          else {alert('Réponse fausse.')}">
+         
+<a href="ACCUEILP.htm"></a></H1>
+<HR>
+<FORM NAME="qcm1">
+<B>Question :</B><BR>
+Un attribut d'une entit&eacute; c'est  :<BR>
+<B>Réponses :</B>
+<BR>
+
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Une colonne de l'entit&eacute;<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Un champ de l'entit&eacute; 
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Une propri&eacute;t&eacute; de l'entit&eacute;<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Une valeur de l'entit&eacute;<BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test2(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm2">
+<B>Question :</B><BR>
+Une entit&eacute; peut avoir :<BR>
+<B>Réponses :</B>
+<BR><INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Une cl&eacute; &eacute;trang&egrave;re de valeur null<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Deux cl&eacute;s pour deux champs
+</INPUT>diff&eacute;rents
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Une cl&eacute; de valeur null
+</INPUT>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Uniquement 10 champs aux maximum 
+</INPUT>
+<BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm3">
+<B>Question :</B><BR>
+Une association r&eacute;flexive est : <BR>
+<B>Réponses :</B>
+<BR><INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+D&eacute;finie sur une seule entit&eacute;<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Est une association entre deux entit&eacute; <BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Est une association binaire
+</INPUT>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Est d&eacute;finie sur trois entit&eacute; cycliques
+<BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm4">
+<B>Question :</B><BR>
+Les cardinalit&eacute;s pr&eacute;cisent le rapport entre:<BR>
+<B>Réponses :</B>
+<BR><INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Les occurences des entit&eacute;s<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Les valeurs d'une entit&eacute;<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+ Les lignes des entit&eacute;s<BR>
+ <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+  Les propri&eacute;t&eacute;s des entit&eacute;s <BR>
+ <BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm1">
+<B>Question :</B><BR>
+Une association de type 1:N 1:N se transforme en mod&egrave;le physique en: <BR>
+<B>Réponses :</B>
+<BR><INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Une table avec une cl&eacute; primaire compos&eacute;e &nbsp;
+</INPUT>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Une table sans cl&eacute; primaire <BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0> 
+Une table avec deux cl&eacute;s primaires&nbsp;<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1> 
+Migration de cl&eacute;s primaires <BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+</BODY>
+</HTML>

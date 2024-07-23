@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style type="text/css">
+<!--
+.Style1 {font-family: "Times New Roman", Times, serif}
+.Style2 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 24px;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body background = "backg2.jpg">
+<div class="Style1" id="Layer1" style="position:absolute; left:88px; top:122px; width:889px; height:2641px; z-index:1"> 
+  <div align="justify"> 
+    <p align="center"><strong><font color="#9C9C4E" size="5">Chapitre 
+      6 : Le Langage SQL</font></strong></p>
+  </div>
+  <blockquote>
+    <div align="justify"><font size="5"><strong><font color="#000080" size="4">Objectif</font></strong></font></div>
+    <div align="justify"><font color="#333333" size="4">Introduire 
+      le langage SQL</font></div>
+    <div align="justify"><font color="#000080" size="4"><strong>Elements 
+      de contenu</strong></font></div>
+    <div align="justify"><font color="#333333" size="4">1-<a href="chapitre6.htm#historique"> 
+      Historique</a></font></div>
+    <div align="justify"><font color="#333333" size="4">2- 
+      <a href="chapitre6.htm#structure">Structure du Langage</a></font></div>
+    <div align="justify"><font color="#333333" size="4">3-<a href="chapitre6.htm#objets"> 
+      Les objets de base </a></font></div>
+    <blockquote>
+      <div align="justify"><font color="#333333" size="4">3.1-<a href="chapitre6.htm#tables"> 
+        Les Tables</a></font></div>
+      <div align="justify"><font color="#333333" size="4">3.2-<a href="chapitre6.htm#vues"> 
+        Les Vues</a></font></div>
+      <div align="justify"><font color="#333333" size="4">3.3- 
+        <a href="chapitre6.htm#utilisateur">Les Utilisateurs</a></font></div>
+      <div align="justify"><font color="#333333" size="4">3.4- 
+        <a href="chapitre6.htm#accelerateur">Les acc&eacute;lerateurs</a></font></div>
+    </blockquote>
+    <p><font color="#0000CC" size="4"><strong><font color="#000080"><a name="historique"></a>1- 
+      Historique</font></strong></font></p>
+    <p align="justify"><font color="#000000" size="4">Depuis 
+      l'apparition de la th&eacute;orie des bases de donn&eacute;es relationnelles 
+      en 1970, plusieurs laboratoires de recherche et universit&eacute;s ont intensifi&eacute; 
+      leurs travaux pour exp&eacute;rimenter cette th&eacute;orie.</font></p>
+    <p align="justify"><font color="#000000" size="4">Ainsi, 
+      IBM et l'universit&eacute; de Berkeley ont commenc&eacute; &agrave; developper 
+      leurs prototypes respectifs System R et INGRES.</font></p>
+    <p align="justify"><font color="#000000" size="4">Plusieurs 
+      langages ont ainsi fait leur apparition entre les ann&eacute;es 70 et 76 
+      dont les principaux sont QUEL et SEQUEL implant&eacute;s respectivement 
+      sur INGRES et System R .</font></p>
+    <p align="justify"><font color="#000000" size="4">SQUEL 
+      a connu des am&eacute;liorations pour devenir en 1980 SQL(Structured Query 
+      lANGUAGE) et a &eacute;t&eacute; commercialis&eacute; par ORACLE Corporation. 
+      SQL a &eacute;t&eacute; utilis&eacute; en 1981 et 1983 par les SGBDs d'IBM, 
+      SQL/DS et DB2.</font></p>
+    <p align="justify"><font color="#000000" size="4">En 
+      1986,une norme a &eacute;t&eacute; adopt&eacute;e par l'Institut National 
+      Am&eacute;ricain de Normalisation ANSI et englobait la version IBM de SQL, 
+      puis a &eacute;t&eacute; adopt&eacute;e par d'autres organismes de normalisation 
+      tels que ISO et X/Open en 1987.</font></p>
+    <p align="justify"><font color="#000000" size="4">La 
+      simplicit&eacute; du langage SQL, sa Richesse en fonctionnalit&eacute;s 
+      et sa normalisation sont les principales raisons de son succ&egrave;s.</font></p>
+    <p align="justify"><strong><font color="#0000CC" size="4"><font color="#000080"><a name="structure"></a>2- 
+      Structure du Langage</font></font></strong></p>
+    <p align="justify"><font color="#000033" size="4">Le 
+      langage SQL d'oracle concerne les commandes de d&eacute;finition, de manipulation 
+      et de contr&ocirc;le de donn&eacute;es.</font></p>
+  </blockquote>
+  <div align="justify"> 
+    <blockquote>&nbsp; </blockquote>
+  </div>
+  <blockquote> 
+    <p align="justify"><font color="#000033" size="4">&#8212;&gt; 
+      Langage de D&eacute;finition de Donn&eacute;es (LDD) : permet de d&eacute;crire 
+      la structure de la base de donn&eacute;es (tables, vues,champs,index...).</font></p>
+    <p align="justify"><font color="#000033" size="4">&#8212;&gt; 
+      Langage de Manipulation de Donn&eacute;es (LMD) : offre les op&eacute;rateurs 
+      relationnels et ensemblistes pour extraire et mettre &agrave; jour les donn&eacute;es 
+      d'une base.</font></p>
+    <p align="justify"><font color="#000033" size="4">&#8212;&gt; 
+      Langage de contr&ocirc;le de donn&eacute;es (LCD) : Permet de maintenir 
+      la confidentialit&eacute; et l'integrit&eacute; de donn&eacute;es . L'acc&eacute;s 
+      aux donn&eacute;es est prot&eacute;g&eacute; contre les usages malveillants.</font></p>
+    <p><font color="#0000CC" size="4"><strong><font color="#000080"><a name="objets"></a>3- 
+      Les Objets de Base</font></strong></font></p>
+    <p><font size="4">Avant de pr&eacute;senter quelques 
+      objets manipul&eacute;s dans le langage SQL, on d&eacute;finit la notion 
+      de Sch&eacute;ma.</font></p>
+    <p><font size="4">En effet, un sch&eacute;ma est un ensemble 
+      de structures de donn&eacute;es qui appartiennent &agrave; un utilisateur 
+      de la base de donn&eacute;es et porte son nom. De ce fait, un utilisateur 
+      ne peut avoir qu'un seul sch&eacute;ma.</font></p>
+    <p><font size="4">Parmi les objets de base manipul&eacute;s 
+      en SQL, on cite les tables , les vues , les utilisateurs avec leurs privil&egrave;ges 
+      d'acc&egrave;s et les acc&eacute;lerateurs.</font></p>
+    <p><font size="4">Dans ORACLE, on ne peut pas d&eacute;finir 
+      explicitement une base de donn&eacute;es mais l'ensemble de tables et de 
+      vues cr&eacute;es par un utisateur constituent la base par d&eacute;faut. 
+      Cependant, tout privil&egrave;ge et l'autorisation de le faire et en pr&eacute;fixant 
+      les noms des tables et des vues par le om deleurs propri&eacute;taires.</font></p>
+    <p><font color="#0000CC" size="4"><strong><a name="tables"></a><font color="#000080">3.1- 
+      Les Tables </font></strong></font></p>
+    <p><font size="4">Une table est une structure de donn&eacute;es 
+      qui maintient les donn&eacute;es d'une base de donn&eacute;es relationnelle. 
+      Elle est compos&eacute;e de lignes et de colonnes.</font></p>
+    <p><font size="4">Une table peut d&eacute;crire une entit&eacute; 
+      du monde r&eacute;el ou une relation entre 2 entit&eacute;s.</font></p>
+    <p><font size="4">Le nombre de colonnes d&eacute;termine 
+      le d&eacute;gr&eacute; de la table.</font></p>
+    <p><font size="4"><strong>Exemple:</strong></font></p>
+    <p><font size="4">Soit la Table ETUDIANT</font></p>
+    <table width="75%" border="1">
+      <tr> 
+        <td><font size="4">mat_etd</font></td>
+        <td><font size="4">nom</font></td>
+        <td><font size="4">adresse</font></td>
+        <td><font size="4">cod_post</font></td>
+        <td><font size="4">ville</font></td>
+        <td><font size="4">t&eacute;l&eacute;phone</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">1</font></td>
+        <td><font size="4">Turki</font></td>
+        <td><font size="4">11,rue jasmins</font></td>
+        <td><font size="4">3093</font></td>
+        <td><font size="4">sfax</font></td>
+        <td><font size="4">213456</font></td>
+      </tr>
+      <tr> 
+        <td><font size="4">2</font></td>
+        <td><font size="4">dhouib</font></td>
+        <td><font size="4">7,av farhat</font></td>
+        <td><font size="4">1020</font></td>
+        <td><font size="4">sousse</font></td>
+        <td><font size="4">754896</font></td>
+      </tr>
+    </table>
+    <p><font color="#0000CC" size="4"><strong><a name="vues"></a><font color="#000080">3.2- 
+      Les Vues </font></strong></font></p>
+    <p><font size="4">Une vue est une repr&eacute;sentation 
+      logique issue de la combinison de la d&eacute;finition d'une ou de plusieurs 
+      tables ou vues.</font></p>
+    <p><font size="4">La d&eacute;finition d'une vue est 
+      stock&eacute;e dans le dictionnaire sous forme de requ&ecirc;tes, donc les 
+      donn&eacute;es sont extraites au moment de l'ex&eacute;cution de la vue.</font></p>
+    <p><font size="4"><strong>Exemple:</strong></font></p>
+    <p><font size="4">La vue CLT_MAHDIA d&eacute;rive de 
+      la table client ( la m&ecirc;me structure) mais ne contient que les clients 
+      dont la condition particuli&egrave;re est habitant Mahdia.</font></p>
+    <p><font color="#0000CC" size="4"><strong><a name="utilisateur"></a><font color="#000080">3.3- 
+      Les Utilisateurs</font></strong></font></p>
+    <p><font size="4">Un utilisateur est d&eacute;fini par 
+      son nom ( identifiant unique), un mot de passe et un ensemble de privilm&egrave;ges).</font></p>
+    <p><font size="4">Les privil&egrave;ges permettent de 
+      fixer les r&egrave;gles d'utilisation des objets d&eacute;finis dans la 
+      base et d'assurer la confidentialit&eacute; des donn&eacute;es.</font></p>
+    <p><font color="#0000CC" size="4"><strong><a name="accelerateur"></a><font color="#000080">3.4- 
+      Les Acc&eacute;lerateurs</font></strong></font></p>
+    <p><font size="4">ORACLE dispose de 2 m&eacute;canismes 
+      pour amliorer les performances en ce qui concerne les acc&egrave;s &agrave; 
+      la BD.</font></p>
+    <blockquote> 
+      <p><font size="4"><strong>&#8212;&gt; Cluster </strong>: 
+        Un cluster (Groupement ) est un objet contenant une ou plusieurs tables 
+        ou une ou plusieurs tables pour permettre un acc&egrave;s rapide aux lignes 
+        issues d'une jointure.</font></p>
+      <p><font size="4"><strong>&#8212;&gt; Index :</strong> Un index est une structure contenant l'adresse physique de chaque ligne 
+        d'une table ou d'un Cluster. Un Index permet l'acc&egrave;s direct &agrave; 
+        l'information.</font></p>
+    </blockquote>
+    <p align="justify">&nbsp;</p>
+  </blockquote>
+</div>
+<div align="center">
+  <p class="Style2"><font color="#000080">Cours 
+  en ligne : Base de Donn&eacute;es</font></p>
+</div>
+<blockquote> 
+  <blockquote>
+    <hr align="left"> 
+    <div id="Layer2" style="position:absolute; left:919px; top:75px; width:502px; height:25px; z-index:2"><a href="ACCUEILP.htm"><img src="acceuil.gif" width="60" height="21" border="0"></a> 
+      <a href="chapitre5.htm"><img src="previous_off.gif" width="21" height="21" border="0"></a> 
+      <a href="chapitre7.htm"><img src="next_off.gif" width="21" height="21" border="0"></a></div>
+    <p>&nbsp;</p>
+  </blockquote>
+  <p>&nbsp;</p>
+</blockquote>
+</body>
+</html>

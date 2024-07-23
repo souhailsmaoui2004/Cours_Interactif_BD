@@ -1,0 +1,346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style type="text/css">
+<!--
+.Style1 {
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-size: 24px;
+}
+.Style2 {font-family: "Times New Roman", Times, serif}
+-->
+</style>
+</head>
+
+<body background = "backg2.jpg">
+<div class="Style2" id="Layer1" style="position:absolute; left:94px; top:146px; width:891px; height:4540px; z-index:1"> 
+  <blockquote>
+    <p align="center"><strong><font color="#9D9D4F" size="5">Chapitre1 
+      : Introduction aux bases de donn&eacute;es</font></strong></p>
+    <p><font size="5"><strong><font color="#000080" size="4">Objectifs</font></strong></font></p>
+    <p><font size="4">Introduire la Notion de base de donn&eacute;es 
+      et du syst&egrave;me de gestion de base de donn&eacute;es</font></p>
+    <p><font color="#000080" size="4"><strong>El&eacute;ments 
+      de contenu</strong></font></p>
+    <p><font size="4"><em>1</em>- <a href="Introduction.htm#historique">Historique 
+      des bases de donn&eacute;es</a></font></p>
+    <p><font size="4">2- <a href="Introduction.htm#critique">Etude 
+      critique de l'approche traditionnelle</a></font></p>
+    <p><font size="4">3- <a href="Introduction.htm#base">Notions 
+      de bases de donn&eacute;es</a></font></p>
+    <blockquote> 
+      <p><font size="4"> 3.1- <a href="Introduction.htm#definition">D&eacute;finitions</a></font></p>
+      <p><font size="4">3.2- <a href="Introduction.htm#objectif">Objectifs 
+        des bases de donn&eacute;es</a></font></p>
+      <p><font size="4">3.3- <a href="Introduction.htm#sgbd">D&eacute;finitions 
+        de syst&egrave;mes de gestion de donn&eacute;es</a></font></p>
+      <p><font size="4">3.4- <a href="Introduction.htm#objectif2">Objectifs 
+        des SGBDs</a></font></p>
+      <p><font size="4">3.5-<a href="Introduction.htm#architecture"> 
+        Architecture logique d'un SGBD</a></font></p>
+    </blockquote>
+  </blockquote>
+  <p>&nbsp;</p>
+  <blockquote> 
+    <p><font size="5"><strong><font color="#0000CC" size="4"><a name="historique"></a><font color="#000080">1- 
+      Historique des bases de donn&eacute;es</font></font></strong></font></p>
+    <p align="justify"><font color="#666666" size="4">- 1960</font><font size="4"> : Uniquement des syst&egrave;mes de gestion de fichiers plus ou moins sophistiqu&eacute;s.</font></p>
+    <p align="justify"><font color="#666666" size="4">- 1970</font><font size="4"> : D&eacute;but des syst&egrave;mes de gestion de donn&eacute;es r&eacute;seaux 
+      et hi&eacute;rarchiques proches des syst&egrave;mes de gestion de fichiers. 
+      Ces syst&egrave;mes de gestion de donn&eacute;es avaient remplis des objectifs 
+      pr&eacute;c&eacute;dents mais on ne pouvat pas interroger une base sans 
+      savoir o&ugrave; &eacute;tait l'information recherch&eacute;e et sans &eacute;crire 
+      de programmes.</font></p>
+    <p align="justify"><font size="4">Sortie du papier de 
+      CODD sur la th&eacute;orie des relations, fondement de la th&eacute;orie 
+      des bases de donn&eacute;es relationnelles.</font></p>
+    <p align="justify"><font color="#666666" size="4">- 1980 
+      </font><font size="4">: Les syst&egrave;mes de gestion 
+      de bases de donn&eacute;es relationnels apparaissent sur le march&eacute;.</font></p>
+    <p align="justify"><font color="#666666" size="4">- 1990</font><font size="4"> : Les syst&egrave;mes de gestion de bases de donn&eacute;es relationnels 
+      dominent le march&eacute;.</font></p>
+    <p align="justify"><font size="4">D&eacute;but des Syst&egrave;mes 
+      de Gestion de Bases de Donn&eacute;es orient&eacute;s objet.</font></p>
+    <div align="justify"><font size="5"><strong><font color="#0000CC" size="4"><font color="#000080"><a name="critique"></a>2- 
+      Etude critique de l'approche traditionnelle</font></font></strong></font></div>
+    <div align="justify"><font size="4">L'utilisation de 
+      fichiers impose d'une part, &agrave; l'utilisateur de conna&icirc;tre l'organisation 
+      (s&eacute;quentielle, index&eacute;e,...) des fichiers qu'il utilise afin 
+      de pouvoir acc&eacute;der aux informations dont il a besoin et d'autre part, 
+      d'ecrire des programmes pour pouvoir effectivement manipuler ces informations.</font></div>
+    <div align="justify"><font size="4">Pour des applications 
+      nouvelles, l'utilisateur devra obligatoirement &eacute;crire de nouveaux 
+      programmes et il pourra &ecirc;tre amen&eacute; &agrave; cr&eacute;er de 
+      nouveaux fichiers qui contiendront peut-&ecirc;tre des informations d&eacute;j&agrave; 
+      pr&eacute;sente dans d' autres fichiers. </font></div>
+    <div align="justify"><font size="4">De telles applications 
+      sont:</font></div>
+    <blockquote> 
+      <div align="justify"><font size="4">- rigides</font></div>
+      <p align="justify"><font size="4">- contraignantes</font></p>
+      <p align="justify"><font size="4">-Longues et co&ucirc;teuses 
+        &agrave; mettre en oeuvre.</font></p>
+    </blockquote>
+    <p align="justify"><font size="4">Les donn&eacute;es 
+      associ&eacute;es sont :</font></p>
+    <blockquote> 
+      <div align="justify"></div>
+      <p align="justify"><font size="4">- Mal d&eacute;finies 
+        et mal d&eacute;sign&eacute;es</font></p>
+      <p align="justify"><font size="4">- Redondantes</font></p>
+      <p align="justify"><font size="4">- Peu accessibles 
+        de mani&egrave;re ponctuelle</font></p>
+      <p align="justify"><font size="4">- Peu fiables</font></p>
+    </blockquote>
+    <p align="justify"><font size="4">La prise de d&eacute;cision 
+      est une part de la vie d' une soci&eacute;t&eacute;. Mais elle n&eacute;cessite 
+      d' &ecirc;tre bien inform&eacute;e sur la situation et donc d' avoir des 
+      informations &agrave; jour et disponibles imm&eacute;diatement.</font></p>
+    <p align="justify"><font size="4">Les utilisateurs, quant 
+      &agrave; eux, ne veulent plus de syst&egrave;mes d' information constitu&eacute;s 
+      d' un ensemble de programmes inflexibles et de donn&eacute;es inaccessibles 
+      &agrave; tout non sp&eacute;cialiste; ils souhaitent des syst&egrave;mes 
+      d' informations globaux, coh&eacute;rents , directement accessibles ( sans 
+      qu 'ils aient besoin soit d' &eacute;crire des programmes soit de demander 
+      &agrave; un programmeur de les &eacute;crire pour eux ) et des r&eacute;ponses 
+      imm&eacute;diates aux questions qu 'ils posent. On a donc recherch&eacute; 
+      des solutions tenant compte &agrave; la fois des d&eacute;sirs des utilisateurs 
+      et des progr&egrave;s techniques.</font></p>
+    <p align="justify"><font size="4">&#8212;&gt; Cette Recherche 
+      a abouti au concept Base de Donn&eacute;es.</font></p>
+    <p align="justify"><font color="#0000CC" size="4"><strong><font color="#000080"><a name="base"></a>3- 
+      Notions de bases de donn&eacute;es</font></strong></font></p>
+    <blockquote> 
+      <blockquote> 
+        <div align="justify"></div>
+      </blockquote>
+    </blockquote>
+    <p align="justify"><font color="#000080" size="4"><strong><a name="definition"></a>3.1 
+      D&eacute;finitions</strong></font></p>
+    <blockquote> 
+      <div align="justify"></div>
+    </blockquote>
+    <p align="justify"><font size="4"><strong>D&eacute;fintion 
+      1</strong>: Selon Claude Delobel et Michel ABIDA</font></p>
+    <blockquote> 
+      <blockquote> 
+        <p align="justify"><font size="4">Une base de donn&eacute;es 
+          est un ensemble structur&eacute; de donn&eacute;es enregistr&eacute;es 
+          sur des supports accessibles par l' ordinateur pour satisfaire simultan&eacute;ment 
+          plusieurs utilisateurs de fa&ccedil;on s&eacute;lective et en temps 
+          opportun. </font></p>
+      </blockquote>
+    </blockquote>
+    <p align="justify"><font size="4"><strong>D&eacute;finition 
+      2: </strong>Selon Claude Delobel et Michel ABIDA</font></p>
+    <blockquote> 
+      <blockquote> 
+        <p align="justify"><font size="4">Une base de donn&eacute;es 
+          est un ensemble</font> <font color="#333333" size="4">de 
+          donn&eacute;es structur&eacute;es mod&eacute;lisant un univers pr&eacute;cis 
+          et accessible &agrave; plusieurs utilisateurs en m&ecirc;me temps.</font></p>
+      </blockquote>
+    </blockquote>
+    <p align="justify"><font size="4"><strong>D&eacute;finition 
+      3: </strong></font></p>
+    <blockquote> 
+      <blockquote> 
+        <p align="justify"><font size="4">Est beaucoup plus 
+          riche qu 'une simple accumulation de donn&eacute;es, car toute information 
+          s'y enrichit des liens qu'elle a avec les autres. En plus, ces liens 
+          permettent d'acc&eacute;der plus rapidement et plus facilement &agrave; 
+          une information &agrave; partir d'une autre.</font></p>
+      </blockquote>
+    </blockquote>
+    <p align="justify"><font size="4"><strong>D&eacute;finition 
+      4:</strong></font></p>
+    <blockquote> 
+      <blockquote> 
+        <p align="justify"><font size="4">Est un ensemble 
+          d'informations sur un sujet qui est </font></p>
+        <blockquote> 
+          <p align="justify"><font size="4">- Exhaustif</font></p>
+          <p align="justify"><font size="4">- Non Redondant</font></p>
+          <p align="justify"><font size="4">- Structur&eacute;</font></p>
+          <p align="justify"><font size="4">- Persistant</font></p>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+    <p align="justify"><font color="#0000CC" size="4"><strong><a name="objectif"></a><font color="#000080">3.2- 
+      Objectifs des bases de donn&eacute;es</font></strong></font></p>
+    <p align="justify"><font color="#000000" size="4">Parmi 
+      les objectifs de la base de donn&eacute;es, on cite:</font></p>
+    <blockquote> 
+      <p align="justify"><font color="#000000" size="4">- 
+          <em>Elimination de la redondance des donn&eacute;es </em>: on ne trouve 
+        plus des informations dupliqu&eacute;es dans le m&ecirc;me syst&egrave;me 
+        d'information.</font></p>
+      <p align="justify"><font color="#000000" size="4">- 
+          <em>Ind&eacute;pendance entre les programmes et les donn&eacute;es</em> : On peut isoler le niveau utilisation (application) de l'organisation 
+        physique de donn&eacute;es.</font></p>
+      <p align="justify"><font color="#000000" size="4">- 
+          <em> Int&eacute;gration de donn&eacute;es</em>: Int&eacute;gration de 
+        toutes les donn&eacute;es de l'entreprise dans un r&eacute;servoir unique 
+        des donn&eacute;es commun &agrave; toutes les applications qui viendraient 
+        y puiser les donn&eacute;es les concernants.</font></p>
+    </blockquote>
+    <p align="justify"><font color="#0000CC" size="4"><strong><a name="sgbd"></a><font color="#000080">3.3- 
+      D&eacute;finitions de syst&egrave;mes de gestion de donn&eacute;es</font></strong></font></p>
+    <p align="justify"><strong><font color="#000000" size="4">&#8212;&gt; 
+      </font></strong><font color="#000000" size="4">Un Syst&egrave;me 
+      de Gestion de Base de Donn&eacute;es (SGBD) est une collection de logiciels 
+      permettant de cr&eacute;er, de g&eacute;rer et d'interroger efficacement 
+      une base de donn&eacute;es ind&eacute;pendamment du domaine d'application.</font></p>
+    <p align="justify"><font color="#000000" size="4">&#8212;&gt; 
+      Un SGBD s&eacute;pare la partie description des donn&eacute;es, des donn&eacute;es 
+      elles- m&ecirc;me. Cette description est stock&eacute;e dans <em>un dictionnaire 
+      de donn&eacute;es</em> et peut &ecirc;tre consult&eacute;e par les utilisateurs.</font></p>
+    <p align="justify"><font color="#0000CC" size="4"><strong><a name="objectif2"></a><font color="#000080">3.4- 
+      Objectifs des SGBDs</font></strong></font></p>
+    <p align="justify">&nbsp;</p>
+    <p align="justify"><font size="4">Les Bases de donn&eacute;es 
+      et les SGBDs ont &eacute;t&eacute; cr&eacute;es pour r&eacute;pondre &agrave; 
+      un certain nombre de besoins et pour r&eacute;soudre un certain nombre de 
+      probl&egrave;mes.</font></p>
+    <p align="justify"><font size="4">Des objectifs principaux 
+      ont &eacute;t&eacute; fix&eacute;s aux SGBDs d&egrave;s l'origine de ceux-ci 
+      et ce afin de r&eacute;soudre les probl&egrave;mes caus&eacute;s par la 
+      d&eacute;marche classique.</font></p>
+    <p align="justify"><font size="4">Ces objectifs sont 
+      les suivants:</font></p>
+    <p align="justify"><font size="4"><strong>&#8212;&gt; 
+      Ind&eacute;pendance physique : </strong></font></p>
+    <p align="justify"><font size="4">La fa&ccedil;on dont 
+      les donn&eacute;es sont d&eacute;finies doit &ecirc;tre ind&eacute;pendante 
+      des structures de stockage utilis&eacute;es.</font></p>
+    <p align="justify"><font size="4"><strong>&#8212;&gt; 
+      Manipulations des donn&eacute;es par des non informaticiens :</strong></font></p>
+    <p align="justify"><font size="4">Il faut pouvoir acc&eacute;der 
+      aux donn&eacute;es sans savoir programmer ce qui signifie des langages &quot;quasi-naturels&quot;.</font></p>
+    <p align="justify"><font size="4"><strong>&#8212;&gt; 
+      Efficacit&eacute; des acc&egrave;s aux donn&eacute;es:</strong></font></p>
+    <p align="justify"><font size="4">Ces langages doivent 
+      permettre d'obtenir des r&eacute;ponses aux interrogations en un temps &quot;raisonable&quot;, 
+      ils doivent donc &ecirc;tre optimis&eacute;s,et ce d'une fa&ccedil;on transparente 
+      aux utilisateurs.</font></p>
+    <p align="justify"><font size="4"><strong>&#8212;&gt; 
+      Non Redondance des Donn&eacute;es :</strong></font></p>
+    <p align="justify"><font size="4">Afin d'&eacute;viter 
+      les probl&egrave;mes lors de mises &agrave; jour, chaque donn&eacute;e ne 
+      doit &ecirc;tre pr&eacute;sente qu'une seule fois dans la base.</font></p>
+    <p align="justify"><font size="4"><strong>&#8212;&gt; 
+      Coh&eacute;rence de donn&eacute;es:</strong></font></p>
+    <p align="justify"><font size="4">Les donn&eacute;es 
+      sont soumises &agrave; un certain nombre de contraintes d'integrit&eacute; 
+      qui d&eacute;finissent un &eacute;tat coh&eacute;rent de la base. Elles 
+      doivent &ecirc;tre exprim&eacute;es simplement et v&eacute;rifi&eacute;es 
+      automatiquement &agrave; chaque insertion, modification ou suppression de 
+      donn&eacute;es.</font></p>
+    <p align="justify"><font size="4"><strong>&#8212;&gt; 
+      Partageabilit&eacute; des donn&eacute;es:</strong></font></p>
+    <p align="justify"><font size="4">Il s'agit de permettre 
+      &agrave; plusieurs utilisateurs d' acc&eacute;der aux m&ecirc;mes donn&eacute;es 
+      au m&ecirc;me moment. Si ce probl&egrave;me est simple &agrave; r&eacute;soudre 
+      quand il s'agit uniquement d'interrogations et quand on ast dans un contexte 
+      mono-utilisateurs. Il s'agit alors de pouvoir :</font></p>
+    <blockquote> 
+      <p align="justify"><font size="4">- Permettre &agrave; 
+        deux ( ou plus ) utilisateurs de modifier la m&ecirc;me donn&eacute;e 
+        en m&ecirc;me temps.</font></p>
+      <p align="justify"><font size="4">- Assurer un r&eacute;sultat 
+        d'interrogation coh&eacute;rent pour un utilisateur consultant une table 
+        pendant qu'un autre la modifie.</font></p>
+    </blockquote>
+    <p align="justify"><font size="4"><strong>&#8212;&gt; 
+      S&eacute;curit&eacute; des Donn&eacute;es:</strong></font></p>
+    <p align="justify"><font size="4">Les donn&eacute;es 
+      doivent pouvoir &ecirc;tre partag&eacute;es contre les acc&egrave;s non 
+      autoris&eacute;s. Pour cela, il faut pouvoir associer &agrave; chaque utilisateur 
+      des droits d'acc&egrave;s aux donn&eacute;es.</font></p>
+    <p align="justify"><font size="4"><strong>&#8212;&gt; 
+      R&eacute;sistance aux pannes :</strong></font></p>
+    <p align="justify"><font size="4">Il faut pouvoir r&eacute;cuperer 
+      une base de donn&eacute;es dans un &eacute;tat sein lorsque une panne arrive. </font></p>
+    <p align="justify"><font color="#0000CC" size="4"><strong><a name="architecture"></a><font color="#000080">3.5- 
+      Architecture logique d'un SGBD</font></strong></font></p>
+    <p align="justify"><font color="#000000" size="4">Les 
+      SGBDs reposent sur 3 niveaux d'abstraction qui assurent l'ind&eacute;pendance 
+      logique et physique des donn&eacute;es, autorisent laipulation de donn&eacute;es, 
+      garantissent l'integrit&eacute; des donn&eacute;es et optimisent l'acc&egrave;s 
+      aux donn&eacute;es. L'architecture ANSI/SPARC sp&eacute;cifie cette architecture 
+      &agrave; 3 niveaux pour un SGBD.</font></p>
+    <p align="right"> 
+      <!-- ImageReady Slices (Sans titre-1) -->
+      <IMG SRC="chap1.gif" WIDTH=608 HEIGHT=351> 
+      <!-- End ImageReady Slices -->
+    </p>
+    <p align="justify"><strong><font size="4"><em>Le Niveau Conceptuel</em></font></strong></p>
+    <p align="justify"><font size="4">Le niveau conceptuel 
+      permet la description<br>
+&#8226; des objets: exemple OUVRAGES, ETUDIANTS<br>
+&#8226; des propri&eacute;t&eacute;s des objets (attributs) <br>
+&#8226; des liens entre les objets <br>
+&#8226; des Contraintes : le nombre d&#8217;exemplaires d&#8217;un OUVRAGE 
+      est sup&eacute;rieur &agrave; 0<br>
+      - Cette description est faite selon un mod&egrave;le de donn&eacute;es.<br>
+      - Un mod&egrave;le de donn&eacute;es est un ensemble de concepts permettant 
+      de d&eacute;crire la structure d'une base de donn&eacute;es. La plupart 
+      des mod&egrave;les de donn&eacute;es incluent des op&eacute;rations permettant 
+      de mettre &agrave; jour et questionner la base. Le mod&egrave;le de donn&eacute;es 
+      le plus utilis&eacute; est le mod&egrave;le relationnel. Cette description 
+      va donner lieu &agrave; un sch&eacute;ma de base de donn&eacute;es. </font></p>
+    <p align="justify"><font size="4">Un sch&eacute;ma de 
+      base de donn&eacute;es se compose d'une description des donn&eacute;es et 
+      de leurs<br>
+      relations ainsi que d'un ensemble de contraintes d'int&eacute;grit&eacute;.</font></p>
+    <p align="justify"><font size="4"><strong><em>Le Niveau 
+      Physique</em></strong></font></p>
+    <p align="justify"><font size="4">- Le niveau Physique 
+      est une description informatique des donn&eacute;es et de leur organisation: 
+      en terme de fichiers, d &#8217;index, de m&eacute;thodes d&#8217;acc&egrave;s, 
+      &#8230;<br>
+      - Le passage du mod&egrave;le logique au mod&egrave;le physique tend &agrave; 
+      &ecirc;tre assist&eacute; par le SGBD : transparent et/ou semi-automatique.</font></p>
+    <p align="justify"><font size="4">- Son objectif est 
+      la performance.</font></p>
+    <p align="justify"><font size="4"><strong><em>Le Niveau 
+      Externe</em></strong><br>
+      - C'est une description des donn&eacute;es vues par un utilisateur (ou un 
+      groupe d&#8217;utilisateurs)<br>
+      - Son objectif est la simplification et la confidentialit&eacute;<br>
+      </font> </p>
+    <p><font size="4">&#8212;&gt;Cette architecture vise 
+      &agrave; identifier diff&eacute;rents niveaux de structuration dans un SGBD 
+      afin d'obtenir une ind&eacute;pendance maximale entre les niveaux.</font></p>
+  </blockquote>
+</div>
+<div align="center">
+  <p>&nbsp;</p>
+  <p class="Style1"><font color="#000080">Cours 
+    en ligne : Base de Donn&eacute;es</font></p>
+</div>
+<blockquote> 
+  <blockquote> 
+    <div id="Layer2" style="position:absolute; left:894px; top:114px; width:502px; height:25px; z-index:2"><a href="ACCUEILP.htm"><img src="acceuil.gif" width="60" height="21" border="0"></a> 
+      <a href="PLAN.htm"><img src="previous_off.gif" width="21" height="21" border="0"></a> 
+      <a href="entite.htm"><img src="next_off.gif" width="21" height="21" border="0"></a></div>
+    <hr align="left">
+    <p>&nbsp;</p>
+  </blockquote>
+  <p>&nbsp;</p>
+</blockquote>
+</body>
+</html>

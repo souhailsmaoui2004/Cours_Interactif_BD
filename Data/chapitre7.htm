@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style type="text/css">
+<!--
+.Style1 {
+	font-size: 24px;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif;
+}
+.Style2 {font-family: "Times New Roman", Times, serif}
+-->
+</style>
+</head>
+
+<body background = "backg2.jpg">
+<div class="Style2" id="Layer1" style="position:absolute; left:100px; top:107px; width:927px; height:772px; z-index:1"> 
+  <p align="center"><font color="#A3A352" size="5"><strong>Langage de d&eacute;finition de donn&eacute;es </strong></font></p>
+  <blockquote> 
+    <p><strong><font color="#000080" size="4">Objectif </font></strong></p>
+    <p><font size="4">Apprendre Le langage SQl pour d&eacute;finir 
+      les donn&eacute;es.</font></p>
+    <p><font color="#000080" size="4"><strong>El&eacute;ments 
+      de Contenu</strong></font></p>
+    <p><font color="#000000" size="4">1- <a href="chapitre7.htm#introduction">Introduction</a></font></p>
+    <p><font size="4">2- <a href="chapitre7.htm#creation">Cr&eacute;ation 
+      d'une Table</a></font></p>
+    <p><font size="4">3- <a href="chapitre7.htm#modification">Modification 
+      de la Structure d'une table</a></font></p>
+    <p><font size="4">4- <a href="chapitre7.htm#suppression">Suppression 
+      d'une Table</a></font></p>
+    <p><font size="4">5-<a href="chapitre7.htm#renommage"> Renommage et cr&eacute;ation des synonymes</a></font></p>
+    <div align="justify"><font color="#000099" size="4"><strong><a name="introduction"></a>1- 
+      Introduction </strong></font></div>
+    <div align="justify"><font size="4">Le langage de d&eacute;finition 
+      de donn&eacute;es (LDD) permet de d&eacute;finir des bases de donn&eacute;es 
+      et des objets qui les composent.</font></div>
+    <div align="justify"><font size="4">La d&eacute;finition 
+      d'un objet inclut g&eacute;neralement sa cr&eacute;ation, sa modification 
+      et sa suppression.</font></div>
+    <div align="justify"><font size="4">Les Commandes de 
+      LDD sont:</font></div>
+    <blockquote> 
+      <div align="justify"><font size="4"> - CREATE : cr&eacute;ation 
+        d' objets</font></div>
+      <div align="justify"><font size="4">- ALTER : modification 
+        des structures d'objets. </font></div>
+      <div align="justify"><font size="4">- DROP : suppression 
+        d'objets.</font></div>
+    </blockquote>
+    <p><font color="#000099" size="4"><strong><font color="#000080"><a name="creation"></a>2 
+      Cr&eacute;ation d'une Table</font></strong></font></p>
+    <p><font color="#000033" size="4">La cr&eacute;ation 
+      d'une table consiste &agrave; d&eacute;finir son nom, les colonnes qui la 
+      composent et leurs types. Elle se fait avec la commande CREATE TABLE</font></p>
+    <p><font color="#000033" size="4">ORACLE permet de cr&eacute;er 
+      les tables de 2 fa&ccedil;ons :</font></p>
+    <blockquote> 
+      <p><font color="#000033" size="4">- Cr&eacute;ation 
+        simple</font></p>
+      <p><font color="#000033" size="4">- Cr&eacute;ation 
+        + Insertion</font></p>
+    </blockquote>
+    <p><font color="#000099" size="4"><strong>2.1- Creation 
+      Simple </strong></font></p>
+    <p><font color="#000033" size="4"><strong>- Syntaxe :</strong></font></p>
+    <blockquote> 
+      <p><font color="#000033" size="4">CREATE TABLE nom_table</font></p>
+      <p><font color="#000033" size="4">(</font></p>
+      <p><font color="#000033" size="4">col1 type [(taille)] 
+        [DEFAULT valeurpardefaut] [NULL/NOT NULL] [ contraintes de colonnes],</font></p>
+      <p><font color="#000033" size="4">col2 type [(taille)] 
+        [DEFAULT valeurpardefaut] [NULL/NOT NULL] [ contraintes de colonnes],</font></p>
+      <p><font color="#000033" size="4">colp type [(taille)] 
+        [DEFAULT valeurpardefaut] [NULL/NOT NULL] [ contraintes de colonnes],</font></p>
+      <p><font color="#000033" size="4">[contrainte de tables]</font></p>
+      <p><font color="#000033" size="4">);</font></p>
+    </blockquote>
+    <p><font color="#000033" size="4"><strong>- D&eacute;finition 
+      des colonnes :</strong></font></p>
+    <blockquote> 
+      <p><strong><font color="#000033" size="4">- </font></strong><font color="#000033" size="4">La 
+        taille indique la valeur maximale de la longueur du champ.</font></p>
+      <p><font color="#000033" size="4">- L'option NOT NULL 
+        indique que le champ doit forc&eacute;ment avoir une valeur.</font></p>
+      <p><font color="#000033" size="4">- Les types de donnes 
+        possibles sont :</font></p>
+      <blockquote> 
+        <p><font color="#000033" size="4">-&gt;NUMBER : d&eacute;signe 
+          les nombres(positifs ou n&eacute;gatifs).</font></p>
+        <p><font color="#000033" size="4">-&gt;NUMBER(n) 
+          : le nombre de taille sp&eacute;cifique n &lt;=105.</font></p>
+        <p><font color="#000033" size="4">-&gt;Number(n,m) 
+          : nombre d&eacute;cimal pouvant avoir au maximum n chiffres dont m apr&egrave;s 
+          la virgule.</font></p>
+        <p><font color="#000033" size="4">-&gt;CHAR(n) : 
+          chaine de caract&egrave;res de taille fixe avec 1&lt;=n&lt;=255.</font></p>
+        <p><font color="#000033" size="4">-&gt;VARCHAR2(n) 
+          : cha&icirc;ne de caract&egrave;res de longueur fixe avec 1&lt;=n&lt;=4000.</font></p>
+        <p><font color="#000033" size="4">-&gt;RAW : accepte 
+          jusqu'&agrave; 2000 octets de donn&eacute;es binaires.</font></p>
+        <p><font color="#000033" size="4">-&gt;LONG RAW :donn&eacute;es 
+          de type binaire de longueur variable allant jusqu'&agrave; 2G Octets.</font></p>
+        <p><font color="#000033" size="4">-&gt;DATE: date 
+          dont le format standard est DD-MM-YY.</font></p>
+      </blockquote>
+    </blockquote>
+    <p><font color="#000033" size="4">- EXEMPLE:</font></p>
+    <p><font color="#000033" size="4"> Cr&eacute;er une table 
+      crrespondante &agrave; l'entit&eacute; client ayant comme cl&eacute; le 
+      champ numero cient. Cette table comprend les champs relatifs au nom, tel&eacute;phone,adresse 
+      , code postal et ville.</font></p>
+    <blockquote> 
+      <p><font color="#000033" size="4">CREATE TABLE client</font></p>
+      <p><font color="#000033" size="4">(numclt NUMBER(6),</font></p>
+      <p><font color="#000033" size="4">nom VARCHAR2(15),</font></p>
+      <p><font color="#000033" size="4">tel NUMBER(8) ,</font></p>
+      <p><font color="#000033" size="4">adr VARCHAR2(30),</font></p>
+      <p><font color="#000033" size="4">cod_post NUMBER(4),</font></p>
+      <p><font color="#000033" size="4">ville char(12)</font></p>
+      <p><font color="#000033" size="4">);</font></p>
+    </blockquote>
+    <p><font color="#000033" size="4"><strong>- D&eacute;finition 
+      des Contraintes </strong></font></p>
+    <p><font color="#000033" size="4">Une contrainte d'integrit&eacute; 
+      est une r&egrave;gle qui d&eacute;finit la coh&eacute;rence d'une donn&eacute;e 
+      ou d'un ensemble de donn&eacute;es de la base de donn&eacute;es.</font></p>
+    <p><font color="#000033" size="4">Les contraintes d&eacute;finies 
+      par SQL sont :</font></p>
+    <blockquote>
+      <p><font color="#000033" size="4">- Non nullit&eacute; 
+        des valeurs d'un attribut : l'utilisateur es oblig&eacute; de saisir la 
+        valeur de l'attribut, et ce &agrave; travers le mot cl&eacute; NOT NULL.</font></p>
+      <p><font color="#000033" size="4">- Unicit&eacute; 
+        de la valeur d'un attribut ou d'un groupe d'attributs : la valeur doit 
+        &ecirc;tre unique et ce &agrave; travers le mot cl&eacute; UNIQUE.</font></p>
+      <p><font color="#000033" size="4">- Cl&eacute; primaire 
+        ( un attribut ou un groupe ) : indique que l'attribut est une cl&eacute; 
+        primaire et ce &agrave; tavers la syntaxe suivante :</font></p>
+      <blockquote>
+        <p><font color="#000033" size="4">CONSTRAINT nom_contrainte 
+          PRIMARY KEY (att1,att2,...attn);</font></p>
+        <p><font color="#000033" size="4">EXEMPLE:</font></p>
+        <p><font color="#000033" size="4">CREATE TABLE client</font></p>
+        <p><font color="#000033" size="4">(numclt NUMBER(6) 
+          PRIMARY KEY,</font></p>
+        <p><font color="#000033" size="4">nom VARCHAR2(15),</font></p>
+        <p><font color="#000033" size="4">tel NUMBER(8) ,</font></p>
+        <p><font color="#000033" size="4">adr VARCHAR2(30),</font></p>
+        <p><font color="#000033" size="4">cod_post NUMBER(4),</font></p>
+        <p><font color="#000033" size="4">ville char(12)</font></p>
+        <p><font color="#000033" size="4">);</font></p>
+        <p><font color="#000033" size="4">CREATE TABLE client</font></p>
+        <p><font color="#000033" size="4">(numclt NUMBER(6) 
+          PRIMARY KEY,</font></p>
+        <p><font color="#000033" size="4">nom VARCHAR2(15),</font></p>
+        <p><font color="#000033" size="4">tel NUMBER(8) ,</font></p>
+        <p><font color="#000033" size="4">adr VARCHAR2(30),</font></p>
+        <p><font color="#000033" size="4">cod_post NUMBER(4),</font></p>
+        <p><font color="#000033" size="4">ville char(12),</font></p>
+        <p><font color="#000033" size="4">CONSTRAINT pk_client 
+          PRIMARY KEY numclt</font></p>
+        <p><font color="#000033" size="4">);</font></p>
+      </blockquote>
+      <p><font size="4">- Cl&eacute; &eacute;trang&egrave;re 
+        :</font></p>
+      <p><font size="4">Lorsque la cl&eacute; primaire figure 
+        dans une autre table en tant qu'un attribut non cl&eacute;. La syntaxe 
+        est :</font></p>
+      <p><font size="4">CONSTRAINT nom_contrainte FOREIGN 
+        KEY (nom_att) REFERENCES nom_table (nom_att);</font></p>
+      <p><font size="4">Il est impossible de cr&eacute;er 
+        une cl&eacute; &eacute;trang&egrave;re si la cl&eacute; primaire associ&eacute;e 
+        n'existe pas.</font></p>
+      <p><font size="4">EXEMPLE :</font></p>
+      <blockquote>
+        <p><font size="4">CREATE TABLE vente</font></p>
+        <p><font size="4">( codvent NUMBER(6) PRIMARY KEY,</font></p>
+        <p><font size="4">numclt NUMBER(6) ,</font></p>
+        <p><font size="4">qtevnt NUMBER(8),</font></p>
+        <p><font size="4">CONSRAINT fk_vente FOREIGN KEY 
+          (numclt) REFERENCES client (numclt));</font></p>
+        <blockquote>
+          <blockquote> 
+            <blockquote> 
+              <blockquote> 
+                <p><font size="4">ou</font></p>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+        <p><font size="4">CREATE TABLE vente</font></p>
+        <p><font size="4">( codvent NUMBER(6) PRIMARY KEY,</font></p>
+        <p><font size="4">numclt NUMBER(6) REFERENCES client(numclt),</font></p>
+        <p><font size="4">qtevnt NUMBER(8));</font></p>
+      </blockquote>
+      <p><font size="4">- Contrainte de valeur avec la clause 
+        CHECK : permet de limiter les valeurs possibles pour une colonne en v&eacute;rifiant 
+        une certaine condition. Le contr&ocirc;l se fera lors des insertions des 
+        donn&eacute;es.</font></p>
+      <p><font size="4">CONSTRAINT nom_contrainte CHECK( 
+        colonne condition).</font></p>
+      <p><font size="4">La condition sur la colonne peut 
+        utiliser :</font></p>
+      <p><font size="4">-&gt; Un Op&eacute;rateur de compraison 
+        : &lt;,&gt;, =, &lt;&gt; , &lt;=,&gt;=</font></p>
+      <p><font size="4">-&gt; La clause BETWEEN val1 AND 
+        val2</font></p>
+      <p><font size="4">-&gt; La clause IN ( liste des valeurs).</font></p>
+      <p><font size="4">EXEMPLE:</font></p>
+      <blockquote>
+        <p><font size="4">CREATE TABLE vente </font></p>
+        <p><font size="4">( codvent NUMBER(6) PRIMARY KEY,</font></p>
+        <p><font size="4">numclt NUMBER(6) REFERENCES client(numclt),</font></p>
+        <p><font size="4">qtevnt NUMBER(8),</font></p>
+        <p><font size="4">CONSTRAINT ck_vente_qte CHECK (qtevnt 
+          between 0 and 10,</font></p>
+        <p><font size="4">CONSTRAINT ck_vente_clt CHECK(numclt 
+          IN (10,11,12,13));</font></p>
+      </blockquote>
+    </blockquote>
+    <p><font color="#000080" size="4"><strong>2.2- Cr&eacute;ation 
+      + Insertion</strong></font></p>
+    <p><font size="4">En plus de la d&eacute;finition de 
+      la structure d'une nouvelle table, cette forme permet d'y ins&eacute;rer 
+      des donn&eacute;es &agrave; partir d'une ou plusieurs tables et/ou vues.</font></p>
+    <p><font size="4"><strong>- Syntaxe</strong></font></p>
+    <blockquote>
+      <p><font size="4">CREATE TABLE NOM8TABLE</font></p>
+      <p><font size="4">[</font></p>
+      <p><font color="#000033" size="4">col1 type [(taille)] 
+        [DEFAULT valeurpardefaut] [NULL/NOT NULL] [ contraintes de colonnes],</font></p>
+      <p><font color="#000033" size="4">col2 type [(taille)] 
+        [DEFAULT valeurpardefaut] [NULL/NOT NULL] [ contraintes de colonnes],</font></p>
+      <p><font color="#000033" size="4">colp type [(taille)] 
+        [DEFAULT valeurpardefaut] [NULL/NOT NULL] [ contraintes de colonnes],</font></p>
+      <p><font color="#000033" size="4">[contrainte de tables]</font></p>
+      <p><font size="4">]</font></p>
+      <p><font size="4">AS requ&ecirc;te;</font></p>
+    </blockquote>
+    <p><font size="4">Si la d&eacute;finition des colonnes 
+      est omise, ORACLE h&eacute;rite les noms de colonnes de la requ&ecirc;te. 
+      En effet la requ&ecirc;te est une op&eacute;ration de s&eacute;lection qui 
+      indique les colonnes sources, les tables auxquelles appartiennent et &eacute;ventuellement 
+      des crit&egrave;res de s&eacute;lection.</font></p>
+    <p><font size="4">EXEMPLE:</font></p>
+    <p><font size="4">Cr&eacute;ation d'une table contenant 
+      des clients de la ville de Mahdia :</font></p>
+    <p><font size="4">CREATE TABLE clent_mahdia </font></p>
+    <p><font size="4">AS</font></p>
+    <p><font size="4">SELECT numclt,nom,tel,adr</font></p>
+    <p><font size="4">FROM client</font></p>
+    <p><font size="4">WHERE ville='MAHDIA';</font></p>
+    <p><font color="#0000CC" size="4"><strong><font color="#000080"><a name="modification"></a>3- 
+      Modification de la Structure d'une table</font></strong></font></p>
+    <p><font size="4">Les tables peuvent avoir une structure 
+      dynamique ( ajout de nouvelles colonnes et/ou modification de colonnes d&eacute;j&agrave; 
+      existantes.</font></p>
+    <p><font size="4">La suppression de colonnes n'est pas 
+      possible directement.</font></p>
+    <p><font size="4">Les deux possibilit&eacute;s de modification 
+      se traduisent par deux variantes de la commande ALTER TABLE</font></p>
+    <p><font color="#000080" size="4"><strong>3.1- Ajout 
+      de Nouvelles colonnes &agrave; une table</strong></font></p>
+    <p><font size="4"><strong>- Syntaxe :</strong></font></p>
+    <blockquote>
+      <p><font size="4">ALTER TABLE nom_table</font></p>
+      <p><font size="4">ADD ( col1 type [(taille)][NULL/NOT 
+        NULL],</font></p>
+      <blockquote>
+        <blockquote> 
+          <p><font size="4">col2 type [(taille)][NULL/NOT 
+            NULL],</font></p>
+          <p><font size="4"> colp type [(taille)][NULL/NOT 
+            NULL]);</font></p>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+    <p><font size="4"><strong>- Exemple :</strong></font></p>
+    <blockquote>
+      <p><font size="4">ALTER TABLE client</font></p>
+      <p><font size="4">ADD type_clt varchar2(10);</font></p>
+    </blockquote>
+    <p><font color="#000080" size="4"><strong>3.2- Modification 
+      de la structure d'une colonne existante</strong></font></p>
+    <p><strong><font color="#000000" size="4">- Syntaxe :</font></strong></p>
+    <blockquote>
+      <p><font color="#000000" size="4">ALTER TABLE nom_table</font></p>
+      <p><font color="#000000" size="4">MODIFY ( </font><font size="4">col1 
+        type [(taille)][NULL/NOT NULL],</font></p>
+      <blockquote>
+        <blockquote> 
+          <p><font size="4">col2 type [(taille)][NULL/NOT 
+            NULL],</font></p>
+          <p><font size="4"> colp type [(taille)][NULL/NOT 
+            NULL]);</font></p>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+    <p><font size="4"><strong>- Exemple :</strong></font></p>
+    <blockquote>
+      <p><font size="4">ALTER TABLE client</font></p>
+      <p><font size="4">MODIFY type_clt varchar2(15);</font></p>
+    </blockquote>
+    <p><font color="#000080" size="4"><strong>3.3- Ajout 
+      d'une contrainte</strong></font></p>
+    <p><strong><font color="#000000" size="4">- Syntaxe : 
+      </font></strong></p>
+    <blockquote>
+      <p><font color="#000000" size="4">ALTER TABLE nom_table</font></p>
+      <p><font color="#000000" size="4">ADD CONSTRAINT def_contrainte;</font></p>
+    </blockquote>
+    <p><font color="#000080" size="4"><strong><a name="suppression"></a>3.4- 
+      Suppression d'une contrainte</strong></font></p>
+    <p><strong><font color="#000000" size="4">- Syntaxe :</font></strong></p>
+    <p><font color="#000000" size="4">* Suppression de la 
+      contrainte cl&eacute; primaire</font></p>
+    <blockquote>
+      <p><font color="#000000" size="4">ALTER TABLE nom_table 
+        </font></p>
+      <p><font color="#000000" size="4">DROP PRIMARY KEY 
+        [CASCADE];</font></p>
+    </blockquote>
+    <p><font color="#000000" size="4">L'option cascade pour 
+      pouvoir supprimer une cl&eacute; primaire r&eacute;ferenc&eacute;e.</font></p>
+    <p><font color="#000000" size="4">* Suppression d'une 
+      contrainte autre que la cl&eacute; primaire</font></p>
+    <blockquote>
+      <p><font color="#000000" size="4">ALTER TABLE nom_table</font></p>
+      <p><font color="#000000" size="4">DROP CONSTRAINT nom_contrainte;</font></p>
+    </blockquote>
+    <p><font color="#000000" size="4">o&ugrave; le nom_contrainte 
+      est celui de la contrainte &agrave; supprimer.</font></p>
+    <p><font color="#000000" size="4">Pour retrouver les 
+      diff&eacute;rentes contraintes avec leur propri&eacute;t&eacute;s, on peut 
+      utiliser la commande suivante:</font></p>
+    <blockquote>
+      <p><font color="#000000" size="4">SELECT * FROM user_constraints 
+        [WHERE table_name ='nom_table'];</font></p>
+    </blockquote>
+    <p><font color="#000000" size="4">Le nom de la table 
+      doit &ecirc;tre &eacute;crit en majuscule.</font></p>
+    <p><font color="#0000CC" size="4"><strong><font color="#000080">3- 
+      Suppression de Tables</font></strong></font></p>
+    <p><strong><font color="#000000" size="4">- Syntaxe :</font></strong></p>
+    <blockquote>
+      <p><font color="#000000" size="4">DROP TABLE nom_table;</font></p>
+    </blockquote>
+    <p><font color="#000000" size="4"><strong>- Exemple :</strong></font></p>
+    <blockquote>
+      <p><font color="#000000" size="4">DROP TABLE client_mahdia;</font></p>
+    </blockquote>
+    <p><font color="#000000" size="4">&#8212;&gt; La contrainte 
+      de suppression de table permet de supprimer toutes les contraintes d'integrit&eacute; 
+      r&eacute;ferentielles qui se refl&egrave;tent aux cl&eacute;s uniques ou 
+      primaires de la table &agrave; supprimer, et ce &agrave; travers l'option 
+      CASCADE CONSTRAINTS.</font></p>
+    <p><font color="#0000CC" size="4"><strong><font color="#000080"><a name="renommage"></a>4- 
+      Renommage et contrainte de synonymes de tables</font></strong></font></p>
+    <p><font color="#000033" size="4">* Pour changer le nom 
+      d'une table existante la commande est :</font></p>
+    <p><font color="#000033" size="4"><strong>- Syntaxe :</strong></font></p>
+    <blockquote>
+      <p><font color="#000033" size="4">RENAME ancien_nom 
+        TO nouveau_nom;</font></p>
+    </blockquote>
+    <p><font color="#000033" size="4">* Pour cr&eacute;er 
+      un synonyme (second nom d'une table) :</font></p>
+    <p><font color="#000033" size="4"><strong>- Syntaxe : 
+      </strong></font></p>
+    <blockquote>
+      <p><font color="#000033" size="4">CREATE SYNONYM nom_synonyme 
+        FOR nom_table;</font></p>
+    </blockquote>
+    <p><font color="#000033" size="4">* pour supprimer un 
+      synonyme :</font></p>
+    <p><font color="#000033" size="4"><strong>- Syntaxe :</strong></font></p>
+    <blockquote>
+      <p><font color="#000033" size="4">DROP SYNONYM nom_synonyme: 
+        </font></p>
+    </blockquote>
+    <p><font color="#000033" size="4">Remarque : la suppression 
+      d'une table implique la suppresssion des synonymes correspondants.</font></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <blockquote>
+      <blockquote> 
+        <blockquote> 
+          <p>&nbsp;</p>
+        </blockquote>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      </blockquote>
+    </blockquote>
+    <p>&nbsp;</p>
+  </blockquote>
+</div>
+<div align="center">
+  <p class="Style1"><font color="#000080">Cours 
+  en ligne : Base de Donn&eacute;es</font></p>
+</div>
+<blockquote> 
+  <blockquote> 
+    <div id="Layer2" style="position:absolute; left:894px; top:69px; width:502px; height:25px; z-index:2"><a href="ACCUEILP.htm"><img src="acceuil.gif" width="60" height="21" border="0"></a> 
+      <a href="chapitre6.htm"><img src="previous_off.gif" width="21" height="21" border="0"></a> 
+      <a href="chapitre8.htm"><img src="next_off.gif" width="21" height="21" border="0"></a></div>
+    <hr align="left">
+    <p>&nbsp;</p>
+  </blockquote>
+  <p>&nbsp;</p>
+</blockquote>
+</body>
+</html>

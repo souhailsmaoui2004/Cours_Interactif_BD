@@ -1,0 +1,156 @@
+<HTML>
+<HEAD>
+ <META HTTP-EQUIV="Content-Language" content="fr">
+ <META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+ <TITLE>QCM avec cases à cocher</TITLE>
+ <SCRIPT LANGUAGE="JavaScript">
+ <!-- cacher code
+ var cpt=0;
+ function test(nom,n) {
+  var rep=true;
+  if ( nom[0].checked==true) rep=true;
+  for (i=1; i<n; i++) { 
+    if (nom[i].checked==true) rep=false;
+	
+  }
+  
+    
+  if (nom[0].checked==false && nom[1].checked==false && nom[1].checked==false && nom[3].checked==false ) rep=false;
+  
+  return rep;
+ }
+ function test2(nom,n) {
+  var rep2=false;
+  if ( nom[0].checked==true &&  nom[1].checked==true &&  nom[2].checked==true && nom[3].checked==false  ) rep2=true;
+       if (nom[3].checked==true) rep2=false;
+	 
+    
+  if (nom[0].checked==false && nom[1].checked==false && nom[1].checked==false && nom[3].checked==false ) rep2=false;
+  
+  return rep2;
+ }
+ //fin du script. -->
+ </SCRIPT>
+</HEAD>
+
+<BODY background = "backg2.jpg">
+<H1>QCM : Introduction 
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type=BUTTON name="bouton11" value="SCORT"
+  ONCLICK="if (true) {alert('votre scort est:'+ cpt*2 + '/10')} 
+          else {alert('Réponse fausse.')}">
+         
+   <a href="ACCUEILP.htm"></a></H1>
+<p>Remarque : il faut valider chaque question </p>
+<HR>
+<FORM NAME="qcm1">
+<B>Question :</B><BR>
+Quelles sont les propriétés incorrectes d'un SGBD ?<BR>
+<B>Réponses :</B>
+<BR>
+
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Non Coh&eacute;rence de donn&eacute;es<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Ind&eacute;pendance logique <BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Non Redondance des Donn&eacute;es<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+</INPUT>Ind&eacute;pendance physique<BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm2">
+<B>Question :</B><BR>
+Quelles sont les objectifs d'une base de donn&eacute;es?<BR>
+<B>Réponses :</B>
+<BR><INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Elimination de la redondance des donn&eacute;es<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Ind&eacute;pendance entre les programmes et les donn&eacute;es
+</INPUT>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Int&eacute;gration de donn&eacute;es
+</INPUT>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1> 
+ Integration donn&eacute;es et traitements
+ </INPUT>
+<BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test2(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm3">
+<B>Question :</B><BR>
+Quelles sont les trois nivaux de l'architecture d'un SGBD?<BR>
+<B>Réponses :</B>
+<BR><INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Conceptuel
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Logique <BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Physiques
+</INPUT>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Traitement
+<BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test2(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm4">
+<B>Question :</B><BR>
+Quelle est la d&eacute;finition de l'ind&eacute;pendance physique d'un SGBD?<BR>
+<B>Réponses :</B>
+<BR><INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+La fa&ccedil;on dont les donn&eacute;es sont d&eacute;finies doit &ecirc;tre ind&eacute;pendante des structures de stockage utilis&eacute;es.<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+La fa&ccedil;on dont les donn&eacute;es sont d&eacute;finies doit &ecirc;tre d&eacute;pendante des structures de stockage utilis&eacute;es<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+ La fa&ccedil;on dont les donn&eacute;es sont d&eacute;finies doit &ecirc;tre d&eacute;pendante des structures de tables <BR>
+ <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+  La fa&ccedil;on dont les donn&eacute;es sont d&eacute;finies doit &ecirc;tre diff&eacute;rente des structures de stockage utilis&eacute;es <BR>
+ <BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm1">
+<B>Question :</B><BR>
+Quelle est la d&eacute;finition de la coh&eacute;rence de donn&eacute;es d'un SGBD? <BR>
+<B>Réponses :</B>
+<BR><INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Les donn&eacute;es sont soumises &agrave; un certain nombre de contraintes d'integrit&eacute;&nbsp;
+</INPUT>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Pas de redondance de donn&eacute;es <BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0> 
+Les donn&eacute;es sont s&eacute;par&eacute;es aux traitement&nbsp;<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1> 
+Les donn&eacute;es sont ind&eacute;pendantes physiquement de l'espace de stockage <BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+</BODY>
+</HTML>

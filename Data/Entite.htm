@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style type="text/css">
+<!--
+.Style1 {
+	font-size: 24px;
+	font-weight: bold;
+	font-family: "Times New Roman", Times, serif;
+}
+.Style2 {font-family: "Times New Roman", Times, serif}
+.Style4 {
+	color: #333333;
+	font-weight: bold;
+	font-size: 16px;
+}
+.Style6 {color: #000066; font-weight: bold; font-size: 18px; }
+.Style9 {
+	color: #333333;
+	font-weight: bold;
+	font-size: 18px;
+}
+.Style10 {
+	color: #000000;
+	font-size: 16px;
+	font-weight: bold;
+}
+.Style11 {
+	font-size: 18px;
+	color: #000033;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body background = "backg2.jpg">
+<div class="Style2" id="Layer1" style="position:absolute; left:97px; top:151px; width:921px; height:3694px; z-index:1"> 
+  <blockquote>
+    <p align="center"><font color="#9A9A4E" size="5"><strong>Chapitre 
+      2 : Le Mod&egrave;le Entit&eacute; / Association</strong></font></p>
+    <p><font color="#000080" size="4"><strong>Objectif </strong></font></p>
+    <p><font size="4">Conna&icirc;tre le mod&egrave;le Entit&eacute;/Association, 
+      ses notions et ses principes de base, ainsi que les r&egrave;gles de passage 
+      vers le mod&egrave;le relationnel.</font></p>
+    <p><font color="#000080" size="4"><strong>El&eacute;ments 
+      de contenu </strong></font></p>
+    <p><font size="4">1- <a href="Entite.htm#introduction">Introduction</a></font></p>
+    <p><font size="4">2- <a href="Entite.htm#concept">Concepts de base</a></font></p>
+    <p><font size="4">3- <a href="Entite.htm#association">Association</a></font></p>
+    <p><font size="4">4-<a href="Entite.htm#regles"> Les 
+      r&egrave;gles de passage du mod&egrave;le E/A vers le mod&egrave;le Relationne</a><a href="Entite.htm#regles">l </a></font></p>
+    <p><font size="4">5-<a href="Entite.htm#exemple"> Exemple illustratif</a></font></p>
+  </blockquote>
+  <p>&nbsp;</p>
+  <blockquote>
+    <div align="justify" class="Style6"><a name="introduction"></a>1. 
+      INTRODUCTION </div>
+    <div align="justify">
+      <p>On  appelle mod&egrave;le, toute repr&eacute;sentation d'un syst&egrave;me r&eacute;el exprim&eacute;e sous forme  verbale, graphique ou math&eacute;matique.</p>
+      <p>La  mod&eacute;lisation se fait en utilisant des symboles pr&eacute;cis pour permettre la  communication entre les concepteurs.</p>
+      <p>Le  mod&egrave;le Entit&eacute;/Association (appel&eacute; aussi entit&eacute;/Relation) est un mod&egrave;le con&ccedil;u  par CHEN en 1976, il est bas&eacute; sur une perception du monde r&eacute;el qui consiste &agrave;  distinguer des abstractions de donn&eacute;es &eacute;l&eacute;mentaires appel&eacute;es  &quot;Entit&eacute;s&quot; et des liaisons entre ces entit&eacute;s appel&eacute;es  &quot;associations&quot;.</p>
+    </div>
+    <div align="justify"> 
+      <p class="Style6"><a name="concept"></a>2. CONCEPTS DE BASE</p>
+      <p class="Style9">Entit&eacute;:</p>
+      <p>Une entit&eacute;  est un objet du monde r&eacute;el , d&eacute;fini g&eacute;n&eacute;ralement par un nom et une liste de  propri&eacute;t&eacute;s.</p>
+      <p class="Style10">Association:</p>
+      <p>une  association est un lien logique entre 2 entit&eacute;s ou plus.</p>
+      <p class="Style4">Cardinalit&eacute; (min:max):</p>
+      <p>La  cardinalit&eacute; permet de d&eacute;terminer le type de lien entres les entit&eacute;s. </p>
+      <p>Exemple:</p>
+      <div><img src="im1.jpg" width="610" height="81"></div>
+      <p>Une  commande correspond au minimum &agrave;&nbsp; 1  client et au maximum &agrave; 1 client(1:1).</p>
+      <p>Un  client peut avoir au minimum 0 commande et au maximum n commandes (0:n).</p>
+      <div>&bull;But  : permettre la description conceptuelle des structures de donn&eacute;es d'une  application</div>
+      <div>&bull;Les  concepts de base (correspondent aux concepts d&rsquo;abstraction de la r&eacute;alit&eacute;) :</div>
+      <div>&ndash;  objet&nbsp;&lt;=&gt;&nbsp;entit&eacute; &nbsp; </div>
+      <div>&ndash;  lien&nbsp;&lt;=&gt;&nbsp;association &nbsp; </div>
+      <div>&ndash;  propri&eacute;t&eacute;&nbsp;&lt;=&gt;&nbsp;attribut&nbsp;</div>
+      <div>&bull;Entit&eacute; : repr&eacute;sentation d&rsquo;un objet du  monde r&eacute;el ayant une existence propre</div>
+      <div>
+        <p>&bull;Classe  d'entit&eacute; (CE) :  repr&eacute;sentation d'un ensemble d'entit&eacute;s per&ccedil;ues comme similaires et ayant les  m&ecirc;mes caract&eacute;ristiques</p>
+        <div align="justify">
+          <p><font size="4"> Les Symboles</font></p>
+          <p> <img name="enti3" src="enti3.gif" width="601" height="274" border="0" alt=""></p>
+        </div>
+        <p>&nbsp;</p>
+      </div>
+      <p class="Style6"><a name="association"></a>3. ASSOCIATION </p>
+      <div>&bull; Association : repr&eacute;sentation d'un lien entre  plusieurs entit&eacute;s (qui jouent un r&ocirc;le d&eacute;termin&eacute;) </div>
+      <div></div>
+      <div>&bull;Classe d'association (CA) : repr&eacute;sentation d'un ensemble  d'associations ayant la m&ecirc;me s&eacute;mantique et d&eacute;crites par les m&ecirc;mes  caract&eacute;ristiques</div>
+      <p align="left" class="Style6"> ROLES D'UNE ASSOCIATION</p>
+      <div></div>
+      <p class="Style6"><img src="im2.jpg" width="851" height="320">.</p>
+    </div>
+    <div align="justify">
+      <p><img src="im3.jpg" width="832" height="337"></p>
+      <p>.</p>
+      <div align="justify">
+        <p><img src="im4.jpg" width="799" height="276"></p>
+        <p>.</p>
+      </div>
+      <div align="justify">
+        <p><img src="im5.jpg" width="817" height="282"></p>
+        <p>.</p>
+      </div>
+      <p>.</p>
+    </div>
+    <div align="justify"> 
+          <div align="justify">
+            <p><img src="im6.jpg" width="838" height="330"></p>
+      </div>
+          <div align="justify">
+            <p><img src="im7.jpg" width="820" height="351"></p>
+          </div>
+          <div align="justify">
+            <p><img src="im8.jpg" width="814" height="422"></p>
+          </div>
+          <div align="justify">
+            <div align="justify">
+              <p><img src="im9.jpg" width="812" height="263"></p>
+            </div>
+            <div align="justify">
+              <p class="Style6"><a name="regles"></a>4. Les 
+      r&egrave;gles de passage du mod&egrave;le E/A vers le mod&egrave;le Relationnel</p>
+            </div>
+            <div align="justify">
+              <div align="justify"><font size="4">Toute entit&eacute; 
+                se transforme en une relation dont l'identifiant sera la cl&eacute; primaire.</font></div>
+              <div align="justify"><font size="4">- Les associations 
+                de type 1:N se traduisent par l'introduction d'une cl&eacute; &eacute;trang&egrave;re 
+                de l'entit&eacute; source vers l'entit&eacute; but ( dans l'entit&eacute; 
+                Fils)</font></div>
+              <div align="justify"><font size="4">- Les associations 
+                de type N:M se traduisent par la cr&eacute;ation d'une relation dont la 
+                cl&eacute; primaire sera la concat&eacute;nation des cl&eacute;s des entit&eacute;s 
+                participantes &agrave; cette association et les propri&eacute;t&eacute;s 
+                sont les propri&eacute;t&eacute;s de cette association.</font></div>
+              <blockquote>
+                <div align="justify"></div>
+              </blockquote>
+            </div>
+      </div>
+          <div align="justify">
+            <p class="Style11"><a name="exemple"></a>5. Exemple illustratif:</p>
+            <p>Supposons  que l&rsquo;on veuille repr&eacute;senter les activit&eacute;s d&rsquo;une petite entreprise commerciale  sp&eacute;cialis&eacute;e dans la vente les jouets. Chaque jouet est caract&eacute;ris&eacute; par : code_jouet, lib_jouet, qte_stk et prix_u_jouet. </p>
+            <p>Chaque  jouet est fourni par un seul fournisseur alors qu&rsquo;un fournisseur peut en  fournir plusieurs.</p>
+            <p>Un  fournisseur est caract&eacute;ris&eacute; par : num_frs, nom_frs, ville_frs et tel_frs.</p>
+            <p>Pour  acheter des&nbsp; jouets l&rsquo;entreprise pr&eacute;pare  des commandes et l&rsquo;envoie aux fournisseurs appropri&eacute;s.&nbsp; </p>
+            <p>Une  commande concerne plusieurs produits est caract&eacute;ris&eacute;e par: num_cde et date_cde.  Pour chaque produit on pr&eacute;cise la quantit&eacute; command&eacute;e.</p>
+            <p><img src="im12.jpg" width="797" height="341"></p>
+          </div>
+    </div>
+    <blockquote>
+      <p>Le  mod&egrave;le relationnel de l&rsquo;exemple illustratif:</p>
+      <p>Jouet  ( <u>code_jouet</u> , lib_jouet, qte_stk, prix_u_jouet, #num_frs)</p>
+      <p>Fournisseur  (<u>num_frs</u>, nom_frs, ville_frs, tel_frs)</p>
+      <p>Commande  (<u>num_cde</u>, date_cde, #num_frs)</p>
+      <p>Ligne_commande (<u>#</u><u>num_cde</u><u>, #</u><u>code_jouet</u> , qt&eacute;_cd&eacute;)</p>
+    </blockquote>
+    <div align="justify"></div>
+  </blockquote>
+</div>
+<div align="center">
+  <p>&nbsp;</p>
+  <p class="Style1"><font color="#000080">Cours 
+    en ligne : Base de Donn&eacute;es</font></p>
+</div>
+<blockquote> 
+  <blockquote> 
+    <hr align="left">
+    <p>&nbsp;</p>
+  </blockquote>
+  <div id="Layer2" style="position:absolute; left:954px; top:107px; width:502px; height:25px; z-index:2"><a href="ACCUEILP.htm"><img src="acceuil.gif" width="60" height="21" border="0"></a> 
+    <a href="introduction.htm"><img src="previous_off.gif" width="21" height="21" border="0"></a> 
+    <a href="chapitre3.htm"><img src="next_off.gif" width="21" height="21" border="0"></a></div>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</blockquote>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<HTML>
+<HEAD>
+ <META HTTP-EQUIV="Content-Language" content="fr">
+ <META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+ <TITLE>QCM avec cases à cocher</TITLE>
+ <SCRIPT LANGUAGE="JavaScript">
+ <!-- cacher code
+ var cpt=0;
+ function test(nom,n) {
+  var rep=true;
+  if ( nom[0].checked==true) rep=true;
+  for (i=1; i<n; i++) { 
+    if (nom[i].checked==true) rep=false;
+	
+  }
+  
+    
+  if (nom[0].checked==false && nom[1].checked==false && nom[1].checked==false && nom[3].checked==false ) rep=false;
+  
+  return rep;
+ }
+ function test2(nom,n) {
+  var rep2=false;
+  if ( nom[0].checked==true &&  nom[1].checked==true &&  nom[2].checked==true && nom[3].checked==false  ) rep2=true;
+       if (nom[3].checked==true) rep2=false;
+	 
+    
+  if (nom[0].checked==false && nom[1].checked==false && nom[1].checked==false && nom[3].checked==false ) rep2=false;
+  
+  return rep2;
+ }
+ //fin du script. -->
+ </SCRIPT>
+</HEAD>
+
+<BODY background = "backg2.jpg">
+<H1>QCM : La normalisation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type=BUTTON name="bouton11" value="SCORT"
+  ONCLICK="if (true) {alert('votre scort est:'+ cpt*2 + '/10')} 
+          else {alert('Réponse fausse.')}">
+         
+<a href="ACCUEILP.htm"></a></H1>
+<HR>
+<FORM NAME="qcm1">
+<B>Question :</B><BR>
+ Une relation est en deuxi&egrave;me forme normale si : <BR>
+<B>Réponses :</B>
+<BR>
+
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1> 
+Elle poss&egrave;de une cl&eacute; , les champs sont atomiques et toutes les DF sont &eacute;l&eacute;mentaires<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Elle est en premi&egrave;re forme normale et toutes les DF sont non transitives<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Elle poss&egrave;de une cl&eacute; , les champs sont atomiques et toutes les DF sont directes<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Elle est en premi&egrave;re forme normale et toutes les DF sont directes <BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm2">
+<B>Question :</B><BR>
+Une relation est en troisi&egrave;me forme normale si : <br>
+<B>Réponses :</B>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Elle poss&egrave;de une cl&eacute; primaire, les champs sont atomiques et toutes les DF sont directes <BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+ Elle est en deuxi&egrave;me forme normale et toutes les DF sont non transitives<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Elle est en deuxi&egrave;me forme normale et toutes les DF sont directes
+</INPUT>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Elle est en deuxi&egrave;me forme normale et toutes les DF sont &eacute;l&eacute;mentaires <BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test2(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+<FORM NAME="qcm3">
+  <p><B>Question :</B></p>
+  <p align="center"><img src="im13.jpg" width="724" height="222"><BR>
+  </p>
+  <p align="left">Cette relation est en :  : <BR>
+    <B>Réponses :</B>
+    <BR>
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+    Premi&egrave;re forme normale<BR>
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+    Deuxi&egrave;me forme normale<BR>
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+    Troisi&egrave;me forme normale
+    </INPUT>
+    <BR>
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+    BCFN<BR>
+    <BR>
+    <INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+    </INPUT>
+      </p>
+</FORM>
+<HR>
+<FORM NAME="qcm4">
+<B>Question :</B><BR>
+<p>Soit  la relation suivante: Produit  (<u>code_produit</u>,  d&eacute;signation, code_tva, taux_tva)<BR>
+Cette relation est en: <BR>
+  <B>R&eacute;ponses :</B><BR>
+  <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+  2FN <BR>
+  <INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+  3FN<BR>
+  <INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+  BCFN<BR>
+  <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1> 
+  3FN et BCFN <BR>
+  <BR>
+  <INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+  </INPUT>
+</p>
+</FORM>
+<HR>
+<FORM NAME="qcm1">
+<B>Question :</B><BR>
+Une  relation est dite en BCFN si et seulement si:<BR>
+<B>Réponses :</B>
+<BR><INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Elle est en 2FN&nbsp;
+</INPUT>
+<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Elle est en 3FN<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+Toute  source de DF doit &ecirc;tre une cl&eacute; primaire&nbsp;<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+Toute  source de DF est r&eacute;f&eacute;renc&eacute;e <BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test2(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+</BODY>
+</HTML>

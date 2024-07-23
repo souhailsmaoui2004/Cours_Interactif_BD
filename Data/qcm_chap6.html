@@ -1,0 +1,181 @@
+<HTML>
+<HEAD>
+ <META HTTP-EQUIV="Content-Language" content="fr">
+ <META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+ <TITLE>QCM avec cases à cocher</TITLE>
+ <SCRIPT LANGUAGE="JavaScript">
+ <!-- cacher code
+ var cpt=0;
+ function test(nom,n) {
+  var rep=true;
+  if ( nom[0].checked==true) rep=true;
+  for (i=1; i<n; i++) { 
+    if (nom[i].checked==true) rep=false;
+	
+  }
+  
+    
+  if (nom[0].checked==false && nom[1].checked==false && nom[1].checked==false && nom[3].checked==false ) rep=false;
+  
+  return rep;
+ }
+ function test2(nom,n) {
+  var rep2=false;
+  if ( nom[0].checked==true &&  nom[1].checked==true &&  nom[2].checked==true && nom[3].checked==false  ) rep2=true;
+       if (nom[3].checked==true) rep2=false;
+	 
+    
+  if (nom[0].checked==false && nom[1].checked==false && nom[1].checked==false && nom[3].checked==false ) rep2=false;
+  
+  return rep2;
+ }
+ //fin du script. -->
+ </SCRIPT>
+</HEAD>
+
+<BODY background = "backg2.jpg">
+<H1>QCM : Le langage SQL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+   <input type=BUTTON name="bouton11" value="SCORT"
+  ONCLICK="if (true) {alert('votre scort est:'+ cpt*2 + '/10')} 
+          else {alert('Réponse fausse.')}">
+         
+<a href="ACCUEILP.htm"></a></H1>
+<HR>
+<FORM NAME="qcm1">
+  <p>Soit la base de donn&eacute;es suivante:</p>
+  <p align="center"><img src="im14.jpg" width="653" height="393"></p>
+  <p><B>Question :</B></p>
+  <p>Soit la reu&ecirc;te suivtante: <BR>
+    select code_dept, count (*)<BR>
+from employ&eacute;   <BR>
+    group by cod_dept; <BR>
+  Cette requ&ecirc;te retourne:</p>
+  <p><BR>
+    <B>Réponses :</B>
+    <BR>
+
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+    Le nombre d'employ&eacute;s par d&eacute;partement<BR>
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+    Null<BR>
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+    Nombre de d&eacute;partement<BR>
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+    Erreur<BR>
+    <BR>
+    <INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+    </INPUT>
+  </p>
+</FORM>
+<HR>
+<FORM NAME="qcm2">
+  <p><B>Question :</B></p>
+  <p>Quelles sont les  affirmations vraies concernant l'ex&eacute;cution des sous-requ&ecirc;tes corr&eacute;l&eacute;es? <BR>
+    <B>Réponses :</B>
+    <BR>
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+    La requ&ecirc;te imbriqu&eacute;e s'ex&eacute;cute en premier lieu.<BR>
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+    Chaque ligne renvoy&eacute;e par la requ&ecirc;te externe est &eacute;valu&eacute;e pour les r&eacute;sultats renvoy&eacute;s par la requ&ecirc;te interne.<BR>
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+    La requ&ecirc;te imbriqu&eacute;e peut retourner plusieurs lignes
+</INPUT>
+    <BR>
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+    La requ&ecirc;te imbriqu&eacute;e doit retourner obligatoirement une seule ligne
+     </INPUT>
+    <BR>
+    <BR>
+    <INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test2(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+    </INPUT>
+    </p>
+</FORM>
+<HR>
+<FORM NAME="qcm3">
+  <p><B>Question :</B></p>
+  <p align="left">Soit la reu&ecirc;te suivtante: <BR>
+select code_emp, nom_emp, code_dept, nom_dept<BR>
+from employ&eacute; e join departement d<BR>
+    on e.code_dept=d.code_dept; <BR>
+  Cette requ&ecirc;te retourne: </p>
+  <p align="left"><B>Réponses :</B>
+    <BR>
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+  Erreur</p>
+  <p align="left">
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+  La liste des clients avec le nom de leur d&eacute;partement </p>
+  <p align="left">
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+    La liste des clients affect&eacute;s &agrave; des d&eacute;partements </p>
+  <p align="left">
+    </INPUT>
+    <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+  Les clients nont affect&eacute;s ne sont pas affich&eacute;s </p>
+  <p align="left"><BR>
+    <INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+    </INPUT>
+  </p>
+</FORM>
+<HR>
+<FORM NAME="qcm4">
+<B>Question :</B><BR>
+<p>Soit la reu&ecirc;te suivtante: <BR>
+select code_emp, nom_emp, e.code_dept, nom_dept<BR>
+from employ&eacute; e left join departement d<BR>
+on e.code_dept=d.code_dept; <BR>
+Cette requ&ecirc;te retourne: <BR>
+  <B>R&eacute;ponses :</B><BR>
+  <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+  La liste des clients affect&eacute;s avec le nom de leur d&eacute;partement et les d&eacute;partement n'ayant pas d'employ&eacute;s <BR>
+  <INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+  La liste des clients affect&eacute;s et non affect&eacute;s avec le nom de leur d&eacute;partement<BR>
+  <INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+  La liste des clients non affect&eacute;s aux d&eacute;partements<BR>
+  <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1> 
+  Erreur<BR>
+  <BR>
+  <INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+  </INPUT>
+</p>
+</FORM>
+<HR>
+<FORM NAME="qcm1">
+<B>Question :</B><BR>
+Soit la reu&ecirc;te suivtante: <BR>
+Souhail est un utilisateur de la base de donn&eacute;es. &Eacute;valuez les commandes &eacute;mises par l'administrateur de base de donn&eacute;es:<BR>
+1 - CREATE ROLE SSS;<br>
+2 - GRANT CREATE TABLE, SELECT 
+ON oe.orders TO SSS;<br>
+3 - GRANT SSS, create table TO Souhail;<BR>
+  <B>Réponses :</B>
+  <BR>
+  <INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+  L&rsquo;instruction 2 ne s&rsquo;ex&eacute;cutera pas car les privil&egrave;ges syst&egrave;me et les privil&egrave;ges d&rsquo;objet ne peuvent pas &ecirc;tre<br>
+  accord&eacute; ensemble dans une seule commande GRANT.&nbsp;
+  </INPUT>
+  <BR>
+  <INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+ L'instruction 1 ne serait pas ex&eacute;cut&eacute;e car la clause IDENTIFIED BY &lt;mot de passe&gt; est manquante.<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=0>
+ L'instruction 1 ne serait pas ex&eacute;cut&eacute;e car l'option WITH GRANT est manquante.<BR>
+<INPUT TYPE=CHECKBOX NAME="choix" VALUE=1>
+L'instruction 3 ne serait pas ex&eacute;cut&eacute;e car les privil&egrave;ges de r&ocirc;le et syst&egrave;me ne pouvaient pas &ecirc;tre accord&eacute;s ensemble<br>
+dans une seule d&eacute;claration GRANT.<BR>
+<BR>
+<INPUT TYPE=BUTTON NAME="bouton" VALUE="Valider"
+ ONCLICK=" this.disabled=true; if (test(choix,4)) {alert('Bonne réponse.') ;  cpt=cpt+1; } 
+          else {alert('Réponse fausse.')} ">  
+</INPUT>
+</FORM>
+<HR>
+</BODY>
+</HTML>

@@ -1,0 +1,1069 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style type="text/css">
+<!--
+.Style1 {
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-size: 24px;
+}
+.Style2 {font-family: "Times New Roman", Times, serif}
+.Style3 {
+	font-size: 36px;
+	font-style: italic;
+	font-weight: bold;
+}
+.Style4 {font-size: 24px; font-style: italic; font-weight: bold; }
+-->
+</style>
+</head>
+
+<body background = "backg2.jpg">
+<div class="Style2" id="Layer1" style="position:absolute; left:96px; top:134px; width:921px; height:493px; z-index:1"> 
+  <p align="center"><font color="#A6A653" size="5"><strong>Langage de manipulation de donn&eacute;es</strong></font></p>
+  <blockquote> 
+    <p><font color="#000080" size="4"><strong>Objectif</strong></font></p>
+    <p><font color="#000033" size="4">Apprendre le lngage 
+      SQL pour manipuler les donn&eacute;es.</font></p>
+    <p><font color="#000080" size="4"><strong>El&eacute;ments 
+      de Contenu</strong></font></p>
+    <p><font color="#000033" size="4">1-<a href="chapitre8.htm#introduction"> 
+      Introduction</a></font></p>
+    <p><font color="#000033" size="4">2-<a href="chapitre8.htm#insertion"> insertion de donn&eacute;es</a></font></p>
+    <p><font color="#000033" size="4">3- <a href="chapitre8.htm#modification">Modification 
+      de donn&eacute;es</a></font></p>
+    <p><font color="#000033" size="4">4- <a href="chapitre8.htm#suppression">Suppression 
+      de Donn&eacute;es</a></font></p>
+    <p><font color="#000033" size="4">5- <a href="chapitre8.htm#consultation">Consultation 
+      de Donn&eacute;es</a></font></p>
+    <p><font color="#000033" size="4">6- <a href="chapitre8.htm#vues">Manipulation 
+      de Donn&eacute;es &agrave; travers les Vues</a></font></p>
+    <p><font color="#0000CC" size="4"><strong><font color="#000080">1- 
+      Introduction<a name="introduction"></a></font></strong></font></p>
+    <p><font size="4">Le langage de Manipulation de Donn&eacute;es 
+      (LMD) permet la consultation et la mise &agrave; jour des objets cr&eacute;es 
+      par le langage de d&eacute;finition de donn&eacute;es. La mise &agrave; 
+      jour englobe l'insertion de nouvelles donn&eacute;es, la modification et 
+      la suppression de donn&eacute;es existantes.</font></p>
+    <div align="justify"> 
+      <p><font color="#000080" size="4"><strong>2- Insertion 
+        de donn&eacute;es<a name="insertion"></a></strong></font></p>
+      <p><font size="4">L'insertion consiste &agrave; ajouter 
+        des nouvelles lignes dans une table. Elle peut affecter toutes les colonnes 
+        d'une tble ou seulement un sous-ensemble de ces colonnes, les autres prendront 
+        automatiquement des valeurs nulles.</font></p>
+      <p><font size="4">On distingiue entre 2 formes por 
+        la commande d'insertion :</font></p>
+      <p><font color="#000080" size="4"><strong>2.1- Insertion 
+        des valeurs pour la totalit&eacute; des colonnes de la table</strong></font></p>
+      <p><font size="4"><strong>- Syntaxe :</strong></font></p>
+    </div>
+    <blockquote> 
+      <div align="justify"> 
+        <p><font size="4">INSERT INTO nom_table VALUES [colonne1, 
+          colonne2,...)] VALUES ( vaeur1,valeur2,...);</font></p>
+      </div>
+    </blockquote>
+    <div align="justify"> 
+      <p><font size="4">Les valeurs des colonnes de type 
+        caract&egrave;re ou cha&icirc;ne de caract&egrave;res doivent appara^tre 
+        entre 2 cotes (''). Si la valeur est nulle, on doit mettre 2 cotes successives(sans 
+        blanc). Si le type est num&eacute;rique et la valeur est nulle, il suffit 
+        de la d&eacute;passer mais il ne faut mettre la liste des champs qui devient 
+        indispensable sans mettre le champ de dont la valeur sea nulle.</font></p>
+      <p><font size="4"><strong>- Exemple1 :</strong></font></p>
+    </div>
+    <blockquote> 
+      <div align="justify"> 
+        <p><font size="4"> INSERT INTO client VALUES (100,'mohamed',98777666,'rue 
+          ezzouhour 102',3093,'Sfax');</font></p>
+      </div>
+    </blockquote>
+    <div align="justify"> 
+      <p><font size="4"><strong>- Exemple2 :</strong></font></p>
+    </div>
+    <blockquote> 
+      <div align="justify"> 
+        <p><font size="4">INSERT INTO client(numcl,nomcl) 
+          VALUES (100,'karima turki');</font></p>
+      </div>
+    </blockquote>
+    <div align="justify"> 
+      <p><font color="#000099" size="4"><strong>2.2- Insertion 
+        &agrave; travers la copie des valeurs des colonnes d'une autre table</strong></font></p>
+      <p><strong><font color="#000000" size="4">- Syntaxe 
+        :</font></strong></p>
+    </div>
+    <blockquote> 
+      <div align="justify"> 
+        <p><font color="#000000" size="4">INSERT INTO nom_table 
+          [(colonne1,colonne2,...)] requ&ecirc;te</font></p>
+      </div>
+    </blockquote>
+    <div align="justify"> 
+      <p><font color="#000000" size="4"><strong>- Exemple 
+        :</strong></font></p>
+    </div>
+    <blockquote> 
+      <div align="justify"> 
+        <p><font color="#000000" size="4">INSERT INTO client 
+          (numcl,nomcl,tel,adr) SELECT * FROM client_mahdia;</font></p>
+      </div>
+    </blockquote>
+    <div align="justify"> 
+      <p><font color="#0000CC" size="4"><strong><font color="#000080">3- 
+        Modification des Donn&eacute;es</font><a name="modification"></a></strong></font></p>
+      <p><font color="#000000" size="4">L'op&eacute;ration 
+        de modification de donn&eacute;es consiste &agrave; mettre &agrave; jour 
+        les colonnes d'une table par de nouvelles valeurs.</font></p>
+      <p><font color="#000000" size="4"><strong>- Syntaxe 
+        :</strong></font></p>
+    </div>
+    <blockquote> 
+      <div align="justify"> 
+        <p><font color="#000000" size="4">UPDATE nom_table</font></p>
+      </div>
+      <blockquote> 
+        <div align="justify"> 
+          <p><font color="#000000" size="4">SET col1= val1,...,coln 
+            =valn WHERE condition;</font></p>
+        </div>
+      </blockquote>
+    </blockquote>
+    <div align="justify"> 
+      <p><font size="4">&#8212;&gt; Il n'est pas possible 
+        de mettre &agrave; jour plus qu'une table &agrave; la fois.</font></p>
+      <p><font size="4">&#8212;&gt; Les valeurs peuvnt &ecirc;tre 
+        des constantes, des expresions ou des r&eacute;ultats de sous-requ&ecirc;tes.</font></p>
+      <p><font size="4"><strong>- Exemple :</strong></font></p>
+    </div>
+    <blockquote> 
+      <div align="justify"> 
+        <p><font size="4">UPDATE client SET adr_clt ='10,cit&eacute; 
+          kantaoui' WHERE nom ='mohamed';</font></p>
+      </div>
+    </blockquote>
+    <div align="justify"> 
+      <p><font color="#0000CC" size="4"><strong><a name="suppression"></a><font color="#000080">4- 
+        Suppression de donn&eacute;es</font></strong> </font></p>
+      <p><font color="#000000" size="4">La suppression des 
+        donn&eacute;es consiste &agrave; supprimer une ou plusieurs lignes d'une 
+        table.</font></p>
+      <p><font color="#000000" size="4"><strong>- Syntaxe 
+        :</strong></font></p>
+    </div>
+    <blockquote> 
+      <div align="justify"> 
+        <p><font color="#000000" size="4">DELETE FROM nom_table 
+          WHERE condition;</font></p>
+      </div>
+    </blockquote>
+    <div align="justify"> 
+      <p><font color="#000000" size="4"><strong>- Exemple 
+        :</strong></font></p>
+    </div>
+    <blockquote> 
+      <div align="justify"> 
+        <p><font color="#000000" size="4">DELETE FROM client 
+          WHERE ville = 'Tunis';</font></p>
+      </div>
+    </blockquote>
+    <div align="justify"> 
+      <p><font color="#0000CC" size="4"><strong><a name="consultation"></a><font color="#000080">5- 
+        Consultation de Donn&eacute;es</font></strong></font></p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify"><font color="#000000" size="4">La 
+        consultation se fait par la syntaxe suivante :</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font color="#000000" size="4">SELECT 
+          liste_d'attributs FROM liste_de_tables</font></p>
+        <p align="justify"><font color="#000000" size="4">[WHERE 
+          condition ]</font></p>
+        <p align="justify"><font color="#000000" size="4">[[START 
+          WITH condition] CONNECT BY condition ]</font></p>
+        <p align="justify"><font color="#000000" size="4">[GROUP 
+          BY list_attributs] [HAVING condition]</font></p>
+        <p align="justify"><font color="#000000" size="4">[UNION 
+          /UNION ALL /INTERSECT/MINUS] commande SELECT ]</font></p>
+        <p align="justify"><font color="#000000" size="4">[ORDER 
+          BY [expre/position] [ASC/DESC];</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000000" size="4">La 
+        clause SELECT et FROM sont obligatoires et permettant de sp&eacute;cifier 
+        la liste des attributs &agrave; extraire et la liste de tables &agrave; 
+        partir desquelles les donn&eacute;es seront extraites.</font></p>
+      <p align="justify"><font color="#000000" size="4">Toutes 
+        les autres clauses sont optionnelles et servent &agrave; raffiner la s&eacute;lection 
+        et offrir d'autres services.</font></p>
+      <p align="justify"><font color="#000000" size="4">- 
+        L'ordre des colonnes est celui sp&eacute;cifi&eacute; dans la liste de 
+        s&eacute;lection. Si l'utilisateur d&eacute;sire lister la totalit&eacute; 
+        des colonnes de la table, il peut utiliser le caract&egrave;re g&eacute;nerique 
+        *.</font></p>
+      <p align="justify"><font color="#000000" size="4">- 
+        Si on souhaite avoir toutes les lignes de la table, on ne met pas la clause 
+        WHERE.</font></p>
+      <p align="justify"><font color="#000000" size="4">- 
+        Chaque fois qu'une req&ucirc;ete d'interrogation est ex&eacute;cut&eacute;e, 
+        les noms des colonnes d&eacute;finies dans la structure de la table apparaissent 
+        comme titres de colonnes. On peut modifier ces noms de colonnes &agrave; 
+        l'affichage uniquement en ajoutant des ALIAS. La commande devient comme 
+        suit:</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font color="#000000" size="4">SELECT 
+          col1[alias1], col2 [alias2],...coln[aliasn]</font></p>
+        <p align="justify"><font color="#000000" size="4">FROM 
+          nom_table [alias]</font></p>
+        <p align="justify"><font color="#000000" size="4">......</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000080" size="4"><strong>5.1- 
+        Cnsultation Simple </strong></font></p>
+      <p align="justify"><font color="#000000" size="4">La 
+        syntaxe est la suivante : SELECT list_attr FROM liste_table;</font></p>
+      <p align="justify"><font color="#000000" size="4">- 
+        Exemple :</font></p>
+      <p align="justify"><font color="#000000" size="4">SELECT 
+        * FROM client;</font></p>
+      <p align="justify"><font color="#000080" size="4"><strong>5.2- 
+        Consultation avec qualification</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">Elle 
+        se fait en ajoutant la clause WHERE et en sp&eacute;cifiant une ou plusieurs 
+        conditions. On peut dans une condition utiliser les op&eacute;rateurs 
+        de comparaison qui sont offerts par SQL tels que =,&lt;&gt;,&lt;,&gt;,&lt;=,&gt;=.</font></p>
+      <p align="justify"><font color="#000000" size="4">La 
+        comparaison concerne bien les valeurs num&eacute;riques,les cha&icirc;nes 
+        de caract&egrave;res et les dates.</font></p>
+      <p align="justify"><font color="#000000" size="4">La 
+        condition est compos&eacute;e g&eacute;n&eacute;ralement de 3 termes :</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        Un nom de colonne</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        Un op&eacute;rateur de comparaison</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        et une costante ou une colonne ou une liste de valeur.</font></p>
+      <p align="justify"><font color="#000000" size="4">En 
+        plus des op&eacute;rateurs de compraison d&eacute;j&agrave; cit&eacute;s 
+        ORACLE dispose d'un certain nombre d'op&eacute;rateurs sp&eacute;cifiques 
+        dont principalement sont :</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        IS NULL : permet de tester si le contenu d'une colonne est une valeur 
+        nulle ( ind&eacute;finie).</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        IN (liste de valeurs) : permet de tester si le contenu d'une colonne coincide 
+        avec l'une des valeurs de la liste.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        BETWEEN V1 AND V2 : permet de tester si le contenu d'une colonne est compris 
+        entre les valeurs V1 et V2.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        LIKE cha&icirc;ne g&eacute;n&eacute;rique : le pr&eacute;dicat LIKE permet 
+        de r&eacute;aliser une comparaison entre la valeur de la colonne et celle 
+        de la cha&icirc;ne en utilisant des caract&egrave;res g&eacute;n&eacute;riques 
+        de substitution. Les caract&egrave;res g&eacute;n&eacute;riques de substitution 
+        sont :</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font color="#000000" size="4">% 
+          : substitue 0 o plusieurs caract&egrave;res pour une cha&icirc;ne.</font></p>
+        <p align="justify"><font color="#000000" size="4">- 
+          : remplace un seul caract&egrave;re.</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000000" size="4">Tous 
+        les op&eacute;rateurs sp&eacute;cifiques peuvent &ecirc;tre mis sous forme 
+        n&eacute;gative en les faisant pr&eacute;c&eacute;der par l'op&eacute;rateur 
+        de n&eacute;gation NOT.</font></p>
+      <p align="justify"><font color="#000000" size="4"><strong>- 
+        Exemples :</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">Soit 
+        la table Produit et client d&eacute;finies par :</font></p>
+      <p align="justify"><font color="#000000" size="4">produit(codep,designation,qtest,prixu)</font></p>
+      <p align="justify"><font color="#000000" size="4">client(numcl,nom,ville)</font></p>
+      <p align="justify"><font color="#000000" size="4">1) 
+        Lister toous les produits dont la quantit&eacute; en stock est inf&eacute;rieure 
+        &agrave; 10.</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font color="#000000" size="4">SELECT 
+          * FROM produit WHERE qtest &lt;10;</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000000" size="4">2) 
+        S&eacute;lectionner la d&eacute;signation et le prix des produits dont 
+        le prix unitaire est compris entre 5 et 10.</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font color="#000000" size="4">SELECT 
+          designation , prixu FROM produit WHERE prixu BETWEEN 5 AND 10;</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000000" size="4">3)S&eacute;lectionner 
+        les clients de Sfax et de Tunis</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font color="#000000" size="4">SELECT 
+          * FROM client WHERE ville in ('Sfax','Tunis');</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000000" size="4">4)S&eacute;lectionner 
+        les noms de clients qui commen&ccedil;ent par la lettre T.</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font color="#000000" size="4">SELECT 
+          nom FROM client WHERE nom LIKE 'T%';</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000000" size="4">5) 
+        S&eacute;lectionner les noms de clients dont la deuxi&egrave;me lettre 
+        est R.</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font color="#000000" size="4">SELECT 
+          nom FROM client WHERE nom like '-R%';</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000080" size="4"><strong>5.3- 
+        Les Expressions Arithm&eacute;tiques</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">Dans 
+        la clause SELECT et WHERE, on peut utiliser des expressions arithm&eacute;tiques 
+        et des fonctions telles que :</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        ABS(n) : permet de calculer la valeur absolue de n.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        CEIL(n) : permet d'avoir le plus petit entier sup&eacute;rieur ou &eacute;gal 
+        &agrave; n.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        FLOOR(n) : permet d'avoir la partie enti&egrave;re de n.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        MOD(n,m) : permet d'avoir le reste de la division enti&egrave;re de m 
+        par n.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        ROUND(m,n) : permet d'arrondir la valeur n &agrave; m d&eacute;cimal.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        POWER(m,n) : permet d'avoir m puissance n.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        SIGN(n) : donne -1 si n &lt; 0, 0 si n =0 et 1 si n&gt; 1.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        SQRT(n) : permet d'avoir racine de n.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        TRUNC(m,n) : permet de tronquer la valeur apr&egrave;s m d&eacute;cimales. 
+        Si n est n&eacute;gatif, la valeur de m est tronqu&eacute;e avant le point 
+        d&eacute;cimal.</font></p>
+      <p align="justify"><font color="#000000" size="4"><strong>- 
+        Exemples :</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">1) 
+        TRUNC(121.371,1) donne 121.3</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font size="4">TRUNC(121.371,-1) 
+          donne 120</font></p>
+        <p align="justify"><font size="4">TRUNC(121.371,-2) 
+          donne 100</font></p>
+      </blockquote>
+      <p align="justify"><font size="4">2)Donner le prix 
+        de tous les produits arrondis en Dinar.</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font size="4">SELECT designation, 
+          ROUND(prixu) &quot; prix en D&quot; FROM produit;</font></p>
+      </blockquote>
+      <p align="justify"><font size="4"><strong><font color="#000080">5.4- 
+        Les Fonctions s'appliquant &agrave; des cha&icirc;nes de caract&egrave;res</font></strong></font></p>
+      <p align="justify"><font color="#0000CC"><font color="#000000" size="4">* 
+        RTRIM(ch) : supprime l'espace &agrave; la fin de la cha&icirc;ne &agrave; 
+        l'oppos&eacute; de</font></font><font size="4"> LTRIM.</font></p>
+      <p align="justify"><font size="4">* RPAD(ch,n) : ajoute 
+        n espaces &agrave; la fin de la cha&icirc;ne &agrave; l'oppos&eacute; 
+        de LPAD.</font></p>
+      <p align="justify"><font size="4">* INITCAP(ch) : met 
+        en majuscule la premi&egrave;re lettre de chaque mot de la cha&icirc;ne.</font></p>
+      <p align="justify"><font size="4">* INSTR(ch1,ch2,[n[,m]]) 
+        : cherche la sous-cha&icirc;ne ch2 dans la cha&icirc;ne ch1 &agrave; partir 
+        de la position n et si l'on souhaite &agrave; partir de la m &egrave;me 
+        occurence de ch2 dan ch1. n et m sont optionnels et ont pour valeur par 
+        d&eacute;faut 1.</font></p>
+      <p align="justify"><font size="4">* LENGTH(ch) : renvoie 
+        la longueur d'une cha&icirc;ne.</font></p>
+      <p align="justify"><font size="4">* LOWER (ch) : transform 
+        la cha&icirc;ne ch en miniscule &agrave; l'oppos&eacute; de UPPER.</font></p>
+      <p align="justify"><font size="4">* SUBSTR(ch,m,n) 
+        : extraire la sous-cha&icirc;ne de ch qui commence &agrave; partir du 
+        caract&egrave;re &agrave; la position m et de longueur n.</font></p>
+      <p align="justify"><font size="4">* TRANSLATE(ch,ch1,ch2) 
+        : permet de transformer dans la cha&icirc;ne ch toutes les occurences 
+        de ch1 par ch2.</font></p>
+      <p align="justify"><font size="4">* REPLACE(chaine,ch1 
+        [,ch2]) : remplace une cha&icirc;ne par une autre dans une colonne. Si 
+        on ne met pas ch2, ch1 va &ecirc;tre emplac&eacute;e par un vide.</font></p>
+      <p align="justify"><font size="4">* ch1 ||ch2 : concat&egrave;ne 
+        les deux cha&icirc;nes.</font></p>
+      <p align="justify"><font size="4"><strong>- Exemple:</strong></font></p>
+      <p align="justify"><font size="4">Soit la table suivante 
+        :</font></p>
+      <p align="justify"><font size="4">Magasin(num,nom,mnager)</font></p>
+      <div align="justify"> 
+        <table width="75%" border="1">
+          <tr> 
+            <td width="38%">num</td>
+            <td width="38%">nom</td>
+            <td width="24%">manager</td>
+          </tr>
+          <tr> 
+            <td>m1</td>
+            <td>Sfax</td>
+            <td>turki</td>
+          </tr>
+          <tr> 
+            <td>m2</td>
+            <td>Sousse</td>
+            <td>dhouib</td>
+          </tr>
+        </table>
+      </div>
+      <p align="justify"><font size="4">SELECT SUBSTR(manager 
+        2,3) FROM Magasin; </font></p>
+      <p align="justify"><font size="4">donne : rki , ouib</font></p>
+      <p align="justify"><font color="#000080" size="4"><strong>5.5- 
+        Les Expressions S'appliquant &agrave; des Dates </strong></font></p>
+      <p align="justify"><font size="4">* ADD_MONTHS(d,n) 
+        : ajoute n mois &agrave; la date ( n est un entier).</font></p>
+      <p align="justify"><font size="4">* GREATEST(d1,d2) 
+        : donne la date la plus r&eacute;cente parmi d1 et d2 : c'est l'oppos&eacute; 
+        de LEAST.</font></p>
+      <p align="justify"><font size="4">* MONTHS_BETWEEN(d1,d2) 
+        : donne le nombre de mois qui se trouvent entre les deux dates.</font></p>
+      <p align="justify"><font size="4">* LASR_DAY(d) : donne 
+        la date du dernier jour du mois de cette date.</font></p>
+      <p align="justify"><font size="4">* SYSDATE : donne 
+        la date et l'heure syst&egrave;me.</font></p>
+      <p align="justify"><font size="4"><strong>- Exemple 
+        :</strong></font></p>
+      <p align="justify"><font size="4">LAS_DAY('06/07/02) 
+        donne 31/07/02.</font></p>
+      <p align="justify"><font color="#000080" size="4"><strong>5.6- 
+        Les Fonctions de Conversion</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        TO_CHAR(valeur-date,format-date) / TO_CHAR(nombre[,format]) : cconvertit 
+        une date ou une valeur num&eacute;rique &agrave; une cha&icirc;ne de caract&egrave;res.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        TO_DATE(valeur-cha&icirc;ne, format_date) : convertit une cha&icirc;ne 
+        &agrave; une date.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        TO_NUMBER( ch[,format]) : convertit une cha&icirc;ne de caract&egrave;res 
+        r&eacute;presentant un nombre en un nombre.</font></p>
+      <p align="justify"><font color="#000000" size="4"><strong>- 
+        Exemples:</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">1) 
+        vente(numv,datev)</font></p>
+      <div align="justify"> 
+        <table width="75%" border="1">
+          <tr> 
+            <td>numv</td>
+            <td>datev</td>
+          </tr>
+          <tr> 
+            <td>1</td>
+            <td>01/01/98</td>
+          </tr>
+          <tr> 
+            <td>2</td>
+            <td>03/01/00</td>
+          </tr>
+        </table>
+      </div>
+      <p align="justify"><font size="4">La commande SELECT 
+        TO_CHAR(date_v,'YEAR') FROM vente; donne</font></p>
+      <p align="justify"><font size="4">twenty ninety eight 
+        et two thousands.</font></p>
+      <p align="justify"><font size="4">2) On cherche l'&acirc;ge 
+        d'une personne en jours qui es n&eacute;e le 16/11/1975 :</font></p>
+      <p align="justify"><font size="4">SYSDATE - TODATE('07-04-1976','MM-DD-YYYY')</font></p>
+      <p align="justify"><font color="#0000CC"><strong><font color="#000080" size="4">5.7 
+        - Les expressions Aregats( ou fonctions de groupe)</font></strong></font></p>
+      <p align="justify"><font color="#000000" size="4">ORACLE 
+        dispose d'un ensemble de fonctions appel&eacute;es fonctions agr&eacute;gats 
+        qui s'appliquent &agrave; un ensemble de donn&eacute;es :</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        AVG : permet de donner la moyenne arithm&eacute;tique d'un ensemble donn&eacute;.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        COUNT: permet d'avoir le nombre d'occurences des enregistrements.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        MAX : permet d'avoir la valeur maximale dans une colonne.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        MIN : permet d'avoir la valeur minimale dans une colonne.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        SUM : permet d'avoir la somme des &eacute;lements.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        STDDEV : permet d'avoir l'ecart -type.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        VARIANCE : permet d'avoir la variance.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        DISTINCT : pour ne pas prendre que des valeurs distinctes.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        ALL : pour insister de prendre toutes les valeurs qui existent.</font></p>
+      <p align="justify"><font color="#000000" size="4">- 
+        Chacune de ces fonctions a comme argument un nom de colonne ou une expression 
+        arithm&eacute;tique. Elles ignorent les valeurs nulles et par d&eacute;faut 
+        prennent les valeurs multiples pour des valeurs diff&eacute;rentes.</font></p>
+      <p align="justify"><font color="#000000" size="4">- 
+        La fonction COUNT peut prendre comme argument la caract&egrave;re g&eacute;nerique 
+        * ce qui veut dire que nous voulons conna&icirc;tre le nombre de ligne 
+        s&eacute;letionn&eacute;es.</font></p>
+      <p align="justify"><font color="#000000" size="4">- 
+        On ne peut pas mettre une fonction de groupe apr&egrave;s la clause WHERE.</font></p>
+      <p align="justify"><font size="4"><strong>- Exemple 
+        :</strong></font></p>
+      <p align="justify"><font size="4">Donner le nombre 
+        de clients de la ville de Sfax dont le num&eacute;ro de t&eacute;l&eacute;phone 
+        commence par 221.</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font size="4">SELECT COUNT(*) 
+          FROM client WHERE ville='Sfax' and trunc(tel,)3) =221000;</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000080" size="4"><strong>5.8- 
+        Classification des R&eacute;sultats</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">Il 
+        est possible de regrouper ( classifier) les r&eacute;sultats obtenus permettant 
+        d'avoir ensemble les lignes ayant une m&ecirc;me vaeur pour la colonne 
+        de classification. La clause qui permet la classification est: GROUP BY 
+        expression [HAVING condition].</font></p>
+      <p align="justify"><font color="#000000" size="4"><strong>- 
+        Exemple :</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">1) 
+        Trouver la somme des quantit&eacute;s command&eacute;es par produit et 
+        par client qui sont superieures &agrave; 10.</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font color="#000000" size="4">SELECT 
+          nump,numclt,sum(qte_cde) FROM commande </font></p>
+        <p align="justify"><font color="#000000" size="4">GROUP 
+          BY nump,numclt </font></p>
+        <p align="justify"><font color="#000000" size="4">HAVING 
+          sum(qte_cde) &gt; 10;</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000080" size="4"><strong>5.9- 
+        Tri des R&eacute;sultats</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">Pour 
+        obtenir un r&eacute;sultat tri&eacute;, il suffit d'ajouter &agrave; la 
+        requ&ecirc;te SQL la clause ORDER BY expression [ASC/DESC].</font></p>
+      <p align="justify"><font color="#000000" size="4">Si 
+        on ne sp&eacute;cifie pas ASC ou DESC, le tri sera croissant par d&eacute;faut.</font></p>
+      <p align="justify"><font color="#000000" size="4"><strong>- 
+        Exemple :</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">Donner 
+        la liste des produits par ordre de prix unitaire croissant et ceux ayant 
+        le m&ecirc;me prix seront tri&eacute;s par ordre alphab&eacute;tique d&eacute;croissant.</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font color="#000000" size="4">SELECT 
+          designation,prixu from produit ORDER BY prixu,designation desc;</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000080" size="4"><strong>5.10- 
+        Les requ&ecirc;tes imbriqu&eacute;es </strong></font></p>
+      <p align="justify"><font color="#000000" size="4">La 
+        requ&ecirc;te imbriqu&eacute;e figure lorsqu'une requ&ecirc;te appara&icirc;t 
+        dans la clause WHERE de la requ&ecirc;te principale.</font></p>
+      <p align="justify"><font color="#000000" size="4"><strong>- 
+        Exemple :</strong></font></p>
+      <p align="justify"><font size="4">1) Trouver la d&eacute;signation 
+        des produits dont le prix unitaire est &eacute;gal &agrave; celui des 
+        chaises.</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font size="4">SELECT designation,prixu 
+          FROM produit WHERE prixu = (SELECT prixu FROM produit WHERE designation 
+          ='chaise');</font></p>
+      </blockquote>
+      <p align="justify"><font size="4">2) Trouver les produits 
+        dont le prix est superieur au prix moyen</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font size="4">SELECT designation, 
+          prixu FROM produit WHERE prixu &gt; (SELECT AVG(prixu) FROM produit);</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000080" size="4"><strong>5.11- 
+        Les Op&eacute;rateurs Ensemblistes</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">- 
+        Syntaxe : </font></p>
+      <p align="justify"><font color="#000000" size="4">La 
+        forme g&eacute;nerale de ces op&eacute;rateurs est :</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font color="#000000" size="4">Requ&ecirc;te1 <strong>op&eacute;rateur</strong> Requ&ecirc;te2 </font></p>
+      </blockquote>
+      <p align="justify"><font color="#000000" size="4">- 
+        Remarques:</font></p>
+      <p align="justify"><font color="#000000" size="4">Pour 
+        tous les op&eacute;rateurs, il faut:</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        Utiliser le m&ecirc;me nombre de variables avec les m&ecirc;mes types 
+        dans les 2 requ&ecirc;tes.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        Les doublons sont automatiquement &eacute;limin&eacute;s.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        Les titres des colonnes r&eacute;sultat sont ceux de la 1 &egrave;re requ&ecirc;te.</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        La clause ORDER BY ne fait plus r&eacute;ference aux noms de colonnes, 
+        mais &agrave; leurs num&eacute;ros. </font></p>
+      <p align="justify"><font color="#000080" size="4"><strong>5.11.1- 
+        L'Union</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">C'est 
+        une op&eacute;ration qui porte sur 2 relations R1 et R2 consistant &agrave; 
+        construire une relation de m&ecirc;me sch&eacute;ma ayant pour tuples 
+        ceux appartenant &agrave; R1 ou R2 ou aux 2 relations.</font></p>
+      <p align="justify"><font color="#000000" size="4">La 
+        forme g&eacute;nerale pour cette relation est :</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font size="4">Requ&ecirc;te1 
+          UNION requ&ecirc;te2</font></p>
+      </blockquote>
+      <p align="justify"><font size="4"><strong>- Exemple 
+        :</strong></font></p>
+      <p align="justify"><font size="4">Soit la relation 
+        suivante :</font></p>
+      <p align="justify"><font size="4">Etudiant(mat_et,nom_et,pre_et,ville,classe,groupe)</font></p>
+      <p align="justify"><font size="4">Donner les noms des 
+        etudiants du groupe G1 et ceux du groupe G2</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font size="4">SELECT nom_et, 
+          pre_et FROM etudiant WHERE groupe ='G1'</font></p>
+        <div align="justify"> 
+          <blockquote> 
+            <blockquote>&nbsp; </blockquote>
+          </blockquote>
+        </div>
+        <blockquote> 
+          <blockquote> 
+            <p align="justify"><font size="4">UNION</font></p>
+          </blockquote>
+        </blockquote>
+        <p align="justify"><font size="4">SELECT nom_et, 
+          pre_et FROM etudiant WHERE groupe ='G2'</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000080" size="4"><strong>5.11.2- 
+        L'Intersection</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">C'est 
+        une op&eacute;ration portant sur 2 relations de m&ecirc;me sch&eacute;ma 
+        ayant pour tuples ceux appartenant &agrave; R1 et R2 en m&ecirc;me temps.</font></p>
+      <p align="justify"><font color="#000000" size="4">La 
+        forme g&eacute;nerale pour cette relation est :</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font size="4">Requ&ecirc;te1 
+          INTERSECT requ&ecirc;te2</font></p>
+      </blockquote>
+      <p align="justify"><font size="4"><strong>- Exemple 
+        :</strong></font></p>
+      <p align="justify"><font size="4">Donner les noms des 
+        &eacute;tudiants de la classe IG4 et qui habitent &agrave; Sfax.</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font size="4">SELECT nom_et FROM 
+          etudiant WHERE classe ='IG4'</font></p>
+        <div align="justify"> 
+          <blockquote> 
+            <blockquote>&nbsp; </blockquote>
+          </blockquote>
+        </div>
+        <blockquote> 
+          <blockquote> 
+            <p align="justify"><font size="4">INTERSECT</font></p>
+          </blockquote>
+        </blockquote>
+        <p align="justify"><font size="4">SELECT nom_et FROM 
+          etudiant WHERE ville='Sfax';</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000080" size="4"><strong>5.11.3- 
+        La Diff&eacute;rence</strong></font></p>
+      <p align="justify"><font color="#000000" size="4">C'est 
+        une op&eacute;ration portant sur 2 relations de m&ecirc;me sch&eacute;ma 
+        R1 et R2 consistant &agrave; construire une relation de m&ecirc;me sch&eacute;ma 
+        ayant pour tuples ceux appartenant &agrave; R1 et n'appartenant pas &agrave; 
+        R2.</font></p>
+      <p align="justify"><font color="#000000" size="4">La 
+        forme g&eacute;nerale pour cette relation est :</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font size="4">Requ&ecirc;te1 
+          MINUS requ&ecirc;te2</font></p>
+      </blockquote>
+      <p align="justify"><font size="4"><strong>- Exemple 
+        :</strong></font></p>
+      <p align="justify"><font size="4">Donner les Noms des 
+        etudiants de l'ISET sauf ceux de la classe IG4.</font></p>
+      <div align="justify"> 
+        <blockquote>&nbsp; </blockquote>
+      </div>
+      <blockquote> 
+        <p align="justify"><font size="4">SELECT nom_et, 
+          pre_et FROM etudiant</font></p>
+        <div align="justify"> 
+          <blockquote> 
+            <blockquote>&nbsp; </blockquote>
+          </blockquote>
+        </div>
+        <blockquote> 
+          <blockquote> 
+            <p align="justify"><font size="4">MINUS</font></p>
+          </blockquote>
+        </blockquote>
+        <p align="justify"><font size="4">SELECT nom_et, 
+          pre_et FROM etudiant WHERE classe ='IG4';</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000080" size="4"><strong>5.11.4- 
+        La Jointure </strong></font></p>
+      <p align="justify" class="Style4">Jointure avec SQL2:</p>
+      <p align="justify"><font color="#000000" size="4">C'et 
+        une op&eacute;ration portant sur 2 relations R1 et R2. Elle produit une 
+        relation R3 dont le Sch&eacute;ma est la juxtaposition de deux Sch&eacute;ms 
+        R1 et R2 et contenant l'ensemble des tuples obtenus par concat&eacute;nation 
+        des tuples de R1 et R2 v&eacute;rifiant une condition d&eacute;fini entre 
+        R1 et R2. G&eacute;neralement la condition d&eacute;finie est sous forme 
+        de comparaison de valeurs d'une ou de plusieurs colonnes communes &agrave; 
+        ces 2 relations et qui &eacute;videmment ont les m&ecirc;mes types et 
+        les m&ecirc;mes tailles.</font></p>
+      <p align="justify"><font color="#000000" size="4">On 
+        distingue entre 3 types de jointure :</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        Jointure Simple : c'est celle d&eacute;j&agrave; pr&eacute;sent&eacute;e</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        Autojointure : c'et une jointure entre la table et elle m&ecirc;me</font></p>
+      <p align="justify"><font color="#000000" size="4">* 
+        Jointure Externe : permet de conserver toutes les valeurs d'un attribut 
+        appartenant &agrave; R1 dans la relation r&eacute;sultat. De point de 
+        vue syntaxique, cette op&eacute;ration se formule de la m&ecirc;me fa&ccedil;on 
+        qu'une jointure classique sauf qu'il faut ajouter &agrave; la condition 
+        de jointure le signe (+). </font></p>
+      <p align="justify"><font color="#000000" size="4"><strong>- 
+        Exemple 1 : Jointure Simple </strong></font></p>
+      <p align="justify"><font color="#000000" size="4">Soit 
+        les 2 relations suivantes :</font></p>
+      <p align="justify"><font color="#000000" size="4">Produit(codp,designation,prixu,qte_stk)</font></p>
+      <p align="justify"><font color="#000000" size="4">lignecom(numc,codp,qte_com)</font></p>
+      <p align="justify"><font color="#000000" size="4">Donner 
+        les d&eacute;signations des produits dont le num&eacute;ro commande est 
+        25</font></p>
+      <blockquote> 
+        <p align="justify"><font color="#000000" size="4">SELECT 
+          designation FROM produit,lignecom WHERE produit.codp = lignecom.codp 
+          and numc =25;</font></p>
+      </blockquote>
+      <p align="justify"><font color="#000000" size="4"><strong>- 
+        Exemple 2 : Autojointure </strong></font></p>
+      <p align="justify"><font size="4">Donner la d&eacute;signation 
+        des produits dont la quantit&eacute; en stock est superieure ou &eacute;gale 
+        &agrave; celle du produit 'ordinateur'.</font></p>
+      <p align="justify"><font size="4"><strong>Solution1</strong> : Cr&eacute;er un synonyme de la table produit</font></p>
+      <p align="justify"><font size="4">CREATE SYNONYM P 
+        FOR PRODUIT;</font></p>
+      <p align="justify"><font size="4">SELECT P.designation 
+        FROM P,produit WHERE produit.designation ='ordinateur' AND P.qte_stk &gt;= 
+        produit.qte_stk;</font></p>
+      <p align="justify"><font size="4"><strong>Solution2</strong> : Cette solution consiste &agrave; utiliser une variable ALIAS pour la 
+        table produit</font></p>
+      <p align="justify"><font size="4">SELECT p2.designation 
+        FROM produit P1,produit P2 WHERE P1.des_pdt='ordinateur' AND P2.qte_stk&gt;=P1.qte_stk;</font></p>
+      <p align="justify"><font size="4"><strong>Solution3</strong> : Cette solution consiste &agrave; utiliser une requ&ecirc;te imbriqu&eacute;e</font></p>
+      <p align="justify"><font size="4">SELECT P1.designation</font></p>
+      <p align="justify"><font size="4">FROM produit P1</font></p>
+      <p align="justify"><font size="4">WHERE P1.qte_stk 
+        &gt;= ( SELECT qte_stk FROM produit P2 WHERE P2.designation ='ordinateur');</font></p>
+      <p align="justify"><font size="4">- <strong>Exemple 
+        3 : La jointure Externe</strong></font></p>
+      <p align="justify"><font size="4">Donner la d&eacute;signation 
+        des produits avec &eacute;ventuellement les commandes correspondantes</font></p>
+      <p align="justify"><font size="4"><strong>Solution</strong></font></p>
+      <p align="justify"><font size="4">SELECT des_pdt,LC.numc</font></p>
+      <p align="justify"><font size="4">FROM produit P,lignecom 
+        LC</font></p>
+      <p align="justify"><font size="4">WHERE P.codp = LC.codp(+)</font></p>
+      <p align="justify" class="Style4">Jointure avec SQL3:</p>
+      <p>Sans compter l'op&eacute;rateur&nbsp;CROSS JOIN, voici les trois syntaxes possibles de  l'expression d'une jointure dans la clause&nbsp;FROM&nbsp;en SQL : <br>
+        table_1 { [INNER] { LEFT | RIGHT | FULL } [OUTER] } JOIN table_2 ON  predicat [...]<br>
+        table_1 { [INNER] { LEFT | RIGHT | FULL } [OUTER] } JOIN table_2 USING  (colonnes) [...]<br>
+        table_1 NATURAL { [INNER] { LEFT | RIGHT | FULL } [OUTER] } JOIN table_2  [...]<br>
+        Ces trois syntaxes diff&egrave;rent par la condition de jointure sp&eacute;cifi&eacute;e par les  clauses&nbsp;ON&nbsp;ou&nbsp;USING, ou implicite dans le cas d'une jointure naturelle introduite par le  mot-cl&eacute;&nbsp;NATURAL.<br>
+  <br>
+  <br>
+  <strong>ON</strong><strong>&nbsp;:</strong> <br>
+        La clause&nbsp;ON&nbsp;correspond &agrave; la condition de  jointure la plus g&eacute;n&eacute;rale. Le pr&eacute;dicat&nbsp;predicat&nbsp;est une expression logique de la  m&ecirc;me nature que celle de la clause&nbsp;WHERE&nbsp;d&eacute;crite dans la section&nbsp;<a href="file:///D:\base_donnees_optimal\base\laurent-audibert.developpez.com\Cours-BD\html\Cours-BD025.html#sec_clause_where">4.5.7</a>.<br>
+  <strong>USING</strong><strong>&nbsp;:</strong> <br>
+        La clause&nbsp;USING&nbsp;est une notation abr&eacute;g&eacute;e  correspondant &agrave; un cas particulier de la clause&nbsp;ON. Les deux tables, sur lesquelles portent  la jointure, doivent poss&eacute;der toutes les colonnes qui sont mentionn&eacute;es, en les  s&eacute;parant par des virgules, dans la liste sp&eacute;cifi&eacute;e entre parenth&egrave;ses juste  apr&egrave;s le mot-cl&eacute;&nbsp;USING. La condition de jointure sera l'&eacute;galit&eacute; des colonnes au sein de chacune  des paires de colonnes. De plus, les paires de colonnes seront fusionn&eacute;es en  une colonne unique dans la table r&eacute;sultat de la jointure. Par rapport &agrave; une  jointure classique, la table r&eacute;sultat comportera autant de colonnes de moins  que de colonnes sp&eacute;cifi&eacute;es dans la liste de la clause&nbsp;USING.<br>
+  <strong>NATURAL</strong><strong>&nbsp;:</strong> <br>
+        Il s'agit d'une notation abr&eacute;g&eacute;e de la  clause&nbsp;USING&nbsp;dans laquelle la liste de colonnes est implicite et correspond &agrave; la  liste des colonnes communes aux deux tables participant &agrave; la jointure. Tout  comme dans le cas de la clause&nbsp;USING, les colonnes communes n'apparaissent qu'une fois  dans la table r&eacute;sultat.<br>
+  <strong>INNER</strong><strong>&nbsp;et&nbsp;</strong><strong>OUTER</strong><strong>&nbsp;:</strong> <br>
+        Les mots-cl&eacute;&nbsp;INNER&nbsp;et&nbsp;OUTER&nbsp;permettent de pr&eacute;ciser s'il s'agit  d'une jointure&nbsp;<em>interne</em>&nbsp;ou&nbsp;<em>externe</em>.&nbsp;INNER&nbsp;et&nbsp;OUTER&nbsp;sont toujours optionnels. En effet,  le comportement par d&eacute;faut est celui de la jointure interne (INNER) et les mots clefs&nbsp;LEFT,&nbsp;RIGHT&nbsp;et&nbsp;FULL&nbsp;impliquent forc&eacute;ment une jointure externe (OUTER).<br>
+  <strong>INNER JOIN</strong><strong>&nbsp;:</strong> <br>
+        La table r&eacute;sultat est constitu&eacute;e de toutes  les juxtapositions possibles d'une ligne de la table&nbsp;table_1&nbsp;avec une ligne de la table&nbsp;table_2&nbsp;qui satisfont la condition de  jointure.<br>
+  <strong>LEFT OUTER JOIN</strong><strong>&nbsp;:</strong> <br>
+        Dans un premier temps, une jointure  interne (<em>i.e.</em>&nbsp;de type&nbsp;INNER JOIN) est effectu&eacute;e. Ensuite, chacune des  lignes de la table&nbsp;table_1&nbsp;qui ne satisfait pas la condition de jointure avec aucune des lignes  de la table&nbsp;table_2&nbsp;(<em>i.e.</em>&nbsp;les lignes de&nbsp;table_1&nbsp;qui n'apparaissent pas dans la table  r&eacute;sultat de la jointure interne) est ajout&eacute;e &agrave; la table r&eacute;sultats. Les  attributs correspondant &agrave; la table&nbsp;table_2, pour cette ligne, sont affect&eacute;s de la  valeur&nbsp;NULL. Ainsi, la table r&eacute;sultat contient au moins autant de lignes que la  table&nbsp;table_1.<br>
+  <strong>RIGHT OUTER JOIN</strong><strong>&nbsp;:</strong> <br>
+        M&ecirc;me sc&eacute;nario que pour l'op&eacute;ration de  jointure de type&nbsp;LEFT OUTER JOIN, mais en inversant les r&ocirc;les des tables&nbsp;table_1&nbsp;et&nbsp;table_2.<br>
+  <strong>FULL OUTER JOIN</strong><strong>&nbsp;:</strong> </p>
+      La jointure externe bilat&eacute;rale  est la combinaison des deux op&eacute;rations pr&eacute;c&eacute;dentes (LEFT OUTER JOIN&nbsp;et&nbsp;RIGHT OUTER JOIN) afin que la table r&eacute;sultat contienne au moins une occurrence de  chacune des lignes des deux tables impliqu&eacute;es dans l'op&eacute;ration de jointure.
+      <p align="justify" class="Style4">&nbsp;</p>
+      <p align="justify" class="Style4">&nbsp;</p>
+      <p align="justify" class="Style3">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+    </div>
+    <blockquote> 
+      <div align="justify"></div>
+    </blockquote>
+    <div align="justify" name="vues">
+      <div align="justify"><font color="#000080" size="4"><strong><a name="vues"></a>6- 
+        Manipulation de donn&eacute;es &agrave; travers des vues</strong></font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4">La 
+        Notion de vue permet &agrave; un utilisateur de manipuler autrement les 
+        donn&eacute;es sans se recourir aux tables d&eacute;finies dans la base.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4">Une 
+        vue est en fait une perception particuli&egrave;re des donn&eacute;es 
+        d'une ou de plusieurs tables. Elle est stock&eacute;e sous forme de requ&ecirc;tes 
+        de s&eacute;lection dans le dictionnaire des donn&eacute;es.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4">Elle 
+        permet de :</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4">- 
+        Restreindre l'acc&egrave;s &agrave; certaines colonnes ou certaines lignes 
+        d'une table : l'acc&egrave;s se fait uniquement &agrave; travers la vue.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4">- 
+        Simplifier la t&acirc;che de l'utilisateur en le d&eacute;chargeant de 
+        la formulation de requ&ecirc;tes complexes.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify">
+        <p>&nbsp;</p>
+        <p><font color="#000080" size="4"><strong>6.1- Cr&eacute;ation 
+          des Vues</strong></font></p>
+      </div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4">La 
+        cr&eacute;ation d'une vue consiste &agrave; d&eacute;finir son sch&eacute;ma, 
+        c'est &agrave; dire son nom et ceux des colonnes qui la composent, et 
+        les donn&eacute;es qui lui sont rattach&eacute;es.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4"><strong>- 
+        Syntaxe :</strong></font></div>
+    </div>
+    <div align="justify"> 
+      <blockquote> 
+        <div align="justify"><font size="4">CREATE VIEW vue 
+          [(colonne1,...,colonnen)] AS requ&ecirc;te </font></div>
+        <div align="justify"><font size="4">[WITH CHECK OPTION];</font></div>
+      </blockquote>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font size="4">La clause WITH 
+        CHECK OPTION permet de v&eacute;rifier l'effet des op&eacute;rations INSERT 
+        et UPDATE r&eacute;alis&eacute;e sur la vue. En effet, cette clause permet 
+        :</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font size="4">- D'autoriser ou 
+        de ne pas autoriser une mise &agrave; jour qui ne respectepas la condition 
+        de s&eacute;lection qui d&eacute;finit la vue.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font size="4">- D'autoriser ou 
+        d'interdire l'ajout d'une ligne qui ne satisfait pas la condition de s&eacute;lection 
+        de cette vue &agrave; travers la vue.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font size="4">&#8212;&gt; Si 
+        cette clause est omise, aucune v&eacute;rification n'aura lieu.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font size="4"><strong>- Exemple 
+        :</strong></font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font size="4">Cr&eacute;er une 
+        vue correspondant aux clients de la ville de Tunis.</font></div>
+    </div>
+    <div align="justify"> 
+      <blockquote> 
+        <div align="justify"><font size="4">CREATE VIEW client_tunis 
+          AS SELECT idclient,nom,adresse,codepostal,tel FROM client WHERE ville='Tunis';</font></div>
+      </blockquote>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000080" size="4"><strong>6.2- 
+        Suppression des Vues</strong></font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4">La 
+        suppression d'une vue consiste &agrave; supprimer du dictionnaire de donn&eacute;es 
+        la d&eacute;finition correspondante. Les donn&eacute;es attach&eacute;es 
+        de la vue ne sont pas supprim&eacute;es.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font size="4"><strong>- Syntaxe 
+        :</strong></font></div>
+    </div>
+    <div align="justify"> 
+      <blockquote> 
+        <div align="justify"><font size="4">DROP VIEW nom_de_la_vue;</font></div>
+      </blockquote>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000080" size="4"><strong>6.3- 
+        Modification des Structures de vues</strong></font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font size="4">Aucune modification 
+        n'est pas permise sur les structures des vues.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000080" size="4"><strong>6.4- 
+        Consultation des Vues</strong></font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font size="4">Toutes les requ&ecirc;tes 
+        possibles sur les tables sont autoris&eacute;es sur les vues.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000080" size="4"><strong>6.5- 
+        Mise &agrave; jour des Vues </strong></font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4">- 
+        Si la vue d&eacute;rive de plusieurs tables ou si sa d&eacute;finition 
+        contient la clause GROUP BY, la clause DISTINCT ou encore une fonction 
+        de groupe, alors les op&eacute;rations UPDATE, INSERT et DELETE sont interdites.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4">- 
+        Si un attribut de la vue est d&eacute;fini comme une expression, cet attribut 
+        ne peut subir d'UPDATE et d'INSERT qui sont interdites sur la vue.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4">- 
+        Si un attribut d&eacute;clar&eacute; NOT NULL dans la table de base n'est 
+        pas repris dans la vue, aucune INSERT n'est possible sur cette vue.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000080" size="4"><strong>6.6- 
+        R&egrave;gles g&eacute;nerales pour l'utilisation d'une vue</strong></font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4">- 
+        La jointure entre une vue group&eacute;e et une table est interdite.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4">- 
+        Les colonnes de la vue, obtenues par groupement ne peuvent en aucun cas 
+        figurer dans la clause WHERE de la requ&ecirc;te d'interrogation.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"><font color="#000000" size="4">- 
+        Des anomalies peuvent &ecirc;tre d&eacute;tect&eacute;es si la d&eacute;finition 
+        de la vue utilise DISTINCT, une op&eacute;ration arithm&eacute;tique, 
+        une op&eacute;ration de concat&eacute;nation de cha&icirc;nes de caract&egrave;res.</font></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"></div>
+    </div>
+    <div align="justify"> 
+      <div align="justify"></div>
+    </div>
+    <div align="justify"> 
+      <blockquote> 
+        <div align="justify"></div>
+        <div align="justify"></div>
+        <div align="justify"></div>
+        <div align="justify"> </div>
+      </blockquote>
+    </div>
+  </blockquote>
+  <div align="justify"></div>
+  <div align="justify"></div>
+  <blockquote> 
+    <blockquote> 
+      <div align="justify"></div>
+    </blockquote>
+  </blockquote>
+  <div align="justify"></div>
+  <p>&nbsp;</p>
+</div>
+<div align="center">
+  <p class="Style1"><font color="#000080">Cours 
+  en ligne : Base de Donn&eacute;es</font></p>
+</div>
+<blockquote> 
+  <blockquote> 
+    <div id="Layer2" style="position:absolute; left:885px; top:74px; width:502px; height:25px; z-index:2"><a href="ACCUEILP.htm"><img src="acceuil.gif" width="60" height="21" border="0"></a> 
+      <a href="chapitre7.htm"><img src="previous_off.gif" width="21" height="21" border="0"></a> 
+      <a href="chapitre9.htm"><img src="next_off.gif" width="21" height="21" border="0"></a></div>
+    <hr align="left">
+    <p>&nbsp;</p>
+  </blockquote>
+  <p>&nbsp;</p>
+</blockquote>
+</body>
+</html>

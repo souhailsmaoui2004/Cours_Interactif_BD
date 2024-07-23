@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Document sans titre</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style type="text/css">
+<!--
+.Style1 {
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-size: 24px;
+}
+.Style2 {font-family: "Times New Roman", Times, serif}
+-->
+</style>
+</head>
+
+<body background = "backg2.jpg">
+<div class="Style2" id="Layer1" style="position:absolute; left:103px; top:125px; width:901px; height:664px; z-index:1"> 
+  <p align="center"><font color="#9C9C4E" size="5"><strong>Langage de  contr&ocirc;le de donn&eacute;es</strong></font></p>
+  <blockquote> 
+    <p><font color="#000080" size="4"><strong>Objectif</strong></font></p>
+    <p><font size="4">Apprndre le Langage SQL pour Contr&ocirc;ler 
+      les donn&eacute;es.</font></p>
+    <p><font color="#000080" size="4"><strong>El&eacute;ments 
+      de Contenu:</strong></font></p>
+    <p><font size="4">1-<a href="chapitre9.htm#uti"> Cr&eacute;ation 
+      des Utilisateurs</a></font></p>
+    <p><font size="4">2- <a href="chapitre9.htm#droits">Cr&eacute;ation 
+      des Droits</a></font></p>
+    <p><font size="4">3- <a href="chapitre9.htm#suppression">Suppression 
+      des Droits</a></font></p>
+    <p><font color="#0000CC" size="4"><strong><font color="#000080"><a name="uti"></a>1- 
+      Cr&eacute;ation des utilisateurs</font></strong></font></p>
+    <p><font size="4">L'administrateur g&eacute;neral d'ORACLE 
+      permet &agrave; tout moment d'ajouter un utilsateur &agrave; l'une des tables 
+      existantes gr&acirc;ce &agrave; la commande:</font></p>
+    <blockquote> 
+      <blockquote> 
+        <p><font size="4"><strong>GRANT [CONNECT/,RESOURCE/, 
+          DBA] TO utilisateur IDENTIFIED BY mot_de_passe;</strong></font></p>
+      </blockquote>
+    </blockquote>
+    <p><font size="4">&#8212;&gt; L'option CONNECT autorise 
+      l'utilisateur &agrave; :</font></p>
+    <blockquote> 
+      <p><font size="4">- Se connecter &agrave; ORACLE.</font></p>
+      <p><font size="4">- Cr&eacute;er des vues et des synonymes 
+        sur des tables existantes.</font></p>
+      <p><font size="4">- S&eacute;lectionner, modifier et 
+        supprimer des donn&eacute;es dans des tables sur lesquelles une autorisation 
+        a &eacute;t&eacute; donn&eacute;e au pr&eacute;alable.</font></p>
+      <p><font size="4">&#8212;&gt; Donc un utilisateur ayant 
+        seulement le droit CONNECT ne peut pas cr&eacute;er des tables ni des 
+        Clusters ni D'index.</font></p>
+    </blockquote>
+    <p><font size="4">&#8212;&gt; L'option Resource ne peut 
+      &ecirc;tre attribu&eacute;e que si l'utilisateur a le droit CONNECT. Elle 
+      lui permet de :</font></p>
+    <blockquote> 
+      <p><font size="4">- Cr&eacute;er des tables , des index 
+        et des regroupements(Clusters).</font></p>
+      <p><font size="4">- Attribuer ou enlever des privil&egrave;ges 
+        sur les tables, index et Clusters &agrave; d'autres utilisateurs.</font></p>
+    </blockquote>
+    <p><font size="4">&#8212;&gt; L'option DBA englobe les 
+      droits des deux options et permet en plus :</font></p>
+    <blockquote> 
+      <p><font size="4">- D'acc&eacute;der aux donn&eacute;es 
+        de tous les utilisateurs de la m&ecirc;me base.</font></p>
+      <p><font size="4">- De cr&eacute;er et de supprimer 
+        des utilisateurs et des droits.</font></p>
+      <p><font size="4">- D'administrer la base ( sauvegarder 
+        et restaurer des donn&eacute;es de la base , contr&ocirc;ler l'integrit&eacute;,...).</font></p>
+    </blockquote>
+    <p><font color="#0000CC" size="4"><strong><font color="#000080"><a name="droits"></a>2- 
+      Cr&eacute;ation des Droits</font></strong></font></p>
+    <p><font size="4">Toute table, Synonyme, Index ou Cluster 
+      n'est initialement accessible que par l'utilisateur qui l' a cr&eacute;e.</font></p>
+    <p><font size="4">Pour partager certains droits avec 
+      d'autres utilisateurs, le propri&eacute;taire doit utiliser l'instruction 
+      suivant:</font></p>
+    <blockquote>
+      <blockquote> 
+        <p><font size="4"><strong>GRANT droit1, droit2,...droitn 
+          ON objet TO utilisateur1, utilisateur2,.....utilisateurp</strong></font></p>
+        <p><strong><font size="4">[WITH GRANT OPTION]</font></strong></p>
+      </blockquote>
+    </blockquote>
+    <p><font size="4">On peut utiliser ALL pour d&eacute;signer 
+      tous les droits et PUBLIC pour d&eacute;signer tous les utilisateurs.</font></p>
+    <blockquote>
+      <blockquote> 
+        <p><font size="4">- Les droits possibles sont : ALTER, 
+          DELETE, INDEX, UPDATE, SELECT ou aussi ALL pour toutes les op&eacute;rations.</font></p>
+        <p><font size="4">- Les objets sont : les noms des 
+          tables et des vues.</font></p>
+        <p><font size="4">- L'option WITH GRANT OPTION autorise 
+          le nouvel utilisateur &agrave; accorder les droits re&ccedil;us &agrave; 
+          un autre utilisateur.</font></p>
+      </blockquote>
+    </blockquote>
+    <p><font size="4"><strong>Exemple:</strong></font></p>
+    <blockquote>
+      <blockquote> 
+        <p><font size="4">1- L'utilisateur IG21 d&eacute;cide 
+          d'attribuer &agrave; l'utilisateur IG22 le droit de S&eacute;lection 
+          et de mise &agrave; jour de sa table commandes; il tape :</font></p>
+        <blockquote>
+          <p><font size="4">GRANT SELECT,UPDATE ON commandes 
+            TO IG22;</font></p>
+        </blockquote>
+        <p><font size="4">2- L'utilisateur IG22 peut cr&eacute;er 
+          une table cde &agrave; partir de cette commande:</font></p>
+        <blockquote>
+          <p><font size="4">CREATE TABLE cde AS SELECT * 
+            FROM IG21.commandes;</font></p>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+    <p><font color="#0000CC" size="4"><strong><font color="#000080"><a name="suppression"></a>3- 
+      Suppression des Droits</font></strong></font></p>
+    <p><font size="4">La commande qui permet de supprimer 
+      un ou plusieurs droits sur un objet est:</font></p>
+    <blockquote> 
+      <blockquote> 
+        <p><font size="4">REVOKE droit1,droit2,....droitn 
+          ON objet FROM utilisateur1, utilisateur2, utilisateuerp;</font></p>
+      </blockquote>
+    </blockquote>
+    <p><font size="4">Avec REVOKE, on peut utiliser ALL pour 
+      d&eacute;signer tous les droits et PUBLIC pour d&eacute;signer tous les 
+      utilisateurs.</font></p>
+    <p><font size="4"><strong>Exemple:</strong></font></p>
+    <p><font size="4">REVOKE ALL ON commandes from PUBLIC;</font></p>
+    <p>&nbsp;</p>
+    <blockquote> 
+      <p>&nbsp;</p>
+    </blockquote>
+  </blockquote>
+</div>
+<div align="center">
+  <p class="Style1"><font color="#000080">Cours 
+  en ligne : Base de Donn&eacute;es</font></p>
+</div>
+<blockquote> 
+  <blockquote> 
+    <hr align="left">
+    <p>&nbsp;</p>
+  </blockquote>
+  <div id="Layer2" style="position:absolute; left:853px; top:74px; width:502px; height:36px; z-index:2"><a href="ACCUEILP.htm"><img src="acceuil.gif" width="60" height="21" border="0"></a> 
+    <a href="chapitre8.htm"><img src="previous_off.gif" width="21" height="21" border="0"></a> 
+    <a href="bibliographie.htm"></a></div>
+  <p>&nbsp;</p>
+</blockquote>
+</body>
+</html>
